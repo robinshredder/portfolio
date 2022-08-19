@@ -1,0 +1,352 @@
+.card-portfolio {
+	position: relative;
+
+	.card-img {
+		display: block;
+	}
+
+	.card-location {
+		display: flex;
+		align-items: center;
+		margin-bottom: auto;
+		font-size: 13px;
+		font-weight: 500;
+		flex: 0 0 auto;
+
+		svg {
+			margin-right: 14px;
+			color: $color-accent-3;
+		}
+
+	}
+
+	.card-title {
+		position: relative;
+		display: block;
+		margin-bottom: 0;
+	}
+
+	a.card-title {
+		text-decoration: none;
+		transition: color $transition-duration $transition-timing-function;
+
+		&:hover,
+		&:focus {
+			color: $dark;
+		}
+
+	}
+
+	.card-category {
+		margin-top: 5px;
+		margin-bottom: 0;
+		font-size: 15px;
+	}
+
+	a.card-category {
+		text-decoration: none;
+	}
+
+	.card-img-overlay {
+		display: flex;
+		justify-content: center;
+		max-width: 100%;
+		padding: 40px 30px;
+		margin-right: auto;
+		margin-left: auto;
+		flex-direction: column;
+		z-index: 1;
+
+		@include media-breakpoint-up(lg) {
+			padding: 50px 40px;
+		}
+
+		&-lg {
+
+			@include media-breakpoint-up(lg) {
+				padding: 50px 60px;
+			}
+
+		}
+
+	}
+
+	.card-body {
+		display: block;
+		padding: 0;
+	}
+
+	// default
+	&.card-default {
+
+		.card-title {
+			margin-bottom: 0;
+		}
+
+		.card-subtitle {
+			display: block;
+		}
+
+		.card-body {
+			padding: 34px 0 0;
+		}
+
+		&:hover,
+		&:focus {
+			color: $dark;
+		}
+
+	}
+
+	// overlay
+	&.card-overlay {
+		overflow: hidden;
+
+		@include media-breakpoint-down(sm) {
+
+			.card-img {
+				min-height: 300px;
+			}
+
+		}
+
+		&:hover .background-color {
+			background-color: var(--background-color-hover, var(--background-color));
+		}
+
+	}
+
+	// horizontal
+	&.card-horizontal {
+		align-items: center;
+		flex-direction: row;
+		background-color: transparent;
+
+		@include media-breakpoint-down(lg) {
+			flex-wrap: wrap;
+		}
+
+		.card-title {
+			margin-bottom: 35px;
+		}
+
+		.card-img {
+			margin-bottom: 50px;
+
+			@include media-breakpoint-up(lg) {
+				max-width: 500px;
+				margin-right: 100px;
+				margin-bottom: 0;
+			}
+
+		}
+
+		.card-body {
+			padding-right: 60px;
+
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+		}
+
+		.btn {
+			margin-top: 40px;
+		}
+
+	}
+
+	// white text
+	&.text-white {
+
+		a.card-title {
+
+			&:hover,
+			&:focus {
+				color: inherit;
+			}
+
+		}
+
+		a.card-category {
+			color: $white;
+		}
+
+	}
+
+	// Hover Effects
+	// Frame
+	&.card-hover-frame {
+
+		.card-img {
+
+			img {
+				width: 100%;
+				transition: clip-path $transition-duration $transition-timing-function;
+				will-change: clip-path;
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			}
+
+			&:hover img,
+			&:focus img {
+				clip-path: polygon(10px 10px, calc(100% - 10px) 10px, calc(100% - 10px) calc(100% - 10px), 10px calc(100% - 10px));
+			}
+
+		}
+
+		&:hover .card-img img,
+		&:focus .card-img img {
+			clip-path: polygon(10px 10px, calc(100% - 10px) 10px, calc(100% - 10px) calc(100% - 10px), 10px calc(100% - 10px));
+		}
+
+	}
+
+	// Appearance
+	&.card-hover-appearance {
+		overflow: hidden;
+
+		.card-img {
+
+			img {
+				transition: transform $transition-duration $transition-timing-function;
+				transform: scale(1);
+				will-change: transform;
+			}
+
+		}
+
+		.card-img-overlay {
+			opacity: 0;
+			transition: opacity $transition-duration $transition-timing-function;
+			will-change: opacity;
+		}
+
+		.card-title,
+		.card-category {
+			opacity: 0;
+			transition: transform $transition-duration $transition-timing-function, opacity $transition-duration $transition-timing-function;
+			transition-delay: .05s;
+			will-change: transform, opacity;
+		}
+
+		.card-title {
+			transform: translateY(10px);
+		}
+
+		.card-category {
+			transform: translateY(18px);
+		}
+
+		&:hover,
+		&:focus {
+
+			.card-img-overlay {
+				opacity: 1;
+			}
+
+			.card-img {
+
+				img {
+					@extend %animate-image;
+				}
+
+			}
+
+			.card-title,
+			.card-category {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+		}
+
+	}
+
+	// Bar
+	&.card-hover-bar {
+		overflow: hidden;
+
+		.card-img img {
+			transition: transform $transition-duration $transition-timing-function;
+			transform: translateY(0);
+			will-change: transform;
+		}
+
+		.card-title,
+		.card-category {
+			opacity: 0;
+			transition: transform $transition-duration $transition-timing-function, opacity $transition-duration $transition-timing-function;
+			will-change: transform, opacity;
+		}
+
+		.card-title {
+			transition-delay: .1s;
+			transform: translateY(5px);
+		}
+
+		.card-category {
+			transition-delay: .15s;
+			transform: translateY(10px);
+		}
+
+		.card-img-overlay {
+			top: auto;
+			padding: 30px 50px;
+			background-color: inherit;
+			transition: transform $transition-duration $transition-timing-function;
+			transform: translateY(100%);
+			will-change: transform;
+		}
+
+		&.rounded-4 .card-img-overlay {
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 100%;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				background-image: radial-gradient(circle at 100% 0, transparent 0%, transparent 20px, $white 20px);
+			}
+
+			&::after {
+				right: 0;
+				left: auto;
+				transform: scaleX(-1);
+			}
+
+		}
+
+		&:hover,
+		&:focus {
+
+			.card-img-overlay {
+				transform: translateY(0);
+			}
+
+			.card-img img {
+				transform: translateY(-25px);
+			}
+
+			.card-title,
+			.card-category {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+
+	}
+
+}
+
+// Bootstrap 5 migration fixes
+a.card-portfolio { text-decoration: none; }

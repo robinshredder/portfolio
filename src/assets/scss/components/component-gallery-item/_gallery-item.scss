@@ -1,0 +1,18 @@
+.gallery-item {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		transition: transform $transition-duration $transition-timing-function;
+		will-change: transform;
+	}
+
+	&:hover {
+
+		img {
+			@extend %animate-image;
+		}
+
+	}
+
+}

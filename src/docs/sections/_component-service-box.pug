@@ -1,0 +1,36 @@
+.docs-card.tab-content.bg-white.rounded-4#component-service-box
+
+	h2.docs-card-title Service Box
+
+	p Additional classes: #[code .service-box-sm].
+
+	.docs-card-example
+
+		.row.align-items-center
+
+			.col-6
+
+				+service_box({
+					icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none"><path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z"/></svg>',
+					title: "Consulting",
+					text: "Stars life that waters firmament our created you.",
+					textClass: "font-size-15 mb-30",
+					link: "#",
+					customClass: "position-relative rounded-4 bg-white text-center no-transform"
+				})
+
+			.col-6
+
+				+service_box({
+					icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none"><path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z"/></svg>',
+					title: "Consulting",
+					style: "small",
+					text: "Stars life that waters firmament our created you.",
+					textClass: "font-size-15 m-0",
+					link: "#",
+					customClass: "position-relative rounded-4 bg-white text-center no-transform"
+				})
+
+	p HTML example:
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="service-box.html")

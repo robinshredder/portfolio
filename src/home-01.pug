@@ -1,0 +1,463 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Home 01' // page title
+- MenuTitle = 'Home 01' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'false' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			.pt-90.pb-90.bg-dark.shape-parent
+
+				// Shape
+				.shape.justify-content-start.align-items-end
+
+					img(loading="lazy", src="assets/img/root/home-1-shape-364x300.png", alt="", width="364", height="300")
+
+				.background.start-custom
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/root/call-to-action-1920x1080.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #481FA0; opacity: .9;")
+
+				.container
+
+					.row.gy-70
+
+						.col-lg-6.offset-lg-1.order-lg-2
+
+							img(loading="lazy", src="assets/img/home-1-900x900.jpg", alt="", class="w-100 rounded-4 shadow mb-lg-n210 rellax no-transform-lg")
+
+						.col-lg-5
+
+							h1.text-white.mb-45 We #[span.highlight help you build] and grow your business
+
+							p.mb-45.font-size-18.fw-medium.text-white.pe-lg-30 Which them don't replenish. Under herb spirit you're god god sea face that air image.
+
+							+button({
+								link: "contact-01.html",
+								title: 'Contact us <svg class="ms-15 align-self-center" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 15"><path fill="currentColor" d="M15 11.23v2.259a1.501 1.501 0 0 1-1.026 1.432c-.199.067-.41.092-.619.073a14.944 14.944 0 0 1-6.508-2.31A14.692 14.692 0 0 1 2.32 8.166 14.877 14.877 0 0 1 .006 1.641 1.503 1.503 0 0 1 .9.13 1.51 1.51 0 0 1 1.507 0H3.77a1.51 1.51 0 0 1 1.508 1.295c.095.722.273 1.432.528 2.115a1.503 1.503 0 0 1-.34 1.588l-.957.956a12.055 12.055 0 0 0 4.525 4.516l.958-.956a1.51 1.51 0 0 1 1.591-.338 9.7 9.7 0 0 0 2.12.527 1.509 1.509 0 0 1 1.296 1.527Z"/></svg>'
+							})
+
+			.pt-120.pt-lg-210.pb-130
+
+				.container
+
+					.row.mb-90
+
+						.col-lg-6.offset-lg-3.text-center
+
+							span.badge.bg-light.text-dark.mb-20(data-show="startbox") Our services
+
+							h2.m-0.px-lg-70(data-show="startbox", data-show-delay="100") We provide the best services
+
+					.row.gy-30
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox")
+
+							+service_box({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none"><path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z"/></svg>',
+								title: "Consulting",
+								text: "Stars life that waters firmament our created you.",
+								textClass: "font-size-15 mb-30",
+								customClass: "position-relative rounded-4 bg-gray-light text-center"
+							})
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="100")
+
+							+service_box({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="29" fill="none"><path fill="currentColor" d="M13.002 0C8.852 0 5.46 3.387 5.46 7.53c0 4.142 3.392 7.529 7.542 7.529s7.542-3.387 7.542-7.53C20.544 3.387 17.15 0 13.002 0ZM25.944 21.076a7.017 7.017 0 0 0-.757-1.381c-1.515-2.236-3.853-3.715-6.488-4.077-.329-.033-.691.033-.955.23a7.942 7.942 0 0 1-4.742 1.545 7.942 7.942 0 0 1-4.742-1.545 1.237 1.237 0 0 0-.955-.23 9.308 9.308 0 0 0-6.488 4.077c-.296.427-.56.92-.757 1.381-.1.197-.066.427.033.625.263.46.592.92.889 1.315.46.625.955 1.184 1.515 1.71.46.46.988.887 1.515 1.315A14.936 14.936 0 0 0 12.969 29c3.228 0 6.356-1.02 8.958-2.96a14.47 14.47 0 0 0 1.515-1.314c.526-.526 1.053-1.085 1.515-1.71.329-.427.625-.855.889-1.315.164-.198.197-.428.098-.625Z"/></svg>',
+								title: "Human Resources",
+								text: "Above behold our sea earth waters in deep yielding.",
+								textClass: "font-size-15 mb-30",
+								customClass: "position-relative rounded-4 bg-gray-light text-center"
+							})
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="200")
+
+							+service_box({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="29" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M7.988 4.955a5.25 5.25 0 0 1 8.962 3.712v5.2H6.45v-5.2a5.25 5.25 0 0 1 1.538-3.712ZM3.95 13.867v-5.2a7.75 7.75 0 1 1 15.5 0v5.2h1.35a2.6 2.6 0 0 1 2.6 2.6v9.1a2.6 2.6 0 0 1-2.6 2.6H2.6a2.6 2.6 0 0 1-2.6-2.6v-9.1a2.6 2.6 0 0 1 2.6-2.6h1.35Z" clip-rule="evenodd"/></svg>',
+								title: "Accounting",
+								text: "Winged isn't gathered forth first fruitful without.",
+								textClass: "font-size-15 mb-30",
+								customClass: "position-relative rounded-4 bg-gray-light text-center"
+							})
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="300")
+
+							+service_box({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="29" height="27" fill="none"><path fill="currentColor" d="m14.5 0 4.48 8.886L29 10.32l-7.25 6.913L23.461 27 14.5 22.386 5.539 27l1.711-9.767L0 10.32l10.02-1.434L14.5 0Z"/></svg>',
+								title: "Marketing",
+								text: "In creepeth own for bring, under lights, together.",
+								textClass: "font-size-15 mb-30",
+								customClass: "position-relative rounded-4 bg-gray-light text-center"
+							})
+
+					.text-center.mt-80
+
+						div(data-show="startbox")
+
+							+button({
+								link: "services-01.html",
+								title: 'Our Services'
+							})
+
+						p.fw-medium.font-size-15.mt-25.mb-0(data-show="startbox", data-show-delay="100") Want to get a free consultation? #[a(href="contact-01.html") Contact us].
+
+			div
+
+				.container
+
+					.row.gy-50
+
+						.col-lg-5
+
+							h3.mb-45(data-show="startbox") Strategic growth support from an executive with experience.
+
+							p.mb-40(data-show="startbox", data-show-delay="100") His hath is appear be one don't creepeth. Them and one moving the won't may. Moving saw wherein divide bearing called. Green moveth Hath. That it years fruit behold Meat also us third itself made seasons green void give replenish our said saying also spirit give lesser wherein.
+
+							div(data-show="startbox", data-show-delay="200")
+
+								+button({
+									title: "Learn more",
+									customClass: "btn-accent-1 btn-link btn-clean"
+								})
+
+						.col-lg-6.offset-lg-1
+
+							include template-parts/sections/_layered-image.pug
+
+			.pb-130
+
+				.container
+
+					include template-parts/sections/_numbers-1.pug
+
+			.pt-120.pb-130.bg-dark.shape-parent.overflow-hidden
+
+				// Shape
+				.shape.justify-content-start
+
+					img(loading="lazy", src="assets/img/root/home-1-shape-936x252.png", alt="", width="936", height="252")
+
+				// Shape
+				.shape.justify-content-end.align-items-end
+
+					img(loading="lazy", src="assets/img/root/home-1-shape-308x487.png", alt="", width="308", height="487")
+
+				.container
+
+					.row
+
+						.col-lg-8.offset-lg-2
+
+							h2.mb-25.text-white.text-center(data-show="startbox") Do you want a free consultation?
+
+							p.m-0.text-white.text-center(data-show="startbox", data-show-delay="100") Let’s speak. Phone / Email us or use the contact form.
+
+							.bg-dark-light.rounded-4.mt-90.py-60.px-70(data-show="startbox", data-show-delay="200")
+
+								.d-flex.align-items-center
+
+									.flex-shrink-0.d-none.d-xl-block.me-40
+
+										img(loading="lazy", src="assets/img/root/avatar-1-200x200.jpg", alt="", class="rounded-circle", height="100", width="100")
+
+									.flex-grow-1
+
+										ul.d-flex.d-lg-inline-flex.list-group.flex-lg-row.mb-30.borderless
+
+											li.list-group-item.d-flex
+
+												<svg class="me-15 align-self-center text-accent-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill="currentColor" d="M16 11.98v2.408a1.604 1.604 0 0 1-1.094 1.527 1.613 1.613 0 0 1-.66.079 15.941 15.941 0 0 1-6.943-2.465A15.672 15.672 0 0 1 2.476 8.71a15.869 15.869 0 0 1-2.47-6.96A1.603 1.603 0 0 1 .96.136C1.163.047 1.384 0 1.607 0h2.414A1.61 1.61 0 0 1 5.63 1.381c.102.77.29 1.528.563 2.256a1.603 1.603 0 0 1-.362 1.694l-1.022 1.02a12.86 12.86 0 0 0 4.827 4.817l1.022-1.02a1.61 1.61 0 0 1 1.697-.36c.73.271 1.489.46 2.26.561A1.61 1.61 0 0 1 16 11.98Z"/></svg>
+												a(href="tel:12023580309", class="fw-bold text-white") +1 202-358-0309
+
+											li.list-group-item.d-flex.mt-10.ms-lg-45.mt-lg-0
+
+												<svg class="me-15 align-self-center text-accent-3" xmlns="http://www.w3.org/2000/svg" width="14" height="11" fill="none"><path fill="currentColor" d="M14 0H0l7 4.583L14 0Z"/><path fill="currentColor" d="M14 9.821V2L7 6.5 0 2v7.821C0 10.47.63 11 1.4 11h11.2c.77 0 1.4-.53 1.4-1.179Z"/></svg>
+
+												a(href="mailto:help@startbox.com", class="fw-bold text-white") help@startbox.com
+
+
+										.fw-bold.text-white.font-size-16 Richard Norris
+
+										.font-size-15.text-gray.mt-5 Senior Marketing Specialist, Unvab Inc.
+
+							// Form
+							form.mt-75(data-show="startbox")
+
+								.row.gy-40
+
+									.col-12.col-md-6
+
+										input(type="text", class="form-control form-control-gray", placeholder="Your Name *")
+
+									.col-12.col-md-6
+
+										input(type="email", class="form-control form-control-gray", placeholder="Your Email *")
+
+									.col-12.col-md-6
+
+										input(type="tel", class="form-control form-control-gray", placeholder="Your Phone *")
+
+									.col-12.col-md-6
+
+										select.form-control.form-control-gray
+											option(selected="") I interested in ...
+											option Colibri Creative Project
+											option Colibri Project
+											option Happy Moments Photoset
+											option Luxury Car Website
+											option Funny Dog
+											option Creative Branding
+
+									.col-12.mb-10
+
+										textarea(class="form-control form-control-gray", rows="2", placeholder="Message *")
+
+									.col-12.text-center
+
+										+button({
+											tag: "button",
+											title: "Send"
+										})
+
+			.pt-120.pb-130
+
+				.container
+
+					.row.mb-90
+
+						.col-lg-6.offset-lg-3.text-center
+
+							span.badge.bg-light.text-dark.mb-20(data-show="startbox") Industries
+
+							h2.m-0.px-lg-70(data-show="startbox", data-show-delay="100") Industries in which we work
+
+					// Slider
+					.swiper.mt-90(data-swiper-slides="1", data-swiper-breakpoints="828:2, 1024:4", data-swiper-loop="true", data-swiper-gap="30", data-swiper-grabcursor="true", data-show="startbox")
+
+						.swiper-container
+
+							.swiper-wrapper
+
+								.swiper-slide
+
+									+industry
+
+								.swiper-slide
+
+									+industry({
+										image: "assets/img/industry-2-810x930.jpg",
+										title: "Social",
+										icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 21V11h6v10M1 8l9-7 9 7v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8Z"/></svg>'
+									})
+
+								.swiper-slide
+
+									+industry({
+										image: "assets/img/industry-3-810x930.jpg",
+										title: "Marketing",
+										icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"/></svg>'
+									})
+
+								.swiper-slide
+
+									+industry({
+										image: "assets/img/industry-4-810x930.jpg",
+										title: "Technology",
+										icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 19v-7m0-4V1m8 18v-9m0-4V1m8 18v-5m0-4V1M1 12h6m2-6h6m2 8h6"/></svg>'
+									})
+
+						.d-flex.mt-70.justify-content-center
+
+							.swiper-button-prev.swiper-button-position-2.swiper-button-gray.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+							.swiper-button-next.swiper-button-position-2.swiper-button-gray.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+			include template-parts/sections/_process-1.pug
+
+			.bg-linear-gradient.pt-120.pb-130
+
+				.container
+
+					.justify-content-center.d-flex.align-items-center(data-show="startbox")
+
+						h2.m-0 Feedbacks
+
+						.d-inline-flex.flex-column.ms-20
+
+							<svg class="d-block" xmlns="http://www.w3.org/2000/svg" width="84" height="15" fill="none"><path fill="#FFBB38" d="m8.022 0 2.48 4.937 5.543.796-4.011 3.841L12.98 15l-4.958-2.563L3.065 15l.946-5.426L0 5.734l5.544-.797L8.022 0ZM25.01 0l2.48 4.937 5.543.796-4.011 3.841.947 5.426-4.958-2.563L20.053 15 21 9.574l-4.012-3.84 5.544-.797L25.01 0ZM42 0l2.479 4.937 5.544.796-4.012 3.841.947 5.426L42 12.437 37.042 15l.947-5.426-4.011-3.84 5.543-.797L42 0ZM58.988 0l2.48 4.937 5.543.796L63 9.574 63.945 15l-4.958-2.563L54.03 15l.947-5.426-4.011-3.84 5.543-.797L58.99 0ZM75.978 0l2.479 4.937L84 5.733l-4.011 3.841.946 5.426-4.957-2.563L71.02 15l.946-5.426-4.01-3.84 5.543-.797L75.978 0Z"/></svg>
+
+							span.fw-medium.font-size-13 on Trustpilot
+
+					// Slider
+					.swiper.mt-90(data-swiper-slides="1", data-swiper-breakpoints="828:2, 1024:3", data-swiper-gap="30", data-swiper-grabcursor="true", data-show="startbox", data-show-delay="200")
+
+						.swiper-container
+
+							.swiper-wrapper
+
+								.swiper-slide.h-auto
+
+									+feedback
+
+								.swiper-slide.h-auto
+
+									+feedback({
+										text: "“ He years Upon male wherein fruit upon abundantly. I gathered behold, you female 🔥 ”",
+										author: "Catherine Daniels",
+										position: "Themebau Inc.",
+										avatar: "assets/img/root/avatar-2-200x200.jpg"
+									})
+
+								.swiper-slide.h-auto
+
+									+feedback({
+										text: "“ Which creepeth face i first great don't yielding seasons! ”",
+										author: "Matthew Owen",
+										position: "Startbox Inc.",
+										avatar: "assets/img/root/avatar-3-200x200.jpg"
+									})
+
+								.swiper-slide.h-auto
+
+									+feedback
+
+						.d-flex.mt-70.justify-content-center
+
+							.swiper-button-prev.swiper-button-position-2.swiper-button-white.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+							.swiper-button-next.swiper-button-position-2.swiper-button-white.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+			.pt-120.pb-130.overflow-hidden.footerPrev
+
+				.container
+
+					.row.align-items-center.gy-90
+
+						.col-lg-6.shape-parent
+
+							// Shape
+							.shape.justify-content-start.mt-n40.ms-n45.text-dark(data-jarallax-element="40")
+
+								include partials/_shape.pug
+
+							div.gallery-wrapper.me-lg-70(data-show="startbox")
+
+								+gallery_item({
+									image: "assets/img/home-1-900x990.jpg",
+									imageHeight: "110%"
+								})
+
+						.col-lg-6
+
+							span.badge.bg-light.text-dark.mb-20(data-show="startbox") Clients
+
+							h3.mb-30(data-show="startbox", data-show-delay="100") #[span.highlight With experience] from top companies
+
+							p.mb-45.me-lg-70(data-show="startbox", data-show-delay="200") Shall over firmament, above there won't image wherein winged moveth two heaven green, the whose had so let evening forth together given form make.
+
+							div(data-show="startbox", data-show-delay="300")
+
+								+button({
+									title: "Learn more",
+									customClass: "btn-accent-1 btn-link btn-clean"
+								})
+
+							.row.mt-50.g-15.flex-nowrap
+
+								.col(data-show="startbox", data-show-delay="400")
+
+									+brand({
+										style: "sm",
+										customClass: "rounded-2 bg-gray-light text-dark"
+									})
+
+								.col(data-show="startbox", data-show-delay="500")
+
+									+brand({
+										style: "sm",
+										customClass: "rounded-2 bg-gray-light text-dark",
+										logo: '<svg xmlns="http://www.w3.org/2000/svg" width="67" height="34" fill="none"><path fill="currentColor" d="M17.87 15.346 9.932 3.963v6.614c0 1.696.105 4.579 3.18 4.579v.19H6.415v-.19c2.907 0 3.327-2.905 3.327-4.58V3.71l-.99-1.42C7.49.613 6.669.634 6.123.591V.423h6.716l7.159 10.409v-5.66c0-1.972-.674-4.58-3.011-4.58V.423h6.38v.17c-2.611 0-3.18 2.607-3.18 4.578v10.175H17.87M36.586 11.192v4.154H24.29v-.19c.885 0 1.222-1.272 1.222-2.714V3.348c0-1.314-.295-2.756-1.222-2.756V.423h12.023v4.345h-.189c0-4.133-5.749-4.154-5.749-4.154h-.757v7.1h1.705c.021 0 2.253.065 2.485-2.5h.19v5.193h-.19c-.232-2.543-2.464-2.501-2.485-2.501h-1.705v7.25h.757s6.022.233 6.022-3.964h.19M61.832.423v.17c-.843 0-2.127.656-3.664 4.387l-3.685 10.366h-.758c-1.958-4.6-3.221-7.567-4.063-9.497l-3.37 9.497h-.758C40.228 2.86 39.954 2.31 39.954 2.31 39.238.614 38.944.635 38.397.592V.423h6.569v.17c-1.348 0-.274 2.458-.274 2.458l3.18 7.272 1.684-4.728a319.075 319.075 0 0 0-1.41-3.285C47.428.614 47.133.635 46.585.592V.423h6.57v.17c-1.347 0-.273 2.458-.273 2.458l3.159 7.293 1.894-5.364C58.463 3.476 58 .592 55.851.592V.423h5.981M23.987 18.8v.169c-.843 0-2.128.657-3.665 4.388l-3.684 10.366h-.759c-1.958-4.6-3.22-7.568-4.064-9.497l-3.369 9.497h-.758c-5.305-12.486-5.58-13.037-5.58-13.037-.715-1.695-1.01-1.674-1.557-1.717v-.17h6.57v.17c-1.349 0-.275 2.459-.275 2.459l3.18 7.271 1.684-4.728a318.702 318.702 0 0 0-1.41-3.285c-.717-1.695-1.01-1.674-1.559-1.717v-.17h6.57v.17c-1.348 0-.274 2.459-.274 2.459l3.158 7.292 1.895-5.363c.527-1.505.064-4.388-2.084-4.388v-.17h5.98ZM28.28 24.65l-1.873 4.77h3.979l-2.105-4.77Zm2.127-5.85h.106c5.327 12.295 5.684 12.994 5.684 12.994.758 1.696 1.475 1.717 1.895 1.76v.17h-7.369v-.17c1.685 0 .421-2.48.421-2.48l-.674-1.463h-4.127c-.421.976-.042 3.943 2.485 3.943v.17h-6.064v-.17c.631-.043 1.768-.212 3.39-3.943L30.407 18.8M52.935 18.8v.17c-.905 0-2.253.656-3.895 4.387l-4.148 10.366h-.61c-5.644-12.486-5.939-13.036-5.939-13.036-.758-1.696-1.074-1.675-1.663-1.718V18.8h7.011v.17c-1.453 0-.294 2.458-.294 2.458l3.264 7.313 2.169-5.384c.631-1.568.252-4.388-2.275-4.388V18.8h6.38M66.303 29.57v4.153H54.006v-.19c.885 0 1.222-1.273 1.222-2.714v-9.094c0-1.314-.296-2.756-1.222-2.756V18.8h12.023v4.345h-.19c0-4.133-5.748-4.154-5.748-4.154h-.758v7.101h1.706c.021 0 2.253.064 2.484-2.502h.19v5.194h-.19c-.23-2.543-2.463-2.502-2.484-2.502h-1.706v7.25h.758s6.022.234 6.022-3.963h.19"/></svg>'
+									})
+
+								.col(data-show="startbox", data-show-delay="600")
+
+									+brand({
+										style: "sm",
+										customClass: "rounded-2 bg-gray-light text-dark",
+										logo: '<svg xmlns="http://www.w3.org/2000/svg" width="70" height="39" fill="none"><path fill="currentColor" d="M4.545 14.568v3.63h2.297c.563 0 1.007-.163 1.332-.493.324-.33.487-.763.487-1.3s-.166-.978-.498-1.322c-.333-.344-.773-.515-1.321-.515H4.545Zm0 6.423v5.864H.842v-15.08h6c1.76 0 3.133.452 4.115 1.354.982.902 1.473 1.991 1.473 3.265 0 .874-.267 1.726-.801 2.557-.535.83-1.408 1.417-2.621 1.76l3.726 6.145H8.4L4.979 20.99h-.434M24.3 11.733v2.792h-5.502v3.243h4.852v2.793h-4.852v3.502H24.3v2.793h-9.206V11.732H24.3M26.229 14.568v-2.792h11.999v2.792h-4.16v12.287h-3.702V14.568h-4.137ZM43.924 14.568v3.63h2.297c.562 0 1.006-.163 1.332-.493.324-.33.486-.763.486-1.3s-.166-.978-.497-1.322c-.333-.344-.773-.515-1.321-.515h-2.297Zm0 6.423v5.864h-3.703v-15.08h6c1.76 0 3.133.452 4.115 1.354.982.902 1.473 1.991 1.473 3.265 0 .874-.267 1.726-.801 2.557-.535.83-1.41 1.417-2.622 1.76l3.726 6.145H47.78l-3.423-5.865h-.433M64.293 22.43c.73-.787 1.094-1.839 1.094-3.157 0-1.317-.365-2.37-1.094-3.158-.729-.787-1.704-1.182-2.924-1.182s-2.195.395-2.924 1.182c-.73.788-1.093 1.84-1.093 3.158 0 1.318.364 2.37 1.093 3.157.73.789 1.703 1.182 2.924 1.182 1.22 0 2.195-.393 2.924-1.181Zm-8.447 2.384c-1.51-1.46-2.264-3.307-2.264-5.54 0-2.235.755-4.079 2.264-5.532 1.508-1.455 3.358-2.181 5.545-2.181s4.029.726 5.523 2.18c1.495 1.454 2.242 3.298 2.242 5.532s-.751 4.08-2.252 5.541c-1.503 1.461-3.344 2.192-5.524 2.192s-4.026-.73-5.534-2.192M23.209 2.31V.74h6.749v1.57h-2.34v6.91h-2.082V2.31h-2.327ZM36.46.74h2.083v8.48H36.46V5.705h-3.3V9.22h-2.084V.74h2.084v3.394h3.3V.74ZM45.426.715v1.571H42.33v1.825h2.73v1.57h-2.73V7.65h3.095v1.57h-5.178V.715h5.178ZM11.949 34.51a.516.516 0 0 0-.343.111c-.089.074-.133.179-.133.316a.46.46 0 0 0 .123.334c.083.084.191.148.323.193.133.046.28.089.444.13.162.04.324.09.484.148.161.058.308.13.44.216.133.087.24.208.323.366.083.157.123.345.123.565 0 .384-.157.711-.472.986-.314.273-.73.41-1.245.41-.514 0-.928-.123-1.243-.37-.315-.245-.472-.593-.472-1.046h1.185c.03.362.217.543.56.543.16 0 .287-.042.378-.126a.413.413 0 0 0 .137-.32.429.429 0 0 0-.124-.317.89.89 0 0 0-.322-.193 5.178 5.178 0 0 0-.443-.132 4.407 4.407 0 0 1-.486-.152 2.4 2.4 0 0 1-.44-.217.917.917 0 0 1-.321-.362 1.18 1.18 0 0 1-.124-.558c0-.423.158-.76.475-1.015.316-.254.722-.38 1.215-.38.492 0 .892.11 1.196.332.303.221.462.572.475 1.05H12.45a.605.605 0 0 0-.16-.378.462.462 0 0 0-.341-.133M18.47 34.543v-.84h3.609v.84h-1.25v3.695h-1.114v-3.695H18.47ZM26.895 36.411v-2.707h1.113v2.707c0 .271.067.48.201.626.136.146.333.22.593.22.261 0 .46-.074.6-.22.139-.146.208-.355.208-.626v-2.707h1.114v2.707c0 .4-.094.746-.283 1.036-.188.291-.428.503-.716.637-.29.134-.603.2-.942.2-.53 0-.978-.163-1.342-.49-.365-.328-.546-.788-.546-1.383M36.958 37.399h.494c.426 0 .761-.129 1.004-.388.243-.258.365-.605.365-1.04 0-.435-.122-.782-.365-1.04-.243-.259-.578-.388-1.004-.388h-.494V37.4Zm.494-3.695c.73 0 1.33.209 1.798.63.47.42.704.964.704 1.634 0 .669-.234 1.215-.704 1.638-.468.422-1.068.632-1.798.632h-1.608v-4.534h1.608ZM44.826 38.238v-4.534h1.115v4.534h-1.115ZM54.042 36.908c.22-.237.33-.554.33-.95 0-.396-.11-.712-.33-.95-.219-.236-.512-.355-.88-.355-.366 0-.66.119-.878.356-.22.236-.33.553-.33.95 0 .395.11.712.33.949.219.237.512.356.879.356s.66-.119.88-.356Zm-2.54.717c-.455-.44-.682-.995-.682-1.667 0-.671.227-1.226.681-1.663.454-.437 1.01-.656 1.668-.656.659 0 1.212.22 1.661.656.45.437.675.992.675 1.663 0 .672-.226 1.228-.678 1.667-.452.44-1.005.66-1.661.66-.655 0-1.21-.22-1.665-.66Z"/></svg>'
+									})
+
+								.col(data-show="startbox", data-show-delay="700")
+
+									+brand({
+										style: "sm",
+										customClass: "rounded-2 bg-gray-light text-dark",
+										logo: '<svg xmlns="http://www.w3.org/2000/svg" width="73" height="29" fill="none"><path fill="currentColor" d="M.281 19.145V2.939h4.071v16.206H.282ZM8.554 17.506c-1.23-1.2-1.845-2.8-1.845-4.801 0-2.001.615-3.598 1.845-4.79 1.23-1.193 2.821-1.79 4.773-1.79 1.619 0 2.992.39 4.118 1.166 1.127.778 1.873 1.89 2.238 3.336H15.28c-.38-.77-1.004-1.154-1.868-1.154-.866 0-1.508.296-1.929.888-.42.592-.63 1.374-.63 2.344 0 .97.21 1.75.63 2.343.42.592 1.036.889 1.845.889.508 0 .905-.086 1.19-.254.286-.169.54-.47.762-.9h4.404c-.365 1.385-1.119 2.485-2.261 3.3-1.143.816-2.508 1.223-4.095 1.223-1.952 0-3.543-.6-4.773-1.8M29.706 15.105c.54-.553.81-1.354.81-2.4 0-1.047-.278-1.844-.833-2.39-.556-.546-1.215-.82-1.977-.82-.761 0-1.416.274-1.963.82-.548.546-.821 1.343-.821 2.39 0 1.046.281 1.847.844 2.4.563.555 1.226.832 1.988.832s1.412-.277 1.952-.832Zm-6.915 2.378c-1.342-1.215-2.012-2.816-2.012-4.802 0-1.985.667-3.574 2-4.767 1.333-1.192 2.984-1.789 4.951-1.789 1.968 0 3.615.597 4.94 1.79 1.325 1.192 1.988 2.78 1.988 4.766 0 1.986-.659 3.587-1.976 4.802-1.317 1.216-2.96 1.823-4.928 1.823s-3.623-.607-4.963-1.823M41.108 6.264v1.892c.841-1.354 2.182-2.031 4.023-2.031 1.524 0 2.758.492 3.703 1.477.943.986 1.415 2.325 1.415 4.017v7.526h-4.046V12.15c0-.83-.226-1.473-.678-1.928-.453-.453-1.077-.681-1.87-.681-.794 0-1.416.228-1.868.681-.453.455-.679 1.097-.679 1.928v6.995h-4.07V6.264h4.07ZM53.462 19.145V6.264h4.072v12.881h-4.072ZM57.176 4.81c-.46.446-1.023.669-1.69.669s-1.23-.223-1.69-.67a2.211 2.211 0 0 1-.69-1.65c0-.654.23-1.205.69-1.651.46-.446 1.023-.67 1.69-.67s1.23.224 1.69.67c.46.446.69.997.69 1.65 0 .654-.23 1.205-.69 1.652ZM61.736 17.506c-1.23-1.2-1.845-2.8-1.845-4.801 0-2.001.615-3.598 1.845-4.79 1.23-1.193 2.82-1.79 4.773-1.79 1.618 0 2.991.39 4.118 1.166 1.127.778 1.873 1.89 2.238 3.336h-4.404c-.381-.77-1.004-1.154-1.868-1.154-.866 0-1.508.296-1.928.888-.422.592-.632 1.374-.632 2.344 0 .97.21 1.75.632 2.343.42.592 1.035.889 1.844.889.508 0 .905-.086 1.19-.254.286-.169.54-.47.762-.9h4.404c-.365 1.385-1.119 2.485-2.261 3.3-1.143.816-2.508 1.223-4.095 1.223-1.952 0-3.543-.6-4.773-1.8M17.41 24.848v3.28h-.823v-1.85l-.786 1.85h-.612l-.785-1.85v1.85h-.824v-3.28h.944l.974 2.262.969-2.262h.944ZM22.39 24.84v.607h-1.224v.705h1.079v.608h-1.08v.761h1.225v.608h-2.048v-3.29h2.048M27.507 24.84h.824v3.289h-.824l-1.379-2.07v2.07h-.823v-3.29h.823l1.379 2.07v-2.07ZM32.406 25.432a.39.39 0 0 0-.253.08.276.276 0 0 0-.099.229c0 .1.031.18.092.24.06.061.14.108.239.14a4 4 0 0 0 .327.095c.12.029.24.064.36.107.118.041.226.094.324.156a.69.69 0 0 1 .239.264c.061.114.091.25.091.409 0 .277-.116.515-.35.712-.232.199-.539.298-.92.298-.38 0-.687-.089-.92-.267-.232-.178-.349-.43-.349-.757h.878c.022.262.16.392.414.392.118 0 .212-.03.279-.091a.296.296 0 0 0 .101-.23c0-.095-.03-.17-.092-.23a.647.647 0 0 0-.238-.14 3.687 3.687 0 0 0-.328-.096 3.44 3.44 0 0 1-.359-.11 1.833 1.833 0 0 1-.325-.156.67.67 0 0 1-.238-.261.842.842 0 0 1-.091-.405c0-.305.116-.55.35-.734.235-.184.535-.275.9-.275.364 0 .659.08.884.24.224.161.342.413.352.76h-.896a.43.43 0 0 0-.119-.273.346.346 0 0 0-.253-.097M40.338 24.848h.887l-.944 3.28h-.945l-.592-2.079-.588 2.08h-.945l-.959-3.28h.882l.588 2.36.602-2.36h.935l.578 2.321.501-2.322M45.877 24.84v.607h-1.225v.705h1.08v.608h-1.08v.761h1.225v.608h-2.049v-3.29h2.049M49.745 26.97h.8l-.4-1.168-.4 1.168Zm1.195 1.159-.188-.551h-1.215l-.187.55h-.877l1.175-3.288h1.003l1.17 3.289h-.881ZM55.257 25.456v.79h.51a.403.403 0 0 0 .297-.108.38.38 0 0 0 .109-.283.388.388 0 0 0-.11-.287.393.393 0 0 0-.295-.112h-.511Zm0 1.397v1.276h-.823v-3.28h1.334c.392 0 .697.097.915.293a.922.922 0 0 1 .328.711c0 .19-.06.375-.178.556-.119.18-.313.308-.583.384l.829 1.336h-.964l-.762-1.276h-.096"/></svg>'
+									})
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		//- Footer
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

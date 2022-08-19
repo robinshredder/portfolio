@@ -1,0 +1,33 @@
+.service-case {
+
+	.service-case-image {
+		overflow: hidden;
+
+		img {
+			transition: transform $transition-duration $transition-timing-function;
+			will-change: transform;
+		}
+
+	}
+
+	&:hover {
+
+		.service-case-image img {
+			@extend %animate-image;
+		}
+
+		.service-case-arrow svg {
+			@extend %animate-icon-right;
+		}
+
+	}
+
+}
+
+.service-case-body {
+	padding: 40px 50px;
+}
+
+.service-case-arrow:hover {
+	color: $color-accent-1;
+}

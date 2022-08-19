@@ -1,0 +1,184 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Projects 03' // page title
+- MenuTitle = 'Projects 03' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Other Options
+- CallToActionShape = 'show' // show / hide
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			// Page title
+			.position-relative.py-210
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/portfolio/projects-hero-1920x1080.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .25;")
+
+				.container
+
+					h1.text-white.mb-0.text-center Our Projects
+
+			// Portfolio section
+			.pb-130.pt-80.footerPrev
+
+				.container
+
+					// Isotope
+					.isotope
+
+						ul.nav.justify-content-center.isotope-filters.mb-60
+
+							li.nav-item.active
+
+								a(href="#", class="nav-link", data-filter="all") All
+
+							li.nav-item
+
+								a(href="#", class="nav-link", data-filter="marketing") Marketing
+
+							li.nav-item
+
+								a(href="#", class="nav-link", data-filter="development") Development
+
+							li.nav-item
+
+								a(href="#", class="nav-link", data-filter="branding") Branding Strategy
+
+							li.nav-item
+
+								a(href="#", class="nav-link", data-filter="architecture") Architecture
+
+						.row.isotope-grid.gy-30
+
+							+card_portfolio({
+								title: "Book Design",
+								style: "style-3",
+								category: "Development",
+								image: "assets/img/portfolio/project-2-900x1000.jpg",
+								imageHeight: "105%",
+								overlayColor: "rgba(23, 22, 26, .6)",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6"
+							})
+
+							+card_portfolio({
+								title: "Portrait",
+								style: "style-3",
+								category: "Development",
+								image: "assets/img/portfolio/project-6-900x1000.jpg",
+								imageHeight: "66%",
+								overlayColor: "rgba(23, 22, 26, .6)",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6"
+							})
+
+							+card_portfolio({
+								title: "Creative Building",
+								style: "style-3",
+								category: "Marketing",
+								image: "assets/img/portfolio/project-1-900x1000.jpg",
+								imageHeight: "105%",
+								overlayColor: "rgba(23, 22, 26, .6)",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6"
+							})
+
+							+card_portfolio({
+								title: "Watch Design",
+								style: "style-3",
+								category: "Architecture",
+								image: "assets/img/portfolio/project-8-900x1000.jpg",
+								imageHeight: "66%",
+								overlayColor: "rgba(23, 22, 26, .6)",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6"
+							})
+
+							+card_portfolio({
+								title: "Last Chance",
+								style: "style-3",
+								category: "Architecture",
+								image: "assets/img/portfolio/project-4-900x1000.jpg",
+								imageHeight: "105%",
+								overlayColor: "rgba(23, 22, 26, .6)",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6"
+							})
+
+							+card_portfolio({
+								title: "Yoga Center",
+								style: "style-3",
+								category: "Branding",
+								image: "assets/img/portfolio/project-3-900x1000.jpg",
+								imageHeight: "66%",
+								overlayColor: "rgba(23, 22, 26, .6)",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6"
+							})
+
+						.text-center.mt-80
+
+							+button({
+								title: "Load more",
+								customClass: "btn-light"
+							})
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

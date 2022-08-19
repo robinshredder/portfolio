@@ -1,0 +1,30 @@
+.process-step {
+	display: flex;
+	align-items: flex-start;
+}
+
+.process-number {
+	display: flex;
+	flex-shrink: 0;
+}
+
+.process-body .process-title {
+	margin-bottom: 15px;
+}
+
+.process-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-decoration: none;
+
+	svg {
+		transition: transform $transition-duration $transition-timing-function;
+		will-change: transform;
+	}
+
+	&:hover svg {
+		transform: translateX(10px);
+	}
+
+}

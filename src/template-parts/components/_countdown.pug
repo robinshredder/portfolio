@@ -1,0 +1,53 @@
+mixin countdown(object)
+
+	//- Default
+	- object = object || {}
+	- object.date = object.date || "2022/05/22" // 2022/01/01
+	- object.digitsClass = object.digitsClass || "h1 large-heading text-white m-0"
+	- object.labelClass = object.labelClass || "display-6 text-white"
+	- object.sepClass = object.sepClass || "h3 text-white mt-15"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || ""
+
+	//- Element Class
+	- elClass = "countdown"
+	- elClass += object.customClass
+
+	// Countdown
+	div(class=elClass, data-due-date=object.date, style=object.css)
+
+		.countdown-item
+
+			span.digits(class=object.digitsClass, data-days) 00
+
+			span.label(class=object.labelClass) Days
+
+		.countdown-item.d-none.d-md-block
+
+			.sep(class=object.sepClass) :
+
+		.countdown-item
+
+			span.digits(class=object.digitsClass, data-hours) 00
+
+			span.label(class=object.labelClass) Hours
+
+		.countdown-item.d-none.d-md-block
+
+			.sep(class=object.sepClass) :
+
+		.countdown-item
+
+			span.digits(class=object.digitsClass, data-minutes) 00
+
+			span.label(class=object.labelClass) Minutes
+
+		.countdown-item.d-none.d-md-block
+
+			.sep(class=object.sepClass) :
+
+		.countdown-item
+
+			span.digits(class=object.digitsClass, data-seconds) 00
+
+			span.label(class=object.labelClass) Seconds

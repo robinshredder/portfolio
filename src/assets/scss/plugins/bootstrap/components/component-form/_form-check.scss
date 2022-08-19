@@ -1,0 +1,48 @@
+.form-check {
+	padding-left: 30px;
+}
+
+.form-check-input[type=checkbox] {
+	border-radius: 3px;
+}
+
+.form-check {
+
+	.form-check-input {
+		width: 17px;
+		height: 17px;
+		margin-left: -30px;
+		border-color: $input-border-color;
+
+		&:checked {
+			background-color: $dark;
+			border-color: $dark;
+		}
+
+	}
+
+	.form-check-label {
+		cursor: pointer;
+	}
+
+}
+
+.form-check-white {
+	color: $white;
+
+	.form-check-input {
+		border-color: $white;
+
+		&[type="checkbox"]:checked {
+			background-color: $white;
+			background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>"));
+			border-color: $white;
+		}
+
+	}
+
+}
+
+.form-check .form-check-label {
+	font-size: 13px;
+}

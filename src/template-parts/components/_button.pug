@@ -1,0 +1,23 @@
+mixin button(object)
+
+	//- Default
+	- object = object || {}
+	- object.tag = object.tag || "a"
+	- object.title = object.title || "Button"
+	- object.link = object.link || "#"
+	- object.target = object.target || "_self"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "btn-accent-1"
+
+	//- Element Class
+	- elClass = "btn "
+	- elClass += object.customClass
+
+	// Button
+	if object.tag == "button"
+
+		button(class=elClass, style=object.css) #{object.title}
+
+	else
+
+		a(class=elClass, href=object.link, target=object.target, style=object.css) !{object.title}

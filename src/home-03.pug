@@ -1,0 +1,594 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Home 03' // page title
+- MenuTitle = 'Home 03' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button-2' // button / button-2 / button-3 / socials
+- NavbarDark = 'true' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'false' // true / false
+- NavbarOpaque = 'true' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Other Options
+- CallToActionShape = 'show' // show / hide
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			//- Header
+			include template-parts/header/_header.pug
+
+			.swiper.bg-dark(data-swiper-slides="1", data-swiper-speed="1000", data-swiper-grabcursor="true", data-swiper-parallax="true", data-swiper-pagination="true")
+
+				.swiper-pagination.text-white.position-absolute.mb-30.start-0.w-100.d-none.d-lg-block
+
+				.swiper-container
+
+					.swiper-wrapper
+
+						.swiper-slide.h-auto
+
+							.py-200.position-relative.overflow-hidden.h-100(data-name="Construction")
+
+								.background
+
+									.background-image
+
+										img(loading="lazy", src="assets/img/home-3-slide-1-1920x1080.jpg", data-swiper-parallax-x="20%", alt="")
+
+									.background-color(style="--background-color: #000; opacity: .25;")
+									.background-color(style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);")
+
+								.container
+
+									.row
+
+										.col-lg-7.offset-lg-1
+
+											h1.text-white.mb-40 We provide construction management
+
+											+button({
+												link: "contact-01.html",
+												customClass: "btn-accent-3",
+												title: 'Contact us <svg class="ms-15 align-self-center" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 15"><path fill="currentColor" d="M15 11.23v2.259a1.501 1.501 0 0 1-1.026 1.432c-.199.067-.41.092-.619.073a14.944 14.944 0 0 1-6.508-2.31A14.692 14.692 0 0 1 2.32 8.166 14.877 14.877 0 0 1 .006 1.641 1.503 1.503 0 0 1 .9.13 1.51 1.51 0 0 1 1.507 0H3.77a1.51 1.51 0 0 1 1.508 1.295c.095.722.273 1.432.528 2.115a1.503 1.503 0 0 1-.34 1.588l-.957.956a12.055 12.055 0 0 0 4.525 4.516l.958-.956a1.51 1.51 0 0 1 1.591-.338 9.7 9.7 0 0 0 2.12.527 1.509 1.509 0 0 1 1.296 1.527Z"/></svg>'
+											})
+
+						.swiper-slide.h-auto
+
+							.py-200.position-relative.overflow-hidden.h-100(data-name="Digital Transformation")
+
+								.background
+
+									.background-image
+
+										img(loading="lazy", src="assets/img/home-3-slide-2-1920x1080.jpg", data-swiper-parallax-x="20%", alt="")
+
+									.background-color(style="--background-color: #000; opacity: .25;")
+									.background-color(style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);")
+
+								.container
+
+									.row
+
+										.col-lg-7.offset-lg-1
+
+											h1.text-white.mb-40 We create digital transformation
+
+											+button({
+												link: "contact-01.html",
+												customClass: "btn-accent-3",
+												title: 'Contact us <svg class="ms-15 align-self-center" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 15"><path fill="currentColor" d="M15 11.23v2.259a1.501 1.501 0 0 1-1.026 1.432c-.199.067-.41.092-.619.073a14.944 14.944 0 0 1-6.508-2.31A14.692 14.692 0 0 1 2.32 8.166 14.877 14.877 0 0 1 .006 1.641 1.503 1.503 0 0 1 .9.13 1.51 1.51 0 0 1 1.507 0H3.77a1.51 1.51 0 0 1 1.508 1.295c.095.722.273 1.432.528 2.115a1.503 1.503 0 0 1-.34 1.588l-.957.956a12.055 12.055 0 0 0 4.525 4.516l.958-.956a1.51 1.51 0 0 1 1.591-.338 9.7 9.7 0 0 0 2.12.527 1.509 1.509 0 0 1 1.296 1.527Z"/></svg>'
+											})
+
+						.swiper-slide.h-auto
+
+							.py-200.position-relative.overflow-hidden.h-100(data-name="Architecture Services")
+
+								.background
+
+									.background-image
+
+										img(loading="lazy", src="assets/img/home-3-slide-3-1920x1080.jpg", data-swiper-parallax-x="20%", alt="")
+
+									.background-color(style="--background-color: #000; opacity: .25;")
+									.background-color(style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);")
+
+								.container
+
+									.row
+
+										.col-lg-7.offset-lg-1
+
+											h1.text-white.mb-40 Perfect architecture services
+
+											+button({
+												link: "contact-01.html",
+												customClass: "btn-accent-3",
+												title: 'Contact us <svg class="ms-15 align-self-center" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 15"><path fill="currentColor" d="M15 11.23v2.259a1.501 1.501 0 0 1-1.026 1.432c-.199.067-.41.092-.619.073a14.944 14.944 0 0 1-6.508-2.31A14.692 14.692 0 0 1 2.32 8.166 14.877 14.877 0 0 1 .006 1.641 1.503 1.503 0 0 1 .9.13 1.51 1.51 0 0 1 1.507 0H3.77a1.51 1.51 0 0 1 1.508 1.295c.095.722.273 1.432.528 2.115a1.503 1.503 0 0 1-.34 1.588l-.957.956a12.055 12.055 0 0 0 4.525 4.516l.958-.956a1.51 1.51 0 0 1 1.591-.338 9.7 9.7 0 0 0 2.12.527 1.509 1.509 0 0 1 1.296 1.527Z"/></svg>'
+											})
+
+						.swiper-slide.h-auto
+
+							.py-200.position-relative.overflow-hidden.h-100(data-name="Buildings Strategy")
+
+								.background
+
+									.background-image
+
+										img(loading="lazy", src="assets/img/home-3-slide-4-1920x1080.jpg", data-swiper-parallax-x="20%", alt="")
+
+									.background-color(style="--background-color: #000; opacity: .25;")
+									.background-color(style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);")
+
+								.container
+
+									.row
+
+										.col-lg-7.offset-lg-1
+
+											h1.text-white.mb-40 We create building strategy
+
+											+button({
+												link: "contact-01.html",
+												customClass: "btn-accent-3",
+												title: 'Contact us <svg class="ms-15 align-self-center" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 15"><path fill="currentColor" d="M15 11.23v2.259a1.501 1.501 0 0 1-1.026 1.432c-.199.067-.41.092-.619.073a14.944 14.944 0 0 1-6.508-2.31A14.692 14.692 0 0 1 2.32 8.166 14.877 14.877 0 0 1 .006 1.641 1.503 1.503 0 0 1 .9.13 1.51 1.51 0 0 1 1.507 0H3.77a1.51 1.51 0 0 1 1.508 1.295c.095.722.273 1.432.528 2.115a1.503 1.503 0 0 1-.34 1.588l-.957.956a12.055 12.055 0 0 0 4.525 4.516l.958-.956a1.51 1.51 0 0 1 1.591-.338 9.7 9.7 0 0 0 2.12.527 1.509 1.509 0 0 1 1.296 1.527Z"/></svg>'
+											})
+
+				.swiper-button-prev.swiper-button-position-3.swiper-button-opacity.shadow
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+				.swiper-button-next.swiper-button-position-3.swiper-button-opacity.shadow
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+
+			.pt-120.pb-100.shape-parent.overflow-hidden
+
+				// Shape
+				.shape.justify-content-end
+
+					img(loading="lazy", src="assets/img/root/home-3-shape-1-536x706.png", alt="", width="536", height="706")
+
+				.container
+
+					.row.align-items-center.gy-90
+
+						.col-lg-6
+
+							.pe-lg-70
+
+								span.badge.bg-light.text-dark.mb-20(data-show="startbox") What we do
+
+								h2.mb-45(data-show="startbox", data-show-delay="100") #[span.highlight You share your idea]. #[br]We get it done.
+
+								div.h4.mb-30(data-show="startbox", data-show-delay="200") Created bearing beast a after moving together fly winged to which be, divide all morning.
+
+								p.mb-50(data-show="startbox", data-show-delay="300") His hath is appear be one don't creepeth. Them and one moving the won't may. Moving saw wherein divide bearing called. Green moveth Hath. That it years fruit behold Meat also us third itself made seasons green void give replenish our said saying also spirit give lesser wherein.
+
+								div(data-show="startbox", data-show-delay="400")
+
+									+button({
+										title: "Learn more",
+										customClass: "btn-accent-1 btn-link btn-clean"
+									})
+
+						.col-lg-6.pb-75
+
+							.ms-70.shape-parent
+
+								// Shape
+								.shape.justify-content-start.mt-n40.ms-n40.text-dark(data-jarallax-element="40")
+
+									include partials/_shape.pug
+
+								div(data-img-height, style="--img-height: 80%;", data-show="startbox")
+
+									img(loading="lazy", src="assets/img/home-3-image-900x720.jpg", alt="", class="rounded-4")
+
+							.rounded-4.overflow-hidden.shape-parent.text-center.d-inline-flex.position-absolute.mt-n75
+
+								.background
+
+									.background-color(style="--background-color: #481FA0;")
+
+								// Shape
+								.shape.shape-visible.justify-content-start
+
+									<svg class="no-transform" xmlns="http://www.w3.org/2000/svg" width="51" height="89" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="7" d="M-4.638 41.934-10.428 85 13.5 70.818 37.429 85l-5.791-43.113M47 14.091c0 18.276-14.998 33.09-33.5 33.09-18.502 0-33.5-14.814-33.5-33.09C-20-4.185-5.002-19 13.5-19 32.002-19 47-4.185 47 14.09Z" opacity=".2"/></svg>
+
+								.px-60.py-35
+
+									div.h1.m-0.text-white 328
+									div.h6.m-0.text-white Successful projects
+
+			.container
+
+				hr.m-0
+
+			.pt-55.pb-130
+
+				.container
+
+					.row.gy-45
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox")
+
+							+category
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="100")
+
+							+category({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M2 27.5 19 36l17-8.5M2 19l17 8.5L36 19M19 2 2 10.5 19 19l17-8.5L19 2Z"/></svg>',
+								title: "Construction",
+								text: "After creature"
+							})
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="200")
+
+							+category({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="38" height="36" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M19 34h17M27.5 3.161a4.044 4.044 0 0 1 5.667 0c.372.368.667.805.868 1.287a3.93 3.93 0 0 1-.868 4.32L9.556 32.131 2 34l1.889-7.476L27.5 3.16Z"/></svg>',
+								title: "Architecture",
+								text: "Behold sea years"
+							})
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="300")
+
+							+category({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M19 2v3.09m0 27.82V36M6.976 6.976l2.195 2.195m19.658 19.658 2.195 2.195M2 19h3.09m27.82 0H36M6.976 31.024l2.195-2.195M28.829 9.171l2.195-2.195M26.727 19a7.727 7.727 0 1 1-15.454 0 7.727 7.727 0 0 1 15.454 0Z"/></svg>',
+								title: "Energy",
+								text: "Don't void days"
+							})
+
+			.pt-120.pb-130.bg-gray-light.callToActionPrev
+
+				.container
+
+					.row.mb-90
+
+						.col-lg-4.offset-lg-4.text-center
+
+							span.badge.bg-light.text-dark.mb-20(data-show="startbox") Our services
+
+							h2.m-0(data-show="startbox", data-show-delay="100") The best services in the industry
+
+					.row.gy-30
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox")
+
+							+service_case
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="100")
+
+							+service_case({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" fill="none"><path fill="currentColor" d="M11 18.904h9ZM15.5 2.424a2.123 2.123 0 0 1 3.621 1.498 2.115 2.115 0 0 1-.621 1.499L6 17.905l-4 .999 1-3.995L15.5 2.424Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M11 18.904h9m-4.5-16.48a2.123 2.123 0 0 1 3.621 1.498 2.115 2.115 0 0 1-.621 1.499L6 17.905l-4 .999 1-3.995L15.5 2.424Z"/></svg>',
+								image: "assets/img/service-case-2-740x480.jpg",
+								title: "Architecture",
+								text: "Greater whose waters of, female you fill darkness."
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="200")
+
+							+service_case({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none"><path fill="currentColor" d="m11.625.5 3.36 6.665L22.5 8.24l-5.438 5.185 1.284 7.325-6.721-3.46-6.72 3.46 1.282-7.325L.75 8.24l7.515-1.075L11.625.5Z"/></svg>',
+								image: "assets/img/service-case-3-740x480.jpg",
+								title: "Lease Review",
+								text: "Won't had morning for, living and gathered was after over seas."
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="300")
+
+							+service_case({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"><path fill="currentColor" d="M13 2 2 7.5 13 13l11-5.5L13 2Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M2 18.5 13 24l11-5.5M2 13l11 5.5L24 13M13 2 2 7.5 13 13l11-5.5L13 2Z"/></svg>',
+								image: "assets/img/service-case-4-740x480.jpg",
+								title: "Construction",
+								text: "Lesser which creepeth had fruit air great be it him."
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="400")
+
+							+service_case({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12.5 0h-10A2.5 2.5 0 0 0 0 2.5v20A2.5 2.5 0 0 0 2.5 25h15a2.5 2.5 0 0 0 2.5-2.5v-15L12.5 0ZM5 7.75a1 1 0 1 0 0 2h2.5a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Z" clip-rule="evenodd"/></svg>',
+								image: "assets/img/service-case-5-740x480.jpg",
+								title: "Project Management",
+								text: "Moving won't him without doesn't winged lights fruit be, beast."
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="500")
+
+							+service_case({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" fill="none"><path fill="currentColor" d="M10.002.75c-3.113 0-5.657 2.54-5.657 5.647s2.544 5.647 5.657 5.647c3.112 0 5.656-2.54 5.656-5.647S13.114.75 10.002.75ZM19.708 16.557a5.264 5.264 0 0 0-.568-1.036c-1.136-1.677-2.89-2.786-4.866-3.058-.246-.024-.518.025-.716.173a5.956 5.956 0 0 1-3.556 1.159 5.956 5.956 0 0 1-3.557-1.159.928.928 0 0 0-.716-.173 6.98 6.98 0 0 0-4.866 3.058c-.222.32-.42.69-.568 1.036-.074.148-.05.32.024.469.198.345.445.69.667.986.346.468.717.888 1.136 1.282.346.346.741.666 1.137.987A11.202 11.202 0 0 0 9.977 22.5c2.42 0 4.767-.765 6.718-2.22.395-.295.79-.64 1.136-.986.395-.394.79-.814 1.136-1.282.247-.32.47-.641.667-.986.124-.148.148-.321.074-.469Z"/></svg>',
+								image: "assets/img/service-case-6-740x480.jpg",
+								title: "Maintenance",
+								text: "Of sixth creeping whales morning deep have, reepeth moveth."
+							})
+
+					.text-center.mt-80
+
+						div(data-show="startbox")
+
+							+button({
+								link: "services-01.html",
+								title: "All Services",
+								customClass: "btn-light"
+							})
+
+			include template-parts/sections/_call-to-action-3-middle.pug
+
+			.pt-120.pb-130.callToActionNext
+
+				.container
+
+					.row
+
+						.col-lg-6.offset-lg-3.text-center.px-lg-50
+
+							h2.mb-25.px-lg-10(data-show="startbox") Latest projects
+
+							p.m-0(data-show="startbox", data-show-delay="100") Waters his moveth seasons over Created appear greater dry air. Cattle set it night let i fruitful make our appear.
+
+				// Slider
+				.swiper.swiper-full-horizontal.mt-90(data-swiper-slides="1", data-swiper-breakpoints="1024:auto", data-swiper-center="true", data-swiper-loop="true", data-swiper-gap="30", data-swiper-grabcursor="true", data-show="startbox", data-show-delay="200")
+
+					.swiper-container
+
+						.swiper-wrapper
+
+							.swiper-slide
+
+								+card_portfolio({
+									style: "style-4",
+									imageHeight: "62%",
+									overlayColor: "rgba(23, 22, 26, .4)",
+									overlayColorHover: "rgba(23, 22, 26, .45)",
+									title: "International Trading",
+									text: "The isn't itself over man fowl two dominion. One over appear sixth fifth cattle.",
+									location: "New York, NY",
+									image: "assets/img/home-3-project-1-900x550.jpg"
+								})
+
+							.swiper-slide
+
+								+card_portfolio({
+									style: "style-4",
+									imageHeight: "62%",
+									overlayColor: "rgba(23, 22, 26, .4)",
+									overlayColorHover: "rgba(23, 22, 26, .45)",
+									title: "Corporation Building",
+									text: "Thing fruit shall divided that To so, without firmament yielding saw one from.",
+									location: "Los Angeles, CA",
+									image: "assets/img/home-3-project-2-900x550.jpg"
+								})
+
+							.swiper-slide
+
+								+card_portfolio({
+									style: "style-4",
+									imageHeight: "62%",
+									overlayColor: "rgba(23, 22, 26, .4)",
+									overlayColorHover: "rgba(23, 22, 26, .45)",
+									title: "Modern Buseness - Center",
+									text: "You every can't thing seed subdue subdue light female.",
+									location: "Houston, TX",
+									image: "assets/img/home-3-project-3-900x550.jpg"
+								})
+
+					.d-flex.mt-70.justify-content-center
+
+						.swiper-button-prev.swiper-button-position-2.swiper-button-gray.shadow
+
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+						.swiper-button-next.swiper-button-position-2.swiper-button-gray.shadow
+
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+				.container.mt-120
+
+					.row
+
+						include template-parts/sections/_clients.pug
+
+			.pt-120.pb-100.bg-dark.shape-parent.videoPrev
+
+				// Shape
+				.shape.justify-content-center.ms-n190
+
+					img(loading="lazy", src="assets/img/root/home-3-shape-688x354.png", alt="", width="688", height="354")
+
+				.container
+
+					.row.gy-70
+
+						.col-lg-7
+
+							.pe-lg-70
+
+								span.badge.bg-gray-dark.text-white.mb-20(data-show="startbox") About
+
+								h3.mb-30.text-white(data-show="startbox", data-show-delay="100") We are #[span.highlight-lg expert constraction team] you can trust
+
+								p.text-white.mb-45(data-show="startbox", data-show-delay="200") His hath is appear be one don't creepeth. Them and one moving the won't may. Moving saw wherein divide bearing called. Green moveth Hath. That it years fruit behold Meat also us third itself made seasons green void give replenish our said saying also spirit give lesser wherein.
+
+								div(data-show="startbox", data-show-delay="300")
+
+									+button({
+										link: "about-us.html",
+										title: "About us",
+										customClass: "btn-accent-3"
+									})
+
+						.col-lg-5
+
+							.ps-lg-70.pe-lg-30
+
+								// Item
+								.d-flex(data-show="startbox")
+
+									.flex-shrink-0
+
+										.circle-icon.text-accent-1.bg-dark-light.mt-10
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="29" height="27" fill="none"><path fill="currentColor" d="m14.5 0 4.48 8.886L29 10.32l-7.25 6.913L23.461 27 14.5 22.386 5.539 27l1.711-9.767L0 10.32l10.02-1.434L14.5 0Z"/></svg>
+
+									.flex-grow-1.ms-40
+
+										div.h1.m-0.text-white 10+
+										div.h6.mb-15.text-white Years of exeperience
+										p.font-size-15.m-0.text-white Called a fly, behold seasons meat which stars bring fruit.
+
+								// Item
+								.d-flex.mt-40(data-show="startbox", data-show-delay="100")
+
+									.flex-shrink-0
+
+										.circle-icon.text-accent-1.bg-dark-light.mt-10
+
+											<svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" fill="none"><path fill="currentColor" d="M25.25 14a1 1 0 1 0-2 0h2Zm-22.5 0a1 1 0 1 0-2 0h2Zm-2-8.75v17.5h2V5.25h-2Zm0 17.5c0 .953.576 1.704 1.258 2.245.692.549 1.632.998 2.707 1.357C6.874 27.072 9.798 27.5 13 27.5v-2c-3.048 0-5.749-.41-7.652-1.045-.957-.32-1.657-.678-2.098-1.027-.45-.358-.5-.594-.5-.678h-2ZM13 27.5c3.202 0 6.126-.428 8.285-1.148 1.075-.359 2.015-.808 2.707-1.357.682-.54 1.258-1.292 1.258-2.245h-2c0 .084-.05.32-.5.678-.44.349-1.141.707-2.098 1.027C18.75 25.09 16.048 25.5 13 25.5v2Zm12.25-4.75V5.25h-2v17.5h2ZM13 10c3.184 0 6.108-.429 8.271-1.15 1.076-.358 2.02-.808 2.714-1.355.683-.538 1.265-1.29 1.265-2.245h-2c0 .08-.048.315-.503.674-.444.35-1.149.71-2.108 1.029C18.729 7.589 16.029 8 13 8v2Zm12.25-4.75c0-.955-.582-1.707-1.265-2.245-.695-.547-1.638-.997-2.714-1.355C19.108.929 16.184.5 13 .5v2c3.029 0 5.73.41 7.639 1.047.96.32 1.664.679 2.108 1.029.455.359.503.594.503.674h2ZM13 .5C9.816.5 6.892.929 4.729 1.65c-1.076.358-2.02.808-2.714 1.355C1.332 3.543.75 4.295.75 5.25h2c0-.08.048-.315.503-.674.444-.35 1.149-.71 2.108-1.029C7.271 2.911 9.971 2.5 13 2.5v-2ZM.75 5.25c0 .955.582 1.707 1.265 2.245.695.547 1.638.997 2.714 1.355C6.892 9.571 9.816 10 13 10V8c-3.029 0-5.73-.41-7.639-1.047-.96-.32-1.664-.679-2.108-1.029-.455-.359-.503-.594-.503-.674h-2ZM23.25 14c0 .084-.05.32-.5.678-.44.349-1.141.707-2.098 1.027-1.903.635-4.604 1.045-7.652 1.045v2c3.202 0 6.126-.428 8.285-1.148 1.075-.359 2.015-.808 2.707-1.357.682-.54 1.258-1.292 1.258-2.245h-2ZM13 16.75c-3.048 0-5.749-.41-7.652-1.045-.957-.32-1.657-.678-2.098-1.027-.45-.358-.5-.594-.5-.678h-2c0 .953.576 1.705 1.258 2.245.692.549 1.632.998 2.707 1.357 2.159.72 5.083 1.148 8.285 1.148v-2Z"/></svg>
+
+									.flex-grow-1.ms-40
+
+										div.h1.m-0.text-white 68%
+										div.h6.mb-15.text-white Cost savings
+										p.font-size-15.m-0.text-white Image isn't that give appear made us you're yielding.
+
+			.position-relative
+
+				.half-section-block.container.position-absolute.top-50.start-0.end-0(data-prev-id=".videoPrev", data-next-id=".videoNext")
+
+					// Video
+					.position-relative.py-235.text-center.rounded-4.overflow-hidden
+
+						.background
+
+							.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+								img(loading="lazy", src="assets/img/home-3-video-1920x900.jpg", class="jarallax-img", alt="")
+
+						+video_button({
+							customClass: "btn btn-accent-3"
+						})
+
+			.pt-120.pb-130.footerPrev.videoNext.shape-parent.overflow-hidden
+
+				// Shape
+				.shape.justify-content-start
+
+					img(loading="lazy", src="assets/img/root/home-3-shape-2-568x706.png", alt="", width="568", height="706")
+
+				.container
+
+					.row
+
+						.col-lg-4.offset-lg-4.text-center
+
+							span.badge.bg-light.text-dark.mb-20(data-show="startbox") Our blog
+
+							h2.m-0(data-show="startbox", data-show-delay="100") Latest in our blog
+
+					// Slider
+					.swiper.mt-90.shape-parent(data-swiper-slides="1", data-swiper-breakpoints="828:2, 1024:3", data-swiper-gap="30", data-swiper-grabcursor="true", data-show="startbox", data-show-delay="200")
+
+						.swiper-container
+
+							.swiper-wrapper
+
+								.swiper-slide
+
+									+card_blog({
+										style: "style-1",
+										category: "Architecture",
+										title: "In isn't light you'll divide",
+										text: "Shall seasons seasons darkness over own there subdue all it.",
+										image: "assets/img/blog/blog-post-10-900x800.jpg",
+										imageHeight: "72%",
+									})
+
+								.swiper-slide
+
+									+card_blog({
+										style: "style-1",
+										category: "Company",
+										title: "Unto saw first great spirit",
+										text: "Winged Also which midst deep grass gathered seas gathered you.",
+										image: "assets/img/blog/blog-post-11-900x800.jpg",
+										imageHeight: "72%",
+									})
+
+								.swiper-slide
+
+									+card_blog({
+										style: "style-1",
+										category: "Business",
+										title: "It was seasons divided",
+										text: "Yielding also isn't gathering sea face second male heaven evening.",
+										image: "assets/img/blog/blog-post-12-900x800.jpg",
+										imageHeight: "72%",
+									})
+
+								.swiper-slide
+
+									+card_blog({
+										style: "style-1",
+										category: "Company",
+										title: "Behold replenish fifth",
+										text: "Let fruit was beginning thing seed which fruitful place there.",
+										image: "assets/img/blog/blog-post-4-900x800.jpg",
+										imageHeight: "72%",
+									})
+
+						.d-flex.mt-70.justify-content-center
+
+							.swiper-button-prev.swiper-button-position-2.swiper-button-gray.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+							.swiper-button-next.swiper-button-position-2.swiper-button-gray.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+			include template-parts/sections/_call-to-action-3.pug
+
+		//- Footer
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

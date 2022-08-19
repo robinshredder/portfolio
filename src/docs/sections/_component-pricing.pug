@@ -1,0 +1,30 @@
+.docs-card.tab-content.bg-white.rounded-4#component-pricing
+
+	h2.docs-card-title Pricing
+
+	.docs-card-example
+
+		.row
+
+			.col-8
+
+				+pricing({
+					content: {
+						1: {
+							active: true,
+							text: 'Constant desire renewal'
+						},
+						2: {
+							active: false,
+							text: 'Very great whose'
+						},
+						3: {
+							active: false,
+							text: 'Of there whales very fly'
+						}
+					}
+				})
+
+	p HTML example:
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="pricing.html")

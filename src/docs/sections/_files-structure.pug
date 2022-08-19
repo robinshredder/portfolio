@@ -1,0 +1,25 @@
+.docs-card.tab-content.bg-white.rounded-4#files-structure
+
+	h2.docs-card-title Files Structure
+
+	ul
+
+		li #[code /#{ThemeName.toLowerCase()}/dist] – main template folder with all files to getting started:
+
+		ul
+			li #[code *.html] – all html files;
+			li #[code assets/img/] – all images used in template (minified);
+			li #[code assets/css/] – main template css files;
+			li #[code assets/js/] – main template js files;
+			li #[code assets/vendors/] – 3rd-party plugins;
+		li #[code /#{ThemeName.toLowerCase()}/src] – source files for developers:
+
+		ul
+			li #[code assets/img/] – all images used in template (not minified);
+			li #[code assets/scss/] – SCSS source files;
+			li #[code assets/js/] – JS source files ;
+			li #[code assets/vendors/] – 3rd-party plugins;
+			li #[code docs] – docs source files (Pug/Jade);
+			li #[code *.pug], #[code html/], #[code mixins/], #[code partials/], #[code template-parts/] – PUG source files (Pug/Jade);
+
+		li #[code /#{ThemeName.toLowerCase()}/*] – system files for development;

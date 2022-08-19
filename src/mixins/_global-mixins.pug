@@ -1,0 +1,60 @@
+//- Mixin for nav menu item
+mixin nav_item(title, url, additionalClass="")
+
+	-additionalClass += MenuTitle == title ? " active" : ""
+
+	li(class = additionalClass)
+
+		a(href=url, class="nav-link")
+			span= title
+
+		block
+
+mixin nav_item_collapse(title, url, additionalClass="", id="")
+
+	-additionalClass += MenuTitle == title ? " active" : ""
+
+	li(class = additionalClass)
+
+		a(href="#" + id, data-bs-toggle="collapse", class="nav-link", role="button", aria-expanded="false", aria-controls=id)
+			span= title
+
+		block
+
+//- Mixin for site main
+mixin site_main(object)
+	//- Default
+	- object = object || {}
+	- object.customClass = object.customClass || ""
+
+	- elClass = "content-wrap "
+	- elClass += object.customClass
+
+	// Main
+	div(class = elClass)
+
+		block
+
+//- Widgets
+include ../template-parts/components/_brand.pug
+include ../template-parts/components/_button.pug
+include ../template-parts/components/_card-demo.pug
+include ../template-parts/components/_card-blog.pug
+include ../template-parts/components/_card-portfolio.pug
+include ../template-parts/components/_category.pug
+include ../template-parts/components/_circle-icon.pug
+include ../template-parts/components/_countdown.pug
+include ../template-parts/components/_feature.pug
+include ../template-parts/components/_feedback.pug
+include ../template-parts/components/_gallery-item.pug
+include ../template-parts/components/_industry.pug
+include ../template-parts/components/_member.pug
+include ../template-parts/components/_page-navigation.pug
+include ../template-parts/components/_pricing.pug
+include ../template-parts/components/_process-step.pug
+include ../template-parts/components/_review.pug
+include ../template-parts/components/_service-box.pug
+include ../template-parts/components/_service-card.pug
+include ../template-parts/components/_service-case.pug
+include ../template-parts/components/_service-line.pug
+include ../template-parts/components/_video-button.pug

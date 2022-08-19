@@ -1,0 +1,33 @@
+mixin feature(object)
+
+	//- Default
+	- object = object || {}
+	- object.icon = object.icon || '<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.5 1 4.172 8.557L28 10.938l-6.75 6.657L22.843 27 14.5 22.557 6.157 27l1.593-9.405L1 10.938l9.329-1.38L14.5 1Z"/></svg>'
+	- object.iconClass = object.iconClass || "text-accent-3"
+	- object.headerClass = object.headerClass || "d-flex align-items-center mb-20"
+	- object.title = object.title || "Perfect Services"
+	- object.titleClass = object.titleClass || "mb-0 ms-20"
+	- object.text = object.text || "Dry them years air there. Blessed Multiply morning, second night and bearing."
+	- object.textClass = object.textClass || "font-size-15 m-0"
+
+	//- Element Class
+	- elClass = object.customClass
+
+	// Feature
+	div(class=object.headerClass)
+
+		if object.icon != ""
+
+			div(class=object.iconClass) !{object.icon}
+
+		if object.title != ""
+
+			h4(class=object.titleClass)
+
+				=object.title
+
+	if object.text != ""
+
+		p(class=object.textClass)
+
+			=object.text

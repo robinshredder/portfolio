@@ -1,0 +1,140 @@
+.swiper-button-prev,
+.swiper-button-next {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--swiper-navigation-size);
+	height: var(--swiper-navigation-size);
+	overflow: hidden;
+	background-image: none;
+	border-radius: 50%;
+
+	&::after {
+		display: none;
+	}
+
+}
+
+.swiper-button-prev {
+	left: 0;
+
+	&:hover svg {
+		@extend %animate-icon-left;
+	}
+
+}
+
+.swiper-button-next {
+	right: 0;
+
+	&:hover svg {
+		@extend %animate-icon-right;
+	}
+
+}
+
+.swiper-button-prev.swiper-button-position-1 {
+	left: 20px;
+
+	@include media-breakpoint-up(md) {
+		left: 0;
+		transform: translateX(-50%);
+	}
+
+}
+
+.swiper-button-next.swiper-button-position-1 {
+	right: 20px;
+
+	@include media-breakpoint-up(md) {
+		right: 0;
+		transform: translateX(50%);
+	}
+
+}
+
+.swiper-button-position-2 {
+	position: static;
+	right: auto;
+	left: auto;
+	margin-top: unset;
+}
+
+.swiper-button-next.swiper-button-position-2 {
+	margin-left: 15px;
+}
+
+.swiper-button-prev.swiper-button-position-3 {
+	left: 20px;
+
+	@include media-breakpoint-up(md) {
+		left: 40px;
+	}
+
+}
+
+.swiper-button-next.swiper-button-position-3 {
+	right: 20px;
+
+	@include media-breakpoint-up(md) {
+		right: 40px;
+	}
+
+}
+
+@include media-breakpoint-down(md) {
+
+	.swiper-button-prev.swiper-button-position-3,
+	.swiper-button-next.swiper-button-position-3 {
+		display: none;
+	}
+
+}
+
+.swiper-button {
+
+	&-gray {
+		color: $dark;
+		background-color: $color-gray-light;
+
+		&:hover {
+			color: $color-accent-1;
+			background-color: $color-gray-light;
+		}
+
+	}
+
+	&-white {
+		color: $dark;
+		background-color: $white;
+
+		&:hover {
+			color: $color-accent-1;
+			background-color: $white;
+		}
+
+	}
+
+	&-dark {
+		color: $color-gray;
+		background-color: $color-dark-light;
+
+		&:hover {
+			color: $white;
+			background-color: $color-dark-light;
+		}
+
+	}
+
+	&-opacity {
+		color: $color-gray;
+		background-color: rgba($gray-600, .4);
+
+		&:hover {
+			color: $white;
+			background-color: rgba($gray-600, .6);
+		}
+
+	}
+
+}

@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Startbox | Documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Startbox">
+    <meta name="author" content="RunWebRun">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon-->
+    <link rel="icon" type="image/png" href="../assets/img/root/favicon.png"><!-- Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"><!-- Style-->
+    <!-- build:css -->
+    <link rel="stylesheet" href="../assets/vendors/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/vendors/css/swiper-bundle.css">
+    <link rel="stylesheet" href="../assets/css/main.css"><!-- endbuild -->
+    <!-- jQuery-->
+    <script src="../assets/vendors/js/jquery.min.js"></script><!-- Main-->
+    <div class="content-wrap ">
+        <div class="container overflow-hidden my-40">
+            <div class="row gy-30 gx-40">
+                <div class="col-12 col-lg-4">
+                    <div class="bg-white rounded-4 p-30">
+                        <div class="navbar sticky-left">
+                            <ul class="nav navbar-nav nav-no-opacity">
+                                <li class="nav-item"><a class="nav-link active" href="#introduction">Introduction</a></li>
+                            </ul>
+                            <h5 class="mb-20 mt-30">Getting Started</h5>
+                            <ul class="nav navbar-nav nav-no-opacity">
+                                <li class="nav-item"><a class="nav-link" href="#getting-started">Gettings Started</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#files-structure">Files Structure</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#development">Development</a></li>
+                            </ul>
+                            <h5 class="mb-20 mt-30">Template Structure</h5>
+                            <ul class="nav navbar-nav nav-no-opacity">
+                                <li class="nav-item"><a class="nav-link" href="#topbar-navigation">Topbar Navigation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#main-navigation-top">Main Navigation (top)</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#main-navigation-right">Main Navigation (right)</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#footer">Footer</a></li>
+                            </ul>
+                            <h5 class="mb-20 mt-30">Components</h5>
+                            <ul class="nav navbar-nav nav-no-opacity">
+                                <li class="nav-item"><a class="nav-link" href="#component-accordion">Accordion</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-background">Background</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-badge">Badge</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-brand">Brand</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-button">Button</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-category">Category</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-circle-icon">Circle Icon</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-feature">Feature</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-feedback">Feedback</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-form">Form</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-gallery-item">Gallery Item</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-industry">Industry</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-list">List</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-member">Member</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-nav">Nav</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-page-navigation">Page Navigation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-pricing">Pricing</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-process-step">Process Step</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-review">Review</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-service-box">Service Box</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-service-card">Service Card</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-service-case">Service Case</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-service-line">Service Line</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#component-shape">Shape</a></li>
+                            </ul>
+                            <h5 class="mb-20 mt-30">Plugins</h5>
+                            <ul class="nav navbar-nav nav-no-opacity">
+                                <li class="nav-item"><a class="nav-link" href="#plugin-countdown">Countdown</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#plugin-magnific-popup">Magnific Popup</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#plugin-isotope">Isotope</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#plugin-show-on-scroll">Show on Scroll</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#plugin-swiper">Swiper</a></li>
+                            </ul>
+                            <h5 class="mb-20 mt-30">Credits</h5>
+                            <ul class="nav navbar-nav nav-no-opacity">
+                                <li class="nav-item"><a class="nav-link" href="#credits-plugins">Plugins</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#credits-images">Images</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#credits-others">Others</a></li>
+                            </ul>
+                            <h5 class="mb-20 mt-30">Others</h5>
+                            <ul class="nav navbar-nav nav-no-opacity">
+                                <li class="nav-item"><a class="nav-link" href="#helper-classes">Helper Classes</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#utils">Utils</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#figma">Figma</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#thank-you">Thank You!</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="sticky-top" style="top: 60px;">
+                        <div class="docs-card tab-content bg-white rounded-4 show" id="introduction">
+                            <h1 class="docs-card-title">Startbox</h1>
+                            <p>Thank you for purchasing Startbox!</p>
+                            <p>Prepare to meet the one and only Bootstrap template perfect for both corporate and creative projects. You can build any type of pages with Bootstrap components. Creating and Editing Pages are greatly simplified by the most powerfull templating engine — Pug/Jade. Create the hand-crafted look you have been dreaming about with Startbox.</p>
+                            <p>This guide will help you get started with Startbox! All the important stuff – compiling the source, file structure, build tools, file includes – is documented here, but should you have any questions, always feel free to reach out to <a href="mailto:runwebrun@gmail.com">runwebrun@gmail.com</a></p>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="getting-started">
+                            <h2 class="docs-card-title">Getting Started</h2>
+                            <p>This is an HTML template. To get started you need only Browser to run HTML files. Better upload files to the web server and run the site there.</p>
+                            <p>To customize the template you can edit CSS and HTML files. Also if you are a developer, there are available source files SCSS, JS and HTML (Pug/Jade). All used plugins added from npm.</p>
+                            <p>For each page available blank CSS file for your customizations. See it here – <code>assets/css/custom.css</code>.</p>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="files-structure">
+                            <h2 class="docs-card-title">Files Structure</h2>
+                            <ul>
+                                <li><code>/startbox/dist</code> – main template folder with all files to getting started:</li>
+                                <ul>
+                                    <li><code>*.html</code> – all html files;</li>
+                                    <li><code>assets/img/</code> – all images used in template (minified);</li>
+                                    <li><code>assets/css/</code> – main template css files;</li>
+                                    <li><code>assets/js/</code> – main template js files;</li>
+                                    <li><code>assets/vendors/</code> – 3rd-party plugins;</li>
+                                </ul>
+                                <li><code>/startbox/src</code> – source files for developers:</li>
+                                <ul>
+                                    <li><code>assets/img/</code> – all images used in template (not minified);</li>
+                                    <li><code>assets/scss/</code> – SCSS source files;</li>
+                                    <li><code>assets/js/</code> – JS source files ;</li>
+                                    <li><code>assets/vendors/</code> – 3rd-party plugins;</li>
+                                    <li><code>docs</code> – docs source files (Pug/Jade);</li>
+                                    <li><code>*.pug</code>, <code>html/</code>, <code>mixins/</code>, <code>partials/</code>, <code>template-parts/</code> – PUG source files (Pug/Jade);</li>
+                                </ul>
+                                <li><code>/startbox/*</code> – system files for development;</li>
+                            </ul>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="development">
+                            <h2 class="docs-card-title">Development</h2>
+                            <p>Startbox template is developer-friendly and contains source files + gulp tasks.</p>
+                            <p>Make sure, that we will not help you with any troubles that you faced with source builds, so if you don’t have any experience with <code>npm</code> and <code>gulp</code>, please first learn more about these tools. These sources only for developers.</p>
+                            <h3>Requirements</h3>
+                            <ol>
+                                <li>Node.js and npm – <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+                            </ol>
+                            <h3>Getting Started</h3>
+                            <ul>
+                                <li>Unzip downloaded template and open /startbox/ folder</li>
+                                <li>Install all node packages: <code>npm install</code></li>
+                                <li>Run <code>gulp development</code></li>
+                                <li>Your site is now viewable at this URL: <a href="http://localhost:3000">http://localhost:3000</a></li>
+                                <li>To create compressed, production-ready assets run <code>gulp production</code>. This will delete everything in the dist folder and recreate all of your complied files. Never make updates directly into the dist folder as these files get overridden each time.</li>
+                            </ul>
+                            <p><code>development</code> and <code>production</code> tasks will build files to <code>/dist/</code> folder.</p>
+                        </div><!-- Template structure-->
+                        <div class="docs-card tab-content bg-white rounded-4" id="topbar-navigation">
+                            <h2 class="docs-card-title">Topbar Navigation</h2><a class="d-block shadow image-link" href="../assets/img/docs/topbar-navigation.jpg"><img class="w-100" src="../assets/img/docs/topbar-navigation.jpg" alt="" loading="lazy"></a>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="topbar-navigation.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="main-navigation-top">
+                            <h2 class="docs-card-title">Main Navigation (top)</h2><a class="d-block shadow image-link" href="../assets/img/docs/main-navigation-top.jpg"><img class="w-100" src="../assets/img/docs/main-navigation-top.jpg" alt="" loading="lazy"></a>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="topbar-navigation.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="main-navigation-right">
+                            <h2 class="docs-card-title">Main Navigation (right)</h2><a class="d-block shadow image-link" href="../assets/img/docs/main-navigation-right.jpg"><img class="w-100" src="../assets/img/docs/main-navigation-right.jpg" alt="" loading="lazy"></a>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="topbar-navigation.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="footer">
+                            <h2 class="docs-card-title">Footer</h2>
+                            <h3>Default Dark</h3><a class="d-block shadow image-link" href="../assets/img/docs/footer-dark.jpg"><img class="w-100" src="../assets/img/docs/footer-dark.jpg" alt="" loading="lazy"></a>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="footer-default-dark.html"></code>
+                            <h3>Default White</h3><a class="d-block shadow image-link" href="../assets/img/docs/footer-white.jpg"><img class="w-100" src="../assets/img/docs/footer-white.jpg" alt="" loading="lazy"></a>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="footer-default-white.html"></code>
+                            <h3>Minimal Dark</h3><a class="d-block shadow image-link" href="../assets/img/docs/footer-minimal-dark.jpg"><img class="w-100" src="../assets/img/docs/footer-minimal-dark.jpg" alt="" loading="lazy"></a>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="footer-minimal-dark.html"></code>
+                        </div><!-- Components-->
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-accordion">
+                            <h2 class="docs-card-title">Accordion</h2>
+                            <p><a href="https://getbootstrap.com/docs/5.0/components/accordion/">Bootstrap documentation</a></p>
+                            <div class="docs-card-example">
+                                <!-- Accordion-->
+                                <div class="accordion" id="docsFAQ">
+                                    <div class="accordion-item">
+                                        <div class="accordion-header" id="headingOne"><a class="h4 accordion-button collapsed" href="#collapseOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false">Accordion title</a>
+                                            <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#docsFAQ">
+                                                <div class="accordion-body">
+                                                    <p class="m-0">Accordion text</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <div class="accordion-header" id="headingTwo"><a class="h4 accordion-button collapsed" href="collapseTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">Accordion title</a>
+                                            <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#docsFAQ">
+                                                <div class="accordion-body">
+                                                    <p class="m-0">Accordion text</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="accordion.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-background">
+                            <h2 class="docs-card-title">Background</h2>
+                            <div class="docs-card-example">
+                                <div class="position-relative" style="width: 100%; height: 300px; z-index: 1;">
+                                    <div class="background">
+                                        <div class="background-image"><img src="../assets/img/docs/placeholder.jpg" alt="" loading="lazy"></div>
+                                        <div class="background-color" style="background-color: #481FA0; opacity: .8;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="component-background.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-badge">
+                            <h2 class="docs-card-title">Badge</h2>
+                            <p>A small count and labeling component.</p>
+                            <div class="docs-card-example"><span class="badge bg-accent-1 text-white">Example badge</span><span class="badge bg-gray-op20 text-dark ms-15">Example badge</span></div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="badge.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-brand">
+                            <h2 class="docs-card-title">Brand</h2>
+                            <p>A simple brand component to easily add brand images of the same size.</p>
+                            <p>Additional classes: <code>.brand-sm</code>.</p>
+                            <div class="docs-card-example">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <!-- Brand--><a class="brand rounded-2 bg-dark text-white brand-" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="74" height="20" fill="none">
+                                                <path fill="currentColor" d="M3.875 3.874V5.44c.69-1.12 1.789-1.68 3.298-1.68 1.25 0 2.261.407 3.035 1.221.774.815 1.162 1.922 1.162 3.322v6.223H8.051V8.742c0-.687-.185-1.219-.556-1.594-.37-.375-.881-.563-1.532-.563-.65 0-1.161.188-1.532.563-.37.375-.556.907-.556 1.594v5.784H.538V3.874h3.337ZM20.64 11.148c.48-.459.722-1.107.722-1.948 0-.84-.241-1.485-.722-1.937-.482-.451-1.035-.678-1.66-.678-.624 0-1.177.23-1.659.687-.48.458-.721 1.108-.721 1.947 0 .84.24 1.487.721 1.938.482.452 1.035.678 1.66.678.624 0 1.177-.229 1.659-.687Zm-5.992 1.985c-.963-1.018-1.444-2.323-1.444-3.914 0-1.59.48-2.898 1.444-3.922.962-1.025 2.137-1.537 3.523-1.537 1.385 0 2.45.503 3.19 1.508V3.874H24.7v10.653h-3.338V12.98c-.807 1.12-1.887 1.68-3.24 1.68-1.353 0-2.512-.51-3.474-1.528ZM32.057 11.759h1.19v2.767H31.55c-1.224 0-2.17-.263-2.84-.792-.67-.528-1.005-1.434-1.005-2.72V6.585H26.69v-2.71h1.015V1.277h3.338v2.596h2.185v2.711h-2.185v4.43c0 .495.337.744 1.014.744ZM42.733 3.874h3.337v10.652h-3.337v-1.565c-.69 1.12-1.79 1.68-3.299 1.68-1.249 0-2.261-.407-3.035-1.222-.774-.814-1.16-1.921-1.16-3.322V3.875h3.316V9.66c0 .687.187 1.218.557 1.593.37.377.882.564 1.532.564s1.162-.188 1.532-.564c.37-.375.556-.906.556-1.593V3.874ZM52.139 3.874V5.86c.78-1.399 1.821-2.1 3.122-2.1v3.322h-.819c-.768 0-1.343.179-1.727.535-.384.356-.576.98-.576 1.87v5.04h-3.337V3.874h3.337ZM63.517 11.148c.48-.459.722-1.107.722-1.948 0-.84-.241-1.485-.722-1.937-.482-.451-1.034-.678-1.66-.678-.624 0-1.177.23-1.658.687-.481.458-.722 1.108-.722 1.947 0 .84.24 1.487.722 1.938.481.452 1.034.678 1.659.678s1.178-.229 1.659-.687Zm-5.992 1.985c-.963-1.018-1.444-2.323-1.444-3.914 0-1.59.481-2.898 1.444-3.922.963-1.025 2.137-1.537 3.524-1.537 1.385 0 2.449.503 3.19 1.508V3.874h3.338v10.653h-3.338V12.98c-.807 1.12-1.887 1.68-3.24 1.68-1.353 0-2.51-.51-3.474-1.528ZM70.309 14.526V.4h3.337v14.126h-3.337ZM4.135 16.391v3.205h-.538V17.4l-.999 2.195h-.372L1.222 17.4v2.195H.684V16.39h.58l1.15 2.513 1.145-2.513h.576ZM7.857 19.596V16.39h.538v3.205h-.538ZM14.272 16.387h.537v3.209h-.537l-1.617-2.393v2.393h-.537v-3.209h.537l1.617 2.388v-2.388ZM20.341 16.387v.41H19.07v.973H20.2v.405H19.07v1.01h1.273v.41h-1.81v-3.208h1.81ZM24.555 16.801v1.084h.594c.204 0 .357-.048.458-.143.1-.095.15-.228.15-.399 0-.17-.05-.304-.15-.398-.101-.095-.254-.144-.458-.144h-.594Zm0 1.495v1.3h-.536V16.39h1.13c.371 0 .657.09.858.27.2.18.301.408.301.685a.923.923 0 0 1-.2.58c-.133.173-.34.285-.615.337l.867 1.333h-.655l-.82-1.3h-.33ZM30.761 18.53h1.08l-.538-1.507-.542 1.507Zm1.462 1.066-.236-.655h-1.371l-.236.655h-.56l1.172-3.209h.623l1.173 3.209h-.565ZM36.313 16.391h.538v2.803h1.108v.402h-1.646V16.39ZM49.542 16.391h.575l-.97 3.205h-.609l-.688-2.426-.73 2.426-.603.004-.93-3.209h.571l.679 2.61.735-2.61h.603l.683 2.596.684-2.596ZM54.326 18.53h1.079l-.537-1.507-.542 1.507Zm1.46 1.066-.235-.655H54.18l-.235.655h-.561l1.173-3.209h.622l1.174 3.209h-.565ZM59.708 16.801v-.41h2.285v.41h-.87v2.795h-.538V16.8h-.877ZM67.362 16.387v.41h-1.273v.973h1.131v.405H66.09v1.01h1.273v.41h-1.81v-3.208h1.81ZM71.575 16.801v1.084h.594c.204 0 .356-.048.457-.143a.522.522 0 0 0 .15-.399c0-.17-.05-.304-.15-.398-.101-.095-.254-.144-.457-.144h-.594Zm0 1.495v1.3h-.537V16.39h1.13c.371 0 .657.09.858.27.201.18.302.408.302.685a.92.92 0 0 1-.2.58c-.134.173-.34.285-.615.337l.867 1.333h-.655l-.82-1.3h-.33Z" />
+                                            </svg></a>
+                                    </div>
+                                    <div class="col">
+                                        <!-- Brand--><a class="brand rounded-2 bg-dark text-white brand-sm" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="74" height="20" fill="none">
+                                                <path fill="currentColor" d="M3.875 3.874V5.44c.69-1.12 1.789-1.68 3.298-1.68 1.25 0 2.261.407 3.035 1.221.774.815 1.162 1.922 1.162 3.322v6.223H8.051V8.742c0-.687-.185-1.219-.556-1.594-.37-.375-.881-.563-1.532-.563-.65 0-1.161.188-1.532.563-.37.375-.556.907-.556 1.594v5.784H.538V3.874h3.337ZM20.64 11.148c.48-.459.722-1.107.722-1.948 0-.84-.241-1.485-.722-1.937-.482-.451-1.035-.678-1.66-.678-.624 0-1.177.23-1.659.687-.48.458-.721 1.108-.721 1.947 0 .84.24 1.487.721 1.938.482.452 1.035.678 1.66.678.624 0 1.177-.229 1.659-.687Zm-5.992 1.985c-.963-1.018-1.444-2.323-1.444-3.914 0-1.59.48-2.898 1.444-3.922.962-1.025 2.137-1.537 3.523-1.537 1.385 0 2.45.503 3.19 1.508V3.874H24.7v10.653h-3.338V12.98c-.807 1.12-1.887 1.68-3.24 1.68-1.353 0-2.512-.51-3.474-1.528ZM32.057 11.759h1.19v2.767H31.55c-1.224 0-2.17-.263-2.84-.792-.67-.528-1.005-1.434-1.005-2.72V6.585H26.69v-2.71h1.015V1.277h3.338v2.596h2.185v2.711h-2.185v4.43c0 .495.337.744 1.014.744ZM42.733 3.874h3.337v10.652h-3.337v-1.565c-.69 1.12-1.79 1.68-3.299 1.68-1.249 0-2.261-.407-3.035-1.222-.774-.814-1.16-1.921-1.16-3.322V3.875h3.316V9.66c0 .687.187 1.218.557 1.593.37.377.882.564 1.532.564s1.162-.188 1.532-.564c.37-.375.556-.906.556-1.593V3.874ZM52.139 3.874V5.86c.78-1.399 1.821-2.1 3.122-2.1v3.322h-.819c-.768 0-1.343.179-1.727.535-.384.356-.576.98-.576 1.87v5.04h-3.337V3.874h3.337ZM63.517 11.148c.48-.459.722-1.107.722-1.948 0-.84-.241-1.485-.722-1.937-.482-.451-1.034-.678-1.66-.678-.624 0-1.177.23-1.658.687-.481.458-.722 1.108-.722 1.947 0 .84.24 1.487.722 1.938.481.452 1.034.678 1.659.678s1.178-.229 1.659-.687Zm-5.992 1.985c-.963-1.018-1.444-2.323-1.444-3.914 0-1.59.481-2.898 1.444-3.922.963-1.025 2.137-1.537 3.524-1.537 1.385 0 2.449.503 3.19 1.508V3.874h3.338v10.653h-3.338V12.98c-.807 1.12-1.887 1.68-3.24 1.68-1.353 0-2.51-.51-3.474-1.528ZM70.309 14.526V.4h3.337v14.126h-3.337ZM4.135 16.391v3.205h-.538V17.4l-.999 2.195h-.372L1.222 17.4v2.195H.684V16.39h.58l1.15 2.513 1.145-2.513h.576ZM7.857 19.596V16.39h.538v3.205h-.538ZM14.272 16.387h.537v3.209h-.537l-1.617-2.393v2.393h-.537v-3.209h.537l1.617 2.388v-2.388ZM20.341 16.387v.41H19.07v.973H20.2v.405H19.07v1.01h1.273v.41h-1.81v-3.208h1.81ZM24.555 16.801v1.084h.594c.204 0 .357-.048.458-.143.1-.095.15-.228.15-.399 0-.17-.05-.304-.15-.398-.101-.095-.254-.144-.458-.144h-.594Zm0 1.495v1.3h-.536V16.39h1.13c.371 0 .657.09.858.27.2.18.301.408.301.685a.923.923 0 0 1-.2.58c-.133.173-.34.285-.615.337l.867 1.333h-.655l-.82-1.3h-.33ZM30.761 18.53h1.08l-.538-1.507-.542 1.507Zm1.462 1.066-.236-.655h-1.371l-.236.655h-.56l1.172-3.209h.623l1.173 3.209h-.565ZM36.313 16.391h.538v2.803h1.108v.402h-1.646V16.39ZM49.542 16.391h.575l-.97 3.205h-.609l-.688-2.426-.73 2.426-.603.004-.93-3.209h.571l.679 2.61.735-2.61h.603l.683 2.596.684-2.596ZM54.326 18.53h1.079l-.537-1.507-.542 1.507Zm1.46 1.066-.235-.655H54.18l-.235.655h-.561l1.173-3.209h.622l1.174 3.209h-.565ZM59.708 16.801v-.41h2.285v.41h-.87v2.795h-.538V16.8h-.877ZM67.362 16.387v.41h-1.273v.973h1.131v.405H66.09v1.01h1.273v.41h-1.81v-3.208h1.81ZM71.575 16.801v1.084h.594c.204 0 .356-.048.457-.143a.522.522 0 0 0 .15-.399c0-.17-.05-.304-.15-.398-.101-.095-.254-.144-.457-.144h-.594Zm0 1.495v1.3h-.537V16.39h1.13c.371 0 .657.09.858.27.201.18.302.408.302.685a.92.92 0 0 1-.2.58c-.134.173-.34.285-.615.337l.867 1.333h-.655l-.82-1.3h-.33Z" />
+                                            </svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="brand.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-button">
+                            <h2 class="docs-card-title">Button</h2>
+                            <div class="docs-card-example">
+                                <!-- Button--><a class="btn btn-accent-1" href="#" target="_self">Button</a><!-- Button--><a class="btn btn-accent-2 ms-15" href="#" target="_self">Button</a><!-- Button--><a class="btn btn-accent-3 ms-15" href="#" target="_self">Button</a><!-- Button--><a class="btn btn-light ms-15" href="#" target="_self">Button</a>
+                            </div>
+                            <h5>Link & Clean</h5>
+                            <div class="docs-card-example bg-dark">
+                                <!-- Button--><a class="btn text-white btn-link btn-clean" href="#" target="_self">Button</a><!-- Button--><a class="btn text-accent-1 btn-link btn-clean ms-15" href="#" target="_self">Button</a>
+                            </div>
+                            <h5>Video Button</h5>
+                            <div class="docs-card-example">
+                                <!-- Video button--><a class="btn-video video-link btn btn-accent-1" href="https://www.youtube.com/watch?v=AT6oSIDbGkw" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+                                        <path fill="currentColor" d="M15.191 10.393 2.466 17.776C1.386 18.402 0 17.644 0 16.382V1.616C0 .356 1.384-.404 2.466.225L15.19 7.608a1.605 1.605 0 0 1 0 2.785Z" />
+                                    </svg></a><!-- Video button--><a class="btn-video video-link btn btn-accent-2 ms-15" href="https://www.youtube.com/watch?v=AT6oSIDbGkw" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+                                        <path fill="currentColor" d="M15.191 10.393 2.466 17.776C1.386 18.402 0 17.644 0 16.382V1.616C0 .356 1.384-.404 2.466.225L15.19 7.608a1.605 1.605 0 0 1 0 2.785Z" />
+                                    </svg></a><!-- Video button--><a class="btn-video video-link btn btn-accent-3 ms-15" href="https://www.youtube.com/watch?v=AT6oSIDbGkw" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+                                        <path fill="currentColor" d="M15.191 10.393 2.466 17.776C1.386 18.402 0 17.644 0 16.382V1.616C0 .356 1.384-.404 2.466.225L15.19 7.608a1.605 1.605 0 0 1 0 2.785Z" />
+                                    </svg></a>
+                            </div>
+                            <h5>Sizes</h5>
+                            <div class="docs-card-example">
+                                <!-- Button--><a class="btn btn-accent-1 btn-lg" href="#" target="_self">Button</a><!-- Button--><a class="btn btn-accent-1 ms-30" href="#" target="_self">Button</a><!-- Button--><a class="btn btn-accent-1 btn-sm ms-30" href="#" target="_self">Button</a>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="button.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-category">
+                            <h2 class="docs-card-title">Category</h2>
+                            <div class="docs-card-example">
+                                <!-- Category-->
+                                <div class="category ">
+                                    <div class="category-icon text-dark"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="39" fill="none">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M25.25 14.896 9.75 5.85m-7.285 4.794L17.5 19.446l15.035-8.803M17.5 37V19.428M33 26.401V12.456c0-.612-.16-1.212-.462-1.742a3.465 3.465 0 0 0-1.26-1.274L19.222 2.467a3.412 3.412 0 0 0-3.444 0L3.722 9.44a3.466 3.466 0 0 0-1.26 1.274A3.52 3.52 0 0 0 2 12.456V26.4c0 .612.16 1.212.462 1.741.303.53.737.97 1.26 1.275l12.056 6.973a3.413 3.413 0 0 0 3.444 0l12.056-6.973a3.465 3.465 0 0 0 1.26-1.275c.302-.529.461-1.13.462-1.74Z" />
+                                        </svg></div>
+                                    <div class="category-body ms-40">
+                                        <h4 class="category-title mb-5">Manufacturing</h4>
+                                        <p class="category-text font-size-15 text-gray-dark m-0">Green you&quot;ll saying</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="category.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-circle-icon">
+                            <h2 class="docs-card-title">Circle Icon</h2>
+                            <p>Additional classes: <code>.circle-icon-sm</code>.</p>
+                            <div class="docs-card-example">
+                                <!-- Circle icon-->
+                                <div class="circle-icon text-white bg-accent-1"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none">
+                                        <path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z" />
+                                    </svg></div><!-- Circle icon-->
+                                <div class="circle-icon  text-gray-light bg-accent-2 circle-icon-sm ms-20"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none">
+                                        <path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z" />
+                                    </svg></div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="circle-icon.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-feature">
+                            <h2 class="docs-card-title">Feature</h2>
+                            <div class="docs-card-example">
+                                <!-- Feature-->
+                                <div class="d-flex align-items-center mb-20">
+                                    <div class="text-accent-1"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.5 1 4.172 8.557L28 10.938l-6.75 6.657L22.843 27 14.5 22.557 6.157 27l1.593-9.405L1 10.938l9.329-1.38L14.5 1Z" />
+                                        </svg></div>
+                                    <h4 class="mb-0 ms-20">Perfect Services</h4>
+                                </div>
+                                <p class="font-size-15 m-0 pe-30">Dry them years air there. Blessed Multiply morning, second night and bearing.</p>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="feature.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-feedback">
+                            <h2 class="docs-card-title">Feedback</h2>
+                            <div class="docs-card-example">
+                                <!-- Feedback-->
+                                <div class="feedback bg-white rounded-4 h-100 shadow">
+                                    <div class="feedback-stars lh-1 mb-30"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="16" fill="none">
+                                            <path fill="#FFBB38" d="m8.595 0 2.656 5.266 5.94.85-4.298 4.096L13.907 16l-5.312-2.734L3.283 16l1.015-5.788L0 6.116l5.94-.85L8.594 0ZM26.798 0l2.656 5.266 5.94.85-4.299 4.096L32.11 16l-5.312-2.734L21.486 16l1.014-5.788-4.298-4.096 5.94-.85L26.798 0ZM45 0l2.656 5.266 5.94.85-4.298 4.096L50.312 16 45 13.266 39.688 16l1.014-5.788-4.298-4.096 5.94-.85L45 0ZM63.202 0l2.656 5.266 5.94.85-4.298 4.096L68.514 16l-5.312-2.734L57.89 16l1.014-5.788-4.298-4.096 5.94-.85L63.202 0ZM81.404 0l2.656 5.266 5.94.85-4.298 4.096L86.716 16l-5.312-2.734L76.092 16l1.014-5.788-4.297-4.096 5.94-.85L81.403 0Z" />
+                                        </svg></div>
+                                    <div class="feedback-header d-flex align-items-center mb-35">
+                                        <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="../assets/img/docs/placeholder.jpg" alt="" height="64" width="64" /></div>
+                                        <div class="flex-grow-1 ms-20">
+                                            <h6 class="feedback-author mb-5">Anthony Allison</h6>
+                                            <p class="feedback-position text-gray-dark font-size-14 m-0">Senior Marketing Specialist, Unvab Inc.</p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback-text fw-medium text-dark m-0">“ Is don&quot;t lights appear fifth face heaven. Night spirit shall tree of Life over, unto in earth second. First, two waters, female. ”</p>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="feedback.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-form">
+                            <h2 class="docs-card-title">Form</h2>
+                            <p>Input styles - <code>.form-control-style-1</code>, <code>.form-control-style-2</code>, <code>.form-control-style-3</code>.</p>
+                            <h5>Style 1</h5>
+                            <p>Additional classes: <code>.form-control-white</code> and <code>.form-control-gray</code>.</p>
+                            <div class="docs-card-example">
+                                <div class="row gy-30">
+                                    <div class="col-12"><input class="form-control" type="text" placeholder="Input field"></div>
+                                </div>
+                            </div>
+                            <h5>Style 2</h5>
+                            <p>Additional classes: <code>.form-control-white</code>.</p>
+                            <div class="docs-card-example">
+                                <div class="row gy-30">
+                                    <div class="col-12"><input class="form-control form-control-style-2" type="text" placeholder="Input field"></div>
+                                    <div class="col-12"><input class="form-control form-control-style-2 form-control-white" type="text" placeholder="Input field"></div>
+                                </div>
+                            </div>
+                            <h5>Style 3</h5>
+                            <p>Additional classes: <code>.form-control-white</code>.</p>
+                            <div class="docs-card-example bg-dark">
+                                <div class="row gy-30">
+                                    <div class="col-12"><input class="form-control form-control-style-3" type="text" placeholder="Input field"></div>
+                                    <div class="col-12"><input class="form-control form-control-style-3 form-control-white" type="text" placeholder="Input field"></div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="form.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-gallery-item">
+                            <h2 class="docs-card-title">Gallery Item</h2>
+                            <ul>
+                                <li><code>.image-link</code> - class for enable popup gallery.</li>
+                                <li><code>.video-link</code> - set the image height in percent or pixels.</li>
+                            </ul>
+                            <p>Galleries are created by adding the <code>.gallery-wrapper</code> class to the parent container.</p>
+                            <div class="docs-card-example">
+                                <div class="row gallery-wrapper">
+                                    <div class="col-6">
+                                        <!-- Gallery item--><a class="gallery-item rounded-4 overflow-hidden" href="../assets/img/docs/placeholder.jpg" style="--img-height: 62%;" data-img-height="data-img-height"><img loading="lazy" src="../assets/img/docs/placeholder.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="col-6">
+                                        <!-- Gallery item--><a class="gallery-item rounded-4 overflow-hidden" href="../assets/img/docs/placeholder.jpg" style="--img-height: 62%;" data-img-height="data-img-height"><img loading="lazy" src="../assets/img/docs/placeholder.jpg" alt="" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="gallery-item.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-industry">
+                            <h2 class="docs-card-title">Industry</h2>
+                            <div class="docs-card-example">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <!-- Industry-->
+                                        <div class="industry position-relative rounded-4 overflow-hidden"><a class="industry-link stretched-link" href="#"></a>
+                                            <div class="industry-image" data-img-height="data-img-height" style="--img-height: 114%;"><img loading="lazy" src="../assets/img/docs/placeholder.jpg" alt="" /></div>
+                                            <div class="industry-body">
+                                                <div class="industry-icon me-20 text-white"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" fill="none">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 4c0 1.657-4.03 3-9 3S1 5.657 1 4m18 0c0-1.657-4.03-3-9-3S1 2.343 1 4m18 0v14c0 1.66-4 3-9 3s-9-1.34-9-3V4m18 7c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                                    </svg></div>
+                                                <h4 class="industry-title m-0 text-white">Industry</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="industry.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-list">
+                            <h2 class="docs-card-title">List</h2>
+                            <p>Use <code>.active</code> class for highlight an icon.</p>
+                            <div class="docs-card-example">
+                                <ul class="list m-0">
+                                    <li class="active">List item 1</li>
+                                    <li class="active">List item 2</li>
+                                    <li>List item 3</li>
+                                    <li>List item 4</li>
+                                </ul>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="list.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-member">
+                            <h2 class="docs-card-title">Member</h2>
+                            <div class="docs-card-example">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <!-- Member-->
+                                        <div class="member "><a class="member-image rounded-4" href="#" data-img-height="data-img-height" style="--img-height: 114%;"><img loading="lazy" src="../assets/img/docs/placeholder.jpg" alt="" /></a>
+                                            <div class="member-body"><a class="member-title h4" href="#">Mary Carroll</a>
+                                                <div class="member-subtitle font-size-15 text-gray-dark">Senior Web Developer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="member.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-nav">
+                            <h2 class="docs-card-title">Nav</h2>
+                            <p><a href="https://getbootstrap.com/docs/5.0/components/navs-tabs/#tabs">Bootstrap documentation</a></p>
+                            <p>Additional classes: <code>.nav-opacity</code> and <code>.nav-no-opacity</code>.</p>
+                            <div class="docs-card-example">
+                                <ul class="nav mx-n18">
+                                    <li class="nav-item"><a class="nav-link" href="#">Item 01</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Item 02</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Item 03</a></li>
+                                </ul>
+                            </div>
+                            <p>Gap classes: <code>.nav-no-gap</code>, <code>.nav-gap-sm</code>, <code>.nav-gap-md</code> and <code>.nav-gap-xl</code>.</p>
+                            <div class="docs-card-example bg-dark">
+                                <ul class="nav nav-gap-md text-white nav-opacity">
+                                    <li class="nav-item"><a class="nav-link" href="#">Item 01</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Item 02</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Item 03</a></li>
+                                </ul>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="nav.html"></code>
+                            <h5>Nav Tabs</h5>
+                            <div class="docs-card-example bg-white">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul class="nav nav-tabs nav-no-opacity flex-column">
+                                            <li class="nav-item"><a class="nav-link rounded-3 d-flex flex-column active" href="#tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" aria-controls="tab-1" aria-selected="true">
+                                                    <!-- Feature-->
+                                                    <div class="d-flex align-items-center mb-20">
+                                                        <div class="text-accent-1"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" fill="none">
+                                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25 4.9c0 2.154-5.373 3.9-12 3.9S1 7.054 1 4.9m24 0C25 2.746 19.627 1 13 1S1 2.746 1 4.9m24 0v18.2c0 2.158-5.333 3.9-12 3.9S1 25.258 1 23.1V4.9M25 14c0 2.158-5.333 3.9-12 3.9S1 16.158 1 14" />
+                                                            </svg></div>
+                                                        <h4 class="mb-0 ms-20">Best Rates</h4>
+                                                    </div>
+                                                    <p class="font-size-15 m-0">Stars he had created two which in i which second midst is day darkness, a days.</p>
+                                                </a></li>
+                                            <li class="nav-item mt-10"><a class="nav-link rounded-3 d-flex flex-column" href="#tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" aria-controls="tab-2" aria-selected="false">
+                                                    <!-- Feature-->
+                                                    <div class="d-flex align-items-center mb-20">
+                                                        <div class="text-accent-1"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="none">
+                                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.818 24v-8.944m0-5.112V1M15 24V12.5m0-5.111V1m10.182 23v-6.389m0-5.111V1M1 15.056h7.636m2.546-7.667h7.636m2.546 10.222H29" />
+                                                            </svg></div>
+                                                        <h4 class="mb-0 ms-20">Ultimate Flexibility</h4>
+                                                    </div>
+                                                    <p class="font-size-15 m-0">Dry them years air there. Blessed Multiply morning, second night and bearing.</p>
+                                                </a></li>
+                                            <li class="nav-item mt-10"><a class="nav-link rounded-3 d-flex flex-column" href="#tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" aria-controls="tab-3" aria-selected="false">
+                                                    <!-- Feature-->
+                                                    <div class="d-flex align-items-center mb-20">
+                                                        <div class="text-accent-1"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none">
+                                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 20.5 14 27l13-6.5M1 14l13 6.5L27 14M14 1 1 7.5 14 14l13-6.5L14 1Z" />
+                                                            </svg></div>
+                                                        <h4 class="mb-0 ms-20">Easy Manage</h4>
+                                                    </div>
+                                                    <p class="font-size-15 m-0">Lesser bring creepeth called second place were lights sea.</p>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade show active" id="tab-1">
+                                                <p class="m-0">Tab 1</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab-2">
+                                                <p class="m-0">Tab 2</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab-3">
+                                                <p class="m-0">Tab 3</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="tabs.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-page-navigation">
+                            <h2 class="docs-card-title">Page Navigation</h2>
+                            <div class="docs-card-example bg-white">
+                                <!-- Page navigation-->
+                                <div class="page-navigation  "><a class="page-navigation-prev h4 rounded-3 bg-light" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                                            <path stroke="currentColor" stroke-width="1.7" d="M20 7H2m0 0 6.75-6M2 7l6.75 6" />
+                                        </svg><span class="d-none d-lg-block">...</span></a><a class="page-navigation-all shadow" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                                            <path fill="currentColor" d="M0 0h7v7H0V0ZM11 0h7v7h-7V0ZM11 11h7v7h-7v-7ZM0 11h7v7H0v-7Z" />
+                                        </svg></a><a class="page-navigation-next h4 rounded-3 bg-light" href="#"><span class="d-none d-lg-block">...</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                                            <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6" />
+                                        </svg></a></div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="page-navigation.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-pricing">
+                            <h2 class="docs-card-title">Pricing</h2>
+                            <div class="docs-card-example">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <!-- Pricing-->
+                                        <div class="pricing position-relative rounded-4 bg-white shadow">
+                                            <div class="pricing-header text-center">
+                                                <h3 class="pricing-title m-0">Free</h3>
+                                                <p class="pricing-subtitle text-gray-dark font-size-14 m-0">Can't good light moved</p>
+                                            </div>
+                                            <div class="pricing-price text-center mt-30 d-flex justify-content-center text-dark">
+                                                <div class="currency text-reset h3 lh-1 m-0 pt-5 pe-5">$</div>
+                                                <div class="value text-reset h1 large-heading lh-1 m-0">0</div>
+                                                <div class="period font-size-18 fw-medium align-self-end lh-1 pb-10">/mo</div>
+                                            </div>
+                                            <div class="pricing-content mt-35">
+                                                <ul class="list fw-bold font-size-16">
+                                                    <li class="active">Constant desire renewal</li>
+                                                    <li>Very great whose</li>
+                                                    <li>Of there whales very fly</li>
+                                                </ul>
+                                            </div>
+                                            <div class="pricing-footer text-center mt-50">
+                                                <!-- Button--><a class="btn btn-accent-1" href="#" target="_self">Get a Demo</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="pricing.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-process-step">
+                            <h2 class="docs-card-title">Process Step</h2>
+                            <div class="docs-card-example">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <!-- Process step-->
+                                        <div class="process-step ">
+                                            <div class="process-number h1 large-heading m-0 text-accent-1">01</div>
+                                            <div class="process-body pt-10 ms-30"><a class="process-title h4" href="#">Strategy<svg xmlns="http://www.w3.org/2000/svg" width="42" height="11" fill="none">
+                                                        <path stroke="currentColor" stroke-width="2" d="M0 5.5h40m0 0L34.6 1M40 5.5 34.6 10" />
+                                                    </svg></a>
+                                                <p class="process-text font-size-15 m-0">Fly us have creature they're tree yielding, morning.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="process-step.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-review">
+                            <h2 class="docs-card-title">Review</h2>
+                            <div class="docs-card-example">
+                                <!-- Review-->
+                                <div class="review text-center">
+                                    <div class="review-stars lh-1 mb-30"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="16" fill="none">
+                                            <path fill="#FFBB38" d="m8.595 0 2.656 5.266 5.94.85-4.298 4.096L13.907 16l-5.312-2.734L3.283 16l1.015-5.788L0 6.116l5.94-.85L8.594 0ZM26.798 0l2.656 5.266 5.94.85-4.299 4.096L32.11 16l-5.312-2.734L21.486 16l1.014-5.788-4.298-4.096 5.94-.85L26.798 0ZM45 0l2.656 5.266 5.94.85-4.298 4.096L50.312 16 45 13.266 39.688 16l1.014-5.788-4.298-4.096 5.94-.85L45 0ZM63.202 0l2.656 5.266 5.94.85-4.298 4.096L68.514 16l-5.312-2.734L57.89 16l1.014-5.788-4.298-4.096 5.94-.85L63.202 0ZM81.404 0l2.656 5.266 5.94.85-4.298 4.096L86.716 16l-5.312-2.734L76.092 16l1.014-5.788-4.297-4.096 5.94-.85L81.403 0Z" />
+                                        </svg></div>
+                                    <p class="review-text text-dark font-size-18 fw-medium mb-0">“ Is don't lights appear fifth face heaven. Night spirit shall tree of Life over, unto in earth second. ”</p>
+                                    <div class="review-footer mt-30">
+                                        <h6 class="review-author mb-5">Anthony Allison</h6>
+                                        <p class="review-position text-gray-dark font-size-14 mb-0">Unvab Inc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="review.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-service-box">
+                            <h2 class="docs-card-title">Service Box</h2>
+                            <p>Additional classes: <code>.service-box-sm</code>.</p>
+                            <div class="docs-card-example">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <!-- Service box-->
+                                        <div class="service-box lift position-relative rounded-4 bg-white text-center no-transform">
+                                            <!-- Circle icon-->
+                                            <div class="circle-icon text-white bg-accent-2 mb-30"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none">
+                                                    <path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z" />
+                                                </svg></div>
+                                            <h4 class="service-box-title mb-15">Consulting</h4>
+                                            <p class="service-box-text font-size-15 mb-30">Stars life that waters firmament our created you.</p><a class="service-box-arrow stretched-link mt-30" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                                                    <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"></path>
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <!-- Service box-->
+                                        <div class="service-box lift position-relative rounded-4 bg-white text-center no-transform service-box-sm">
+                                            <!-- Circle icon-->
+                                            <div class="circle-icon text-white bg-accent-2 mb-30"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none">
+                                                    <path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z" />
+                                                </svg></div>
+                                            <h4 class="service-box-title mb-15">Consulting</h4>
+                                            <p class="service-box-text font-size-15 m-0">Stars life that waters firmament our created you.</p><a class="stretched-link" href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="service-box.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-service-card">
+                            <h2 class="docs-card-title">Service Card</h2>
+                            <div class="docs-card-example bg-dark">
+                                <!-- Service card-->
+                                <div class="service-card lift position-relative bg-light rounded-4 overflow-hidden no-transform">
+                                    <div class="service-card-image flex-shrink-0" data-img-height="data-img-height" style="--img-height: 100%;"><img loading="lazy" src="../assets/img/docs/placeholder.jpg" alt="" /></div>
+                                    <div class="service-card-body flex-grow-1">
+                                        <h4 class="service-card-title mb-15">Consulting</h4>
+                                        <p class="service-card-text font-size-15 mb-30">Stars life that waters firmament our created you.</p><a class="service-card-arrow stretched-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                                                <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6" />
+                                            </svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="service-card.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-service-case">
+                            <h2 class="docs-card-title">Service Case</h2>
+                            <div class="docs-card-example">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <!-- Service case-->
+                                        <div class="service-case lift rounded-4 bg-white shadow overflow-hidden"><a class="service-case-image" href="#" data-img-height="data-img-height" style="--img-height: 64%;"><img loading="lazy" src="../assets/img/docs/placeholder.jpg" alt="" /></a>
+                                            <div class="service-case-body position-relative">
+                                                <!-- Circle icon-->
+                                                <div class="circle-icon circle-icon-sm text-white bg-accent-1 position-absolute me-50 top-0 end-0 translate-middle-y"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" fill="none">
+                                                        <path fill="currentColor" fill-rule="evenodd" d="M20.493 18.382c.396-.396.618-.933.618-1.493V5.278A2.111 2.111 0 0 0 19 3.167H9.5L7.389 0H2.11A2.111 2.111 0 0 0 0 2.111V16.89A2.111 2.111 0 0 0 2.111 19H19c.56 0 1.097-.222 1.493-.618Zm-8.938-9.938a1 1 0 1 0-2 0v2.167H7.388a1 1 0 1 0 0 2h2.167v2.167a1 1 0 1 0 2 0V12.61h2.166a1 1 0 0 0 0-2h-2.166V8.444Z" clip-rule="evenodd" />
+                                                    </svg></div>
+                                                <h4 class="service-case-title mb-15">Project Engineering</h4>
+                                                <p class="service-case-text font-size-15 mb-30">Beast whose. You&quot;ll may fruit don&quot;t deep abundantly own void.</p><a class="service-case-arrow stretched-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                                                        <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6" />
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="service-case.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-service-line">
+                            <h2 class="docs-card-title">Service Line</h2>
+                            <p>Additional classes: <code>.service-line-sm</code>.</p>
+                            <div class="docs-card-example bg-white">
+                                <!-- Service line-->
+                                <div class="service-line lift position-relative rounded-3 no-transform">
+                                    <div class="service-line-icon text-accent-1"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" fill="none">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M39 20.5C39 30.717 30.717 39 20.5 39M39 20.5C39 10.283 30.717 2 20.5 2M39 20.5H2M20.5 39C10.283 39 2 30.717 2 20.5M20.5 39a28.305 28.305 0 0 0 7.4-18.5A28.305 28.305 0 0 0 20.5 2m0 37a28.305 28.305 0 0 1-7.4-18.5A28.305 28.305 0 0 1 20.5 2M2 20.5C2 10.283 10.283 2 20.5 2" />
+                                        </svg></div>
+                                    <div class="service-line-body ms-40">
+                                        <h4 class="service-line-title m-0">Web Development</h4><a class="service-line-arrow stretched-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                                                <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6" />
+                                            </svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="service-line.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="component-shape">
+                            <h2 class="docs-card-title">Shape</h2>
+                            <p>The <code>jarallax</code> plugin is used.</p>
+                            <div class="docs-card-example">
+                                <div class="shape-parent">
+                                    <div class="shape position-relative"><svg class="no-transform" width="200" height="200" viewBox="0 0 641 641" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="320.5" cy="320.5" r="320.5" fill="#ccc"></circle>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="component-shape.html"></code>
+                        </div><!-- Plugins-->
+                        <div class="docs-card tab-content bg-white rounded-4" id="plugin-countdown">
+                            <h2 class="docs-card-title">Countdown</h2>
+                            <p>This attribute <code>data-due-date="..."</code> can be one of the following:</p>
+                            <ul>
+                                <li><code>YYYY/MM/DD</code></li>
+                                <li><code>MM/DD/YYYY</code></li>
+                                <li><code>YYYY/MM/DD hh:mm:ss</code></li>
+                                <li><code>MM/DD/YYYY hh:mm:ss</code></li>
+                            </ul>
+                            <p>HTML Example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="countdown.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="plugin-magnific-popup">
+                            <h2 class="docs-card-title">Magnific Popup</h2>
+                            <p>JavaScript lightbox library for presenting various types of media. Responsive, touch-enabled and customizable.</p>
+                            <p><a href="https://dimsemenov.com/plugins/magnific-popup/documentation.html">Plugin documentation</a>.</p>
+                            <div class="docs-card-example"><a class="image-link" href="https://www.youtube.com/watch?v=BGrY85i-skk"><img class="w-100" src="https://img.youtube.com/vi/BGrY85i-skk/maxresdefault.jpg" alt=""></a></div>
+                            <p>HTML example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="magnific-popup.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="plugin-isotope">
+                            <h2 class="docs-card-title">Isotope</h2>
+                            <p>HTML Example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="isotope.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="plugin-show-on-scroll">
+                            <h2 class="docs-card-title">Show on Scroll</h2>
+                            <p>A lightweight and simple script performs the action of appearing an element during page scrolling.</p>
+                            <h5>Additional attributes:</h5>
+                            <ul>
+                                <li>Duration (milliseconds) - <code>data-show-duration="500"</code></li>
+                                <li>Delay (milliseconds) - <code>data-show-delay="100"</code></li>
+                                <li>Distance (px) - <code>data-show-distance="30"</code></li>
+                                <li>Position (default: bottom) - <code>data-show-origin="left"</code> - <code>top</code> | <code>right</code> | <code>bottom</code> | <code>left</code></li>
+                            </ul>
+                            <p>HTML Example:</p><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="show-on-scroll.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="plugin-swiper">
+                            <h2 class="docs-card-title">Swiper</h2>
+                            <p>See inside the template for more examples.</p>
+                            <h5>Additional classes:</h5>
+                            <ul>
+                                <li>Horizontal - <code>.swiper-full-horizontal</code></li>
+                            </ul>
+                            <h5>Additional attributes:</h5>
+                            <ul>
+                                <li><code>data-swiper-loop</code> - boolean</li>
+                                <li><code>data-swiper-effect</code> - "slide", "fade"</li>
+                                <li><code>data-swiper-freeMode</code> - boolean</li>
+                                <li><code>data-swiper-grabCursor</code> - boolean</li>
+                                <li><code>data-swiper-autoHeight</code> - boolean</li>
+                                <li><code>data-swiper-parallax</code> - boolean</li>
+                                <li><code>data-swiper-center</code> - boolean</li>
+                                <li><code>data-swiper-slides</code> - number</li>
+                                <li><code>data-swiper-pagination</code> - boolean</li>
+                                <li><code>data-swiper-autoplay</code> - number</li>
+                                <li><code>data-swiper-speed</code> - number</li>
+                                <li><code>data-swiper-gap</code> - number</li>
+                                <li><code>data-swiper-breakpoints</code> - example <code>"1200: 2, 600: 1"</code> = 1200(breakpoint): 2(slides), 600(breakpoint): 1(slides)</li>
+                            </ul><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="swiper.html"></code>
+                        </div><!-- Credits-->
+                        <div class="docs-card tab-content bg-white rounded-4" id="credits-plugins">
+                            <h2 class="docs-card-title">Plugins</h2>
+                            <ul>
+                                <li>Magnific-Popup - <a href="https://github.com/dimsemenov/Magnific-Popup">https://github.com/dimsemenov/Magnific-Popup</a></li>
+                                <li>Bootstrap - <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></li>
+                                <li>Imagesloaded - <a href="https://github.com/desandro/imagesloaded">https://github.com/desandro/imagesloaded</a></li>
+                                <li>Isotope-layout - <a href="https://isotope.metafizzy.co/">https://isotope.metafizzy.co/</a></li>
+                                <li>Jarallax - <a href="https://github.com/nk-o/jarallax">https://github.com/nk-o/jarallax</a></li>
+                                <li>jQuery - <a href="https://jquery.com/">https://jquery.com/</a></li>
+                                <li>jQuery-Countdown - <a href="http://hilios.github.io/jQuery.countdown/">http://hilios.github.io/jQuery.countdown/</a></li>
+                                <li>jQuery-inview - <a href="https://github.com/protonet/jquery.inview">https://github.com/protonet/jquery.inview</a></li>
+                                <li>Object-fit-images - <a href="https://github.com/bfred-it/object-fit-images#readme">https://github.com/bfred-it/object-fit-images#readme</a></li>
+                                <li>Swiper - <a href="https://swiperjs.com/">https://swiperjs.com/</a></li>
+                            </ul>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="credits-images">
+                            <h2 class="docs-card-title">Images</h2>
+                            <h5>Images</h5>
+                            <ul>
+                                <li><a href="https://www.pexels.com/">https://www.pexels.com/</a></li>
+                                <li><a href="https://unsplash.com/">https://unsplash.com/</a></li>
+                                <li><a href="https://freebiesbug.com/">https://freebiesbug.com/</a></li>
+                            </ul>
+                            <hr>
+                            <h5>Illustrations</h5>
+                            <ul>
+                                <li><a href="https://www.freepik.com/">https://www.freepik.com/</a></li>
+                            </ul>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="credits-others">
+                            <h2 class="docs-card-title">Other</h2>
+                            <h5>Icons</h5>
+                            <ul>
+                                <li><a href="https://www.flaticon.com/">https://www.flaticon.com/</a></li>
+                                <li><a href="https://feathericons.com/">https://feathericons.com/</a></li>
+                                <li><a href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></li>
+                            </ul>
+                            <hr>
+                            <h5>Fonts</h5>
+                            <ul>
+                                <li><a href="https://fonts.google.com/">https://fonts.google.com/</a></li>
+                            </ul>
+                        </div><!-- Others-->
+                        <div class="docs-card tab-content bg-white rounded-4" id="helper-classes">
+                            <h2 class="docs-card-title">Helper Classes</h2>
+                            <h5>Utilities:</h5>
+                            <ul>
+                                <li><code>.highlight</code> - animated underline.</li>
+                                <li><code>.no-transform</code> - disable CSS transform.</li>
+                                <li><code>.z-index-1</code> - sets the z-index property value to 1.</li>
+                                <li><code>.z-index-n1</code> - sets the z-index property value to -1.</li>
+                            </ul>
+                            <h5>Font:</h5>
+                            <ul>
+                                <li><code>.font-size-13</code> - sets the font size to 13px.</li>
+                                <li><code>.font-size-14</code> - sets the font size to 14px.</li>
+                                <li><code>.font-size-15</code> - sets the font size to 15px.</li>
+                                <li><code>.font-size-18</code> - sets the font size to 18px.</li>
+                                <li><code>.fw-medium</code> - sets the font weight to medium (500).</li>
+                            </ul>
+                            <h5>Text Colors:</h5>
+                            <ul>
+                                <li><code>.text-accent-1</code> - sets the text color to <code>$color-accent-1</code>.</li>
+                                <li><code>.text-hover-accent-1</code> - sets the text hover color to <code>$color-accent-1</code>.</li>
+                                <li><code>.text-accent-2</code> - sets the text color to <code>$color-accent-2</code>.</li>
+                                <li><code>.text-hover-accent-2</code> - sets the text hover color to <code>$color-accent-2</code>.</li>
+                                <li><code>.text-accent-3</code> - sets the text color to <code>$color-accent-3</code>.</li>
+                                <li><code>.text-hover-accent-3</code> - sets the text hover color to <code>$color-accent-3</code>.</li>
+                                <li><code>.text-gray-light</code> - sets the text color to <code>$color-gray-light</code>.</li>
+                                <li><code>.text-gray</code> - sets the text color to <code>$color-gray</code>.</li>
+                                <li><code>.text-gray-dark</code> - sets the text color to <code>$color-dark</code>.</li>
+                                <li><code>.text-gray-darker</code> - sets the text color to <code>$gray-600</code>.</li>
+                            </ul>
+                            <h5>Background Colors:</h5>
+                            <ul>
+                                <li><code>.bg-linear-gradient</code> - sets the background linear gradient between <code>#FFF5EB</code> and <code>#F4F2F9</code>.</li>
+                                <li><code>.bg-accent-1</code> - sets the background color to <code>$color-accent-1</code>.</li>
+                                <li><code>.bg-accent-2</code> - sets the background color to <code>$color-accent-2</code>.</li>
+                                <li><code>.bg-accent-3</code> - sets the background color to <code>$color-accent-3</code>.</li>
+                                <li><code>.bg-dark-light</code> - sets the background color to <code>$color-dark-light</code>.</li>
+                                <li><code>.bg-gray-light</code> - sets the background color to <code>$color-gray-light</code>.</li>
+                                <li><code>.bg-gray</code> - sets the background color to <code>$color-gray</code>.</li>
+                                <li><code>.bg-gray-op20</code> - sets the background color to <code>$color-gray</code> with 20% opacity.</li>
+                                <li><code>.bg-gray-dark</code> - sets the background color to <code>$color-dark</code>.</li>
+                                <li><code>.bg-gray-darker</code> - sets the background color to <code>$gray-600</code>.</li>
+                            </ul>
+                            <h5>Border Colors:</h5>
+                            <ul>
+                                <li><code>.border-gray</code> - sets the border color to <code>$gray-500</code> with 30% opacity.</li>
+                            </ul>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="utils">
+                            <h2 class="docs-card-title">Utils</h2>
+                            <h5>Image Height</h5>
+                            <ul>
+                                <li>Add <code>data-img-height</code> to element which contains an image.</li>
+                                <li>Add <code>style="--img-height: 100%;"</code> attribute to this element.</li>
+                            </ul>
+                            <div class="docs-card-example">
+                                <div data-img-height style="--img-height: 70%;"><a class="image-link" href="../assets/img/docs/placeholder.jpg"><img class="rounded-4" loading="lazy" src="../assets/img/docs/placeholder.jpg" alt=""></a></div>
+                            </div>
+                            <h5>Half Section Divider</h5>
+                            <ul>
+                                <li>Add <code>.half-section-block</code> class to element which will divide two sections.</li>
+                                <li>Add <code>data-prev-id</code> to this element which contain unique class to the previous section.</li>
+                                <li>Add <code>data-next-id</code> to this element which contain unique class to the next section.</li>
+                            </ul><code class="docs-card-gist" data-gist-id="3db95727944fb311a7fb574e51e90d5b" data-gist-file="utils.html"></code>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="figma">
+                            <h2 class="docs-card-title">Figma</h2>
+                            <p class="m-0">Startbox was designed in Figma. Please use the <a href="https://drive.google.com/file/d/1s-M1apEvz3ZfDXEzYZ-6uej9ph0NuyXC/view">link</a> to download an unofficial Figma file that can be useful to rough out new pages or modify existing ones.</p>
+                        </div>
+                        <div class="docs-card tab-content bg-white rounded-4" id="thank-you">
+                            <h2 class="docs-card-title">Thank You!</h2>
+                            <p>Thanks for using Startbox. We take great pride in creating solid templates and strongly believe in robust customer service practices. Should you have a question that neither this documentation file nor Bootstrap's forums can resolve and we’ll do our very best to assist you.</p>
+                            <p class="m-0">We hope you will enjoy using it for your next project!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Vendors-->
+    <!-- build:js -->
+    <script src="../assets/vendors/js/bootstrap.js"></script>
+    <script src="../assets/vendors/js/imagesloaded.pkgd.js"></script>
+    <script src="../assets/vendors/js/isotope.pkgd.js"></script>
+    <script src="../assets/vendors/js/jarallax.js"></script>
+    <script src="../assets/vendors/js/jarallax-element.js"></script>
+    <script src="../assets/vendors/js/jquery.countdown.js"></script>
+    <script src="../assets/vendors/js/jquery.magnific-popup.js"></script>
+    <script src="../assets/vendors/js/ofi.js"></script>
+    <script src="../assets/vendors/js/jquery.inview.js"></script>
+    <script src="../assets/vendors/js/swiper-bundle.js"></script>
+    <script src="../assets/vendors/js/gist-embed.min.js"></script>
+    <script src="../assets/js/helpers.js"></script>
+    <script src="../assets/js/controllers/show-on-scroll.js"></script>
+    <script src="../assets/js/controllers/countdown.js"></script>
+    <script src="../assets/js/controllers/isotope.js"></script>
+    <script src="../assets/js/controllers/navbar.js"></script>
+    <script src="../assets/js/controllers/stretch-column.js"></script>
+    <script src="../assets/js/controllers/swiper.js"></script>
+    <script src="../assets/js/controllers/others.js"></script><!-- endbuild -->
+</head>
+
+</html>

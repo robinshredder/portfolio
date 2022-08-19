@@ -1,0 +1,97 @@
+.docs-card {
+	padding: 30px 60px 60px;
+
+	.docs-card-title {
+		padding-right: 60px;
+		padding-bottom: 30px;
+		padding-left: 60px;
+		margin-top: 0;
+		margin-right: -60px;
+		margin-bottom: 40px;
+		margin-left: -60px;
+		border-bottom: 1px solid rgba($color-gray, .3);
+	}
+
+	>h2,
+	>.h2{
+		margin-top: em(40px, 40px);
+	}
+
+	>h3,
+	>.h3{
+		margin-top: em(40px, 34px);
+	}
+
+	>h4,
+	>.h4 {
+		margin-top: em(40px, 20px);
+	}
+
+	>h5,
+	>.h5 {
+		margin-top: em(40px, 18px);
+	}
+
+	>h6,
+	>.h6 {
+		margin-top: 1em;
+	}
+
+	ul:not([class]),
+	ol:not([class]) {
+		margin-bottom: 30px;
+		line-height: 2;
+
+		ul,
+		ul {
+			margin-bottom: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+	}
+
+	a + p,
+	ul:not([class]) + p,
+	ol:not([class]) + p,
+	ul:not([class]) + .docs-card-example,
+	ol:not([class]) + .docs-card-example,
+	.docs-card-example + p,
+	p + .docs-card-example,
+	.docs-card-example + .docs-card-example {
+		margin-top: 40px;
+	}
+
+	p a,
+	ul:not([class]) a,
+	ol:not([class]) a {
+		color: $color-accent-1;
+		text-decoration: underline;
+	}
+
+	&:not(.show) {
+		display: none;
+	}
+
+}
+
+code.docs-card-gist {
+	display: block;
+	margin-top: 45px;
+	margin-bottom: 45px;
+
+	.blob-wrapper {
+		max-height: 500px;
+		overflow-y: auto;
+	}
+
+}
+
+.docs-card-example {
+	position: relative;
+	padding: 30px;
+	background-color: $color-gray-light;
+	border: 1px solid rgba($color-gray, .3);;
+}

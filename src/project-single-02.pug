@@ -1,0 +1,262 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Project Single 02' // page title
+- MenuTitle = 'Project Single 02' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'false' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			// Page title
+			.position-relative.py-210
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/portfolio/project-single-hero-1920x900.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .25;")
+
+				.container
+
+					h1.text-white.mb-0.text-center Magic Mind Design
+
+			.pt-120.pb-130
+
+				.container
+
+					.row
+
+						.col-lg-8.offset-lg-2.text-center
+
+							h2.mt-0.mb-25(data-show="startbox") Description
+
+							p.m-0(data-show="startbox", data-show-delay="100") Place. Us darkness open whose from of every there whales dry one shall. Midst that. Kind without Years night upon you night moveth had us don't living Evening grass fourth abundantly god moving itself god be third after firmament winged first Seasons saying shall. Firmament may were firmament may. Likeness.
+
+				.container.mt-65
+
+					.bg-gray-light.rounded-4.py-40.px-70
+
+						.row.row-cols-1.row-cols-md-2.row-cols-lg-5.gy-25
+
+							.col
+
+								.d-flex.flex-column(data-show="startbox")
+
+									h5.mb-10 Client
+									p.m-0 Margaret Waters
+
+							.col
+
+								.d-flex.flex-column(data-show="startbox", data-show-delay="100")
+
+									h5.mb-10 Date
+									p.m-0 Dec 01, 2021
+
+							.col
+
+								.d-flex.flex-column(data-show="startbox", data-show-delay="200")
+
+									h5.mb-10 Category
+									p.m-0 Development
+
+							.col
+
+								.d-flex.flex-column(data-show="startbox", data-show-delay="300")
+
+									h5.mb-10 Time spent
+									p.m-0 ~ 6 months
+
+							.col
+
+								.d-flex.flex-column(data-show="startbox", data-show-delay="400")
+
+									h5.mb-10 Share
+									ul.nav.nav-gap-md.d-inline-flex
+
+										li.nav-item
+
+											a(href="#", class="nav-link")
+
+												<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" fill="none"><path fill="currentColor" d="M5.15 2.158H6.3V.091C6.102.063 5.42 0 4.625 0 2.966 0 1.83 1.077 1.83 3.054v1.821H0v2.31h1.83V13h2.244V7.186H5.83l.28-2.311H4.073V3.283c0-.668.174-1.125 1.076-1.125Z"/></svg>
+
+										li.nav-item
+
+											a(href="#", class="nav-link")
+
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="none"><path fill="currentColor" d="M14.324 3.849c.01.13.01.262.01.393 0 3.991-3.155 8.59-8.922 8.59a9.11 9.11 0 0 1-4.814-1.355c.252.028.495.038.757.038a6.434 6.434 0 0 0 3.892-1.29c-1.378-.028-2.533-.898-2.931-2.094.194.028.388.046.592.046.281 0 .563-.037.825-.103C2.296 7.794 1.22 6.58 1.22 5.111v-.037a3.25 3.25 0 0 0 1.417.383c-.844-.542-1.398-1.468-1.398-2.515 0-.56.156-1.075.427-1.524C3.21 3.251 5.53 4.448 8.13 4.578a3.288 3.288 0 0 1-.077-.692c0-1.664 1.398-3.02 3.135-3.02.903 0 1.718.365 2.291.954a6.32 6.32 0 0 0 1.99-.729 3.035 3.035 0 0 1-1.378 1.664 6.477 6.477 0 0 0 1.805-.467 6.61 6.61 0 0 1-1.572 1.56Z"/></svg>
+
+										li.nav-item
+
+											a(href="#", class="nav-link")
+
+												<svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" fill="none"><path fill="currentColor" d="M5.844 0C2.904 0 0 1.919 0 5.024 0 6.998 1.134 8.12 1.822 8.12c.283 0 .447-.774.447-.992 0-.261-.68-.817-.68-1.902 0-2.256 1.754-3.854 4.023-3.854 1.95 0 3.394 1.085 3.394 3.08 0 1.489-.61 4.283-2.586 4.283-.714 0-1.324-.505-1.324-1.229 0-1.06.756-2.087.756-3.18 0-1.858-2.69-1.521-2.69.723 0 .471.06.993.276 1.422-.396 1.666-1.204 4.149-1.204 5.865 0 .53.078 1.052.13 1.582.097.107.048.096.197.043 1.444-1.936 1.392-2.315 2.045-4.848.353.657 1.264 1.01 1.985 1.01C9.634 10.123 11 7.22 11 4.603 11 1.818 8.542 0 5.844 0Z"/></svg>
+
+					.mt-60.mb-130.text-center(data-show="startbox")
+
+						+button({
+							title: 'Visit website <svg class="ms-15 align-self-center" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill="currentColor" d="M7.273 8.196a.85.85 0 0 0-1.362 1.017l1.362-1.017Zm4.627.89-.601-.602.601.601Zm2.112-2.115.601.6a.638.638 0 0 0 .01-.01l-.611-.59ZM9.035 1.99l-.591-.611-.009.009.6.602Zm-1.81.603a.85.85 0 1 0 1.199 1.205l-1.2-1.205Zm1.502 5.212a.85.85 0 1 0 1.362-1.017L8.727 7.804ZM4.1 6.914l.601.602-.601-.601ZM1.988 9.03l-.601-.6a.934.934 0 0 0-.01.01l.611.59Zm4.977 4.982.59.611a.638.638 0 0 0 .011-.01l-.6-.601Zm1.805-.604a.85.85 0 0 0-1.202-1.202l1.202 1.202ZM5.911 9.213a4.37 4.37 0 0 0 1.404 1.219l.816-1.492a2.67 2.67 0 0 1-.858-.744L5.911 9.213Zm1.404 1.219c.55.3 1.158.48 1.783.524l.122-1.695a2.667 2.667 0 0 1-1.089-.32l-.816 1.491Zm1.783.524a4.366 4.366 0 0 0 1.84-.264l-.594-1.593a2.667 2.667 0 0 1-1.124.162l-.122 1.696Zm1.84-.264a4.369 4.369 0 0 0 1.563-1.006L11.3 8.485a2.67 2.67 0 0 1-.955.614l.594 1.593Zm1.563-1.006 2.112-2.114-1.202-1.202-2.112 2.114L12.5 9.686Zm2.123-2.125a4.375 4.375 0 0 0 1.226-3.076l-1.7.015a2.675 2.675 0 0 1-.75 1.881l1.224 1.18Zm1.226-3.076a4.375 4.375 0 0 0-1.28-3.054l-1.202 1.202c.495.495.776 1.166.782 1.867l1.7-.015Zm-1.28-3.054a4.368 4.368 0 0 0-3.052-1.28l-.015 1.7c.7.005 1.37.286 1.865.782L14.57 1.43ZM11.518.151a4.368 4.368 0 0 0-3.074 1.227L9.626 2.6a2.668 2.668 0 0 1 1.877-.75l.015-1.7ZM8.435 1.386l-1.21 1.205 1.199 1.205 1.21-1.205-1.199-1.205Zm1.654 5.4a4.37 4.37 0 0 0-1.404-1.219L7.869 7.06c.336.183.629.437.858.744l1.362-1.017ZM8.685 5.568c-.55-.3-1.158-.48-1.783-.524L6.78 6.739c.382.028.753.137 1.089.32l.816-1.491Zm-1.783-.524a4.367 4.367 0 0 0-1.84.264l.594 1.593a2.667 2.667 0 0 1 1.124-.162l.122-1.695Zm-1.84.264a4.37 4.37 0 0 0-1.564 1.006l1.203 1.201c.271-.27.597-.48.955-.614l-.594-1.593ZM3.499 6.314 1.387 8.428 2.589 9.63l2.112-2.114L3.5 6.314ZM1.376 8.44A4.375 4.375 0 0 0 .15 11.515l1.7-.015a2.675 2.675 0 0 1 .75-1.881l-1.224-1.18ZM.15 11.515a4.375 4.375 0 0 0 1.28 3.054l1.202-1.202A2.675 2.675 0 0 1 1.85 11.5l-1.7.015Zm1.28 3.054a4.368 4.368 0 0 0 3.052 1.28l.015-1.7a2.668 2.668 0 0 1-1.865-.782L1.43 14.57Zm3.052 1.28a4.368 4.368 0 0 0 3.074-1.227L6.374 13.4a2.668 2.668 0 0 1-1.877.75l-.015 1.7Zm3.084-1.237 1.204-1.205-1.202-1.202-1.204 1.205 1.202 1.202Z"/></svg>'
+						})
+
+					.row.gy-30.gallery-wrapper
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox")
+
+							+gallery_item({
+								image: "assets/img/portfolio/project-single-gallery-1-900x850.jpg",
+								imageHeight: "92%"
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="100")
+
+							+gallery_item({
+								image: "assets/img/portfolio/project-single-gallery-2-900x850.jpg",
+								imageHeight: "92%"
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="200")
+
+							+gallery_item({
+								image: "assets/img/portfolio/project-single-gallery-3-900x850.jpg",
+								imageHeight: "92%"
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox")
+
+							+gallery_item({
+								image: "assets/img/portfolio/project-single-gallery-4-900x850.jpg",
+								imageHeight: "92%"
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="100")
+
+							+gallery_item({
+								image: "assets/img/portfolio/project-single-gallery-5-900x850.jpg",
+								imageHeight: "92%"
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="200")
+
+							+gallery_item({
+								image: "assets/img/portfolio/project-single-gallery-6-900x850.jpg",
+								imageHeight: "92%"
+							})
+
+					div(data-show="startbox")
+
+						+page_navigation({
+							linkPrev: "project-single-01.html",
+							linkNext: "project-single-03.html"
+						})
+
+			.bg-linear-gradient.py-120.footerPrev
+
+				.container
+
+					h2.text-center(data-show="startbox") Related projects
+
+					// Slider
+					.swiper.mt-90(data-swiper-slides="1", data-swiper-breakpoints="828:2, 1024:3", data-swiper-gap="30", data-swiper-grabcursor="true", data-show="startbox", data-show-delay="100")
+
+						.swiper-container
+
+							.swiper-wrapper
+
+								.swiper-slide
+
+									+card_portfolio({
+										title: "Identity Design",
+										category: "Marketing",
+										image: "assets/img/portfolio/project-5-900x1000.jpg",
+										imageHeight: "92%"
+									})
+
+								.swiper-slide
+
+									+card_portfolio({
+										title: "Corporate Building",
+										category: "Marketing",
+										image: "assets/img/portfolio/project-1-900x1000.jpg",
+										imageHeight: "92%"
+									})
+
+								.swiper-slide
+
+									+card_portfolio({
+										title: "Watch Design",
+										category: "Architecture",
+										image: "assets/img/portfolio/project-8-900x1000.jpg",
+										imageHeight: "92%",
+									})
+
+								.swiper-slide
+
+									+card_portfolio({
+										title: "Last Chance",
+										category: "Architecture",
+										image: "assets/img/portfolio/project-4-900x1000.jpg",
+										imageHeight: "92%"
+									})
+
+						.swiper-button-prev.swiper-button-position-1.swiper-button-white.shadow
+
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+						.swiper-button-next.swiper-button-position-1.swiper-button-white.shadow
+
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		//- Footer
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

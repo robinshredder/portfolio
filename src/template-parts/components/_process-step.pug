@@ -1,0 +1,42 @@
+mixin process_step(object)
+
+	//- Default
+	- object = object || {}
+	- object.link = object.link || "#"
+	- object.number = object.number || "01"
+	- object.numberClass = object.numberClass || "text-accent-1"
+	- object.title = object.title || "Strategy"
+	- object.titleClass = object.titleClass || ""
+	- object.text = object.text || "Fly us have creature they\'re tree yielding, morning."
+	- object.textClass = object.textClass || "font-size-15 m-0"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || ""
+
+	//- Element Class
+	- elClass = "process-step "
+	- elClass += object.customClass
+
+	// Process step
+	div(class=elClass, style=object.css)
+
+		if object.number != ""
+
+			.process-number.h1.large-heading.m-0(class=object.numberClass)
+
+				=object.number
+
+		.process-body.pt-10.ms-30
+
+			if object.link != "" && object.title != ""
+
+				a.process-title.h4(href=object.link, class=object.titleClass)
+
+					=object.title
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="11" fill="none"><path stroke="currentColor" stroke-width="2" d="M0 5.5h40m0 0L34.6 1M40 5.5 34.6 10"/></svg>
+
+			if object.text != ""
+
+				p.process-text(class=object.textClass)
+
+					=object.text

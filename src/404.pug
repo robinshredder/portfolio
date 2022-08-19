@@ -1,0 +1,91 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Page 404' // page title
+- MenuTitle = 'Page 404' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'false' // true / false
+- NavbarOpaque = 'true' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			.pt-210.pb-130.bg-linear-gradient.text-center.shape-parent
+
+				// Shape
+				.shape.justify-content-start
+
+					img(loading="lazy", src="assets/img/root/404-shape-326x321.png", alt="", width="326", height="321")
+
+				// Shape
+				.shape.justify-content-end.align-items-end
+
+					img(loading="lazy", src="assets/img/root/404-shape-301x281.png", alt="", width="301", height="281")
+
+				// Shape
+				.shape.justify-content-center.align-items-center.mb-40
+
+					img(loading="lazy", src="assets/img/root/404-shape-782x302.png", alt="", width="782", height="302")
+
+				.container
+
+					h1.large-heading.mb-20(data-show="startbox") 404
+
+					h3.mb-10(data-show="startbox", data-show-delay="100") Page not found
+
+					p.mb-40(data-show="startbox", data-show-delay="200") Perhaps you would like to go to our home page?
+
+					div(data-show="startbox", data-show-delay="300")
+
+						+button({
+							title: "Go to Home",
+							link: "index.html"
+						})
+
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

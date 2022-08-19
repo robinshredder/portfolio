@@ -1,0 +1,93 @@
+mixin pricing(object)
+
+	//- Default
+	- object = object || {}
+	- object.badge = object.badge || ""
+	- object.badgeClass = object.badgeClass || "bg-accent-1 text-white position-absolute top-0 start-50 translate-middle"
+	- object.link = object.link || "#"
+
+	- object.priceClass = object.priceClass || "text-center mt-30 d-flex justify-content-center text-dark"
+	- object.contentClass = object.contentClass || "mt-35"
+	- object.footerClass = object.footerClass || "text-center mt-50"
+
+	- object.title = object.title || "Free"
+	- object.titleClass = object.titleClass || "m-0"
+
+	- object.subtitle = object.subtitle || "Can't good light moved"
+	- object.subtitleClass = object.subtitleClass || "text-gray-dark font-size-14 m-0"
+
+	- object.currency = object.currency || "$"
+	- object.currencyClass = object.currencyClass || "text-reset h3 lh-1 m-0 pt-5 pe-5"
+
+	- object.value = object.value || "0"
+	- object.valueClass = object.valueClass || "text-reset h1 large-heading lh-1 m-0"
+
+	- object.period = object.period || "/mo"
+	- object.periodClass = object.periodClass || "font-size-18 fw-medium align-self-end lh-1 pb-10"
+
+	- object.content = object.content || {}
+
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "position-relative rounded-4 bg-white shadow"
+
+	//- Element Class
+	- elClass = "pricing "
+	- elClass += object.customClass
+
+	// Pricing
+	div(class=elClass, style=object.css)
+
+		if object.badge != ""
+
+			span.badge(class=object.badgeClass)
+
+				=object.badge
+
+		.pricing-header.text-center
+
+			h3.pricing-title(class=object.titleClass)
+
+				=object.title
+
+			p.pricing-subtitle(class=object.subtitleClass)
+
+				=object.subtitle
+
+		.pricing-price(class=object.priceClass)
+
+				.currency(class=object.currencyClass)
+
+					=object.currency
+
+				.value(class=object.valueClass)
+
+					=object.value
+
+				.period(class=object.periodClass)
+
+					=object.period
+
+		.pricing-content(class=object.contentClass)
+
+			ul.list.fw-bold.font-size-16
+
+				each val in object.content
+
+					if val.active == true
+
+						li.active
+
+							=val.text
+
+					else
+
+						li
+
+							=val.text
+
+		.pricing-footer(class=object.footerClass)
+
+			+button({
+				link: object.link,
+				title: "Get a Demo"
+			})

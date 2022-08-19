@@ -1,0 +1,18 @@
+mixin gallery_item(object)
+
+	//- Default
+	- object = object || {}
+	- object.image = object.image || ""
+	- object.imageClass = object.imageClass || ""
+	- object.imageHeight = object.imageHeight || "87%"
+	- object.css = object.css || "--img-height: " + object.imageHeight + ";"
+	- object.customClass = object.customClass || "rounded-4 overflow-hidden"
+
+	//- Element Class
+	- elClass = "gallery-item "
+	- elClass += object.customClass
+
+	// Gallery item
+	a(href=object.image, class=elClass, style=style=object.css, data-img-height)
+
+		img(loading="lazy", src=object.image, alt="", class=object.imageClass)

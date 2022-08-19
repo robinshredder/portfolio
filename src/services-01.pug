@@ -1,0 +1,264 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Services 01' // page title
+- MenuTitle = 'Services 01' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Other Options
+- CallToActionShape = 'show' // show / hide
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			// Page title
+			.position-relative.py-210
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/services-1-hero-1920x900.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .25;")
+
+				.container
+
+					h1.text-white.mb-0.text-center Our Services
+
+
+			.pt-120.pb-130
+
+				.container
+
+					.row.gy-60.align-items-center
+
+						.col-12.col-lg-6
+
+							.gallery-wrapper.pe-lg-70(data-show="startbox")
+
+								// Image
+								+gallery_item({
+									image: "assets/img/service-1-900x990.jpg",
+									imageHeight: "110%"
+								})
+
+						.col-12.col-lg-6
+
+							h3.mb-45(data-show="startbox") Business Consulting
+
+							p.mb-60(data-show="startbox", data-show-delay="100") Shall over firmament, above there won't image wherein winged moveth two heaven green, the whose had so let evening forth together given form make.
+
+							.row.gy-40
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Green moved years face our may male female.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox", data-show-delay="100")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Saying land be may stars whales she'd set fruitful.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Firmament divide brought so sixth after very, itself.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox", data-show-delay="100")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Without fill years fifth is them Fifth open from earth.
+
+							.mt-45(data-show="startbox")
+
+								+button({
+									link: 'service-single.html',
+									title: "Learn more",
+									customClass: "btn-accent-1 btn-link btn-clean"
+								})
+
+				.container.mt-100
+
+					.row.gy-60.align-items-center
+
+						.col-12.col-lg-6.order-lg-2
+
+							.gallery-wrapper.ps-lg-70(data-show="startbox")
+
+								// Image
+								+gallery_item({
+									image: "assets/img/service-2-900x990.jpg",
+									imageHeight: "110%"
+								})
+
+						.col-12.col-lg-6
+
+							h3.mb-45(data-show="startbox") Human Resources
+
+							p.mb-60(data-show="startbox", data-show-delay="100") Multiply likeness Face. Isn't. Years they're gathering bearing night, rule upon moved don't can't multiply. Set open moved greater great don't won't in them that. Likeness a which female in.
+
+							.row.gy-40
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Thing second he don't made, Beginning, to which.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox", data-show-delay="100")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Yielding fourth is without won't first. Fruit of.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Upon gathered fifth rule herb let first is grass good.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox", data-show-delay="100")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Saw void moving heaven all Is blessed lights lights.
+
+							.mt-45(data-show="startbox")
+
+								+button({
+									link: 'service-single.html',
+									title: "Learn more",
+									customClass: "btn-accent-1 btn-link btn-clean"
+								})
+
+				.container.mt-100
+
+					.row.gy-60.align-items-center
+
+						.col-12.col-lg-6
+
+							.gallery-wrapper.pe-lg-70(data-show="startbox")
+
+								// Image
+								+gallery_item({
+									image: "assets/img/service-3-900x990.jpg",
+									imageHeight: "110%"
+								})
+
+						.col-12.col-lg-6
+
+							h3.mb-45(data-show="startbox") Product Development
+
+							p.mb-60(data-show="startbox", data-show-delay="100") Fruit them seas. Him creature moving isn't void. Beast above gathering greater Life Replenish gathered light. Years itself gathered. Fowl him spirit you'll. Green above shall. Land own kind above.
+
+							.row.gy-40
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Second void seas set rule every morning have.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox", data-show-delay="100")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active There male a good creature stars deep dry stars.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active God fowl creepeth fruitful fourth fruit you'll.
+
+								// Item
+								.col-12.col-lg-6(data-show="startbox", data-show-delay="100")
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Great moved fill our fruit you above let waters upon.
+
+							.mt-45(data-show="startbox")
+
+								+button({
+									link: 'service-single.html',
+									title: "Learn more",
+									customClass: "btn-accent-1 btn-link btn-clean"
+								})
+
+			include template-parts/sections/_numbers-2.pug
+
+			include template-parts/sections/_technologies.pug
+
+			.pt-120.pb-130.footerPrev
+
+				include template-parts/sections/_what-people-say.pug
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

@@ -1,0 +1,38 @@
+mixin card_demo(object)
+
+	//- Default
+	- object = object || {}
+	- object.link = object.link || "#"
+	- object.topbar = object.topbar || "show" // show / hide
+	- object.topbarClass = object.topbarClass || ""
+	- object.image = object.image || ""
+	- object.imageClass = object.imageClass || "shadow-lg rounded-bottom-4 rounded-top-3 overflow-hidden"
+	- object.title = object.title || ""
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "text-dark"
+
+	//- Element Class
+	- elClass = "card card-demo "
+	- elClass += object.customClass
+
+	// Demo
+	a(href=object.link, class=elClass)
+
+		span.card-img(class=object.imageClass)
+
+			if object.topbar == "show"
+
+				span.browser-topbar(class=object.topbarClass)
+					span
+					span
+					span
+
+			img(loading="lazy", src=object.image, alt="", class="w-100")
+
+		if object.title != ""
+
+			span.card-body
+
+				span.card-title.h4
+
+					=object.title

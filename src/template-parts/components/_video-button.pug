@@ -1,0 +1,18 @@
+mixin video_button(object)
+
+	//- Default
+	- object = object || {}
+	- object.link = object.link || "https://www.youtube.com/watch?v=AT6oSIDbGkw"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "btn btn-accent-1"
+
+	//- Element Class
+	- elClass = "btn-video video-link "
+	- elClass += object.customClass
+
+	// Video button
+	if object.link != ""
+
+		a(class=elClass, href=object.link, rel="nofollow", style=object.css)
+
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18"><path fill="currentColor" d="M15.191 10.393 2.466 17.776C1.386 18.402 0 17.644 0 16.382V1.616C0 .356 1.384-.404 2.466.225L15.19 7.608a1.605 1.605 0 0 1 0 2.785Z"/></svg>

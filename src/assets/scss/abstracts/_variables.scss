@@ -1,0 +1,28 @@
+// Variables
+$smooth_font: true;
+$transition-duration: 150ms;
+$transition-timing-function: linear;
+
+// Colors
+$color-accent-1: #F01F4B;
+$color-accent-2: #481FA0;
+$color-accent-3: #FFBB38;
+$color-dark: #17161A;
+$color-dark-light: #262528;
+$color-gray-dark: #4B4A4D;
+$color-gray: #B1B1B4;
+$color-gray-middle: #EAEAEE;
+$color-gray-light: #F5F5F7;
+$color-white: #FFFFFF;
+$color-yellow: #FFF5EB;
+$color-yellow-light: #F4F2F9;
+$linear-gradient: linear-gradient(63.34deg, $color-yellow 0%, $color-yellow-light 100%);
+
+// Navbar
+$navbar-color: $color-dark !default;
+$navbar-min-height: 80px !default;
+$navbar-position: sticky !default;
+$navbar-background-color: #fff !default;
+
+// Topbar
+$topbar-min-height: 46px !default;

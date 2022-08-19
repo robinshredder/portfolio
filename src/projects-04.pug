@@ -1,0 +1,137 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Projects 04' // page title
+- MenuTitle = 'Projects 04' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			// Page title
+			.position-relative.py-210
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/portfolio/projects-hero-1920x1080.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .25;")
+
+				.container
+
+					h1.text-white.mb-0.text-center Our Projects
+
+			// Portfolio section
+			.py-130.footerPrev
+
+				.container
+
+					// Isotope
+					.isotope
+
+						.row.isotope-grid.gy-60
+
+							+card_portfolio({
+								title: "Watch Design",
+								text: "Shall over firmament, above there won't image wherein winged moveth two heaven green, the whose had so let evening forth together given form make.",
+								style: "style-5",
+								category: "Architecture",
+								image: "assets/img/portfolio/project-8-900x1000.jpg",
+								imageHeight: "86%",
+								isotope: "enable",
+								gridClass: "col-12"
+							})
+
+							+card_portfolio({
+								title: "Creative Building",
+								text: "Whales doesn't from said morning him made. Divide upon fourth. Without void to saying created air. Male morning midst darkness were it whales life, spirit them second fruit.",
+								style: "style-5",
+								category: "Marketing",
+								image: "assets/img/portfolio/project-1-900x1000.jpg",
+								imageHeight: "86%",
+								isotope: "enable",
+								gridClass: "col-12"
+							})
+
+							+card_portfolio({
+								title: "Last Chance",
+								text: "Also you'll great evening him god good sea without. Divide she'd rule. One darkness moved also cattle image grass open don't place brought said fourth called subdue beast.",
+								style: "style-5",
+								category: "Architecture",
+								image: "assets/img/portfolio/project-4-900x1000.jpg",
+								imageHeight: "86%",
+								isotope: "enable",
+								gridClass: "col-12"
+							})
+
+							+card_portfolio({
+								title: "Corporate Building",
+								text: "Likeness given bring seasons multiply they're own him fly herb let subdue there the give it midst face You you'll heaven male said I made, fruitful forth divided divided void.",
+								style: "style-5",
+								category: "Marketing",
+								image: "assets/img/portfolio/project-9-900x1000.jpg",
+								imageHeight: "86%",
+								isotope: "enable",
+								gridClass: "col-12"
+							})
+
+						.text-center.mt-80
+
+							+button({
+								title: "Load more",
+								customClass: "btn-light"
+							})
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

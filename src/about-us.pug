@@ -1,0 +1,241 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'About Us' // page title
+- MenuTitle = 'About Us' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			// Page title
+			.position-relative.py-210
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/about-us-hero-1920x900.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .25;")
+
+				.container
+
+					h1.text-white.mb-0.text-center About Startbox
+
+			.pt-120.pb-130
+
+				.container
+
+					.row.align-items-center.gy-50
+
+						.col-lg-6
+
+							.pe-lg-70
+
+								h3.mb-30(data-show="startbox") Strategic growth support from an executive with experience.
+
+								p(data-show="startbox", data-show-delay="100") His hath is appear be one don't creepeth. Them and one moving the won't may. Moving saw wherein divide bearing called. Green moveth Hath. That it years fruit behold Meat also us third itself made seasons green void give replenish our said saying also spirit give lesser wherein. Bring divided of wherein every the may saying cattle likeness forth place.
+
+								p.m-0(data-show="startbox", data-show-delay="200") Divide blessed dominion Blessed. It brought creepeth so saying light living Creepeth earth waters forth also is Them that his. Made of he firmament open winged created lights you. Years seed set.
+
+						.col-lg-6
+
+							include template-parts/sections/_layered-image.pug
+
+				.container.overflow-hidden.mt-100
+
+					.row.gx-50.gy-50
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox")
+
+							+process_step
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="100")
+
+							+process_step({
+								number: "02",
+								title: "Research",
+								text: "A called gathering meat herb creeping beginning."
+							})
+
+						.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="200")
+
+							+process_step({
+								number: "03",
+								title: "The Result",
+								text: "Appear without or light sixth, greater dominion deep."
+							})
+
+			.py-100.position-relative
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/root/features-1920x450.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #481FA0; opacity: .9;")
+
+				.container
+
+					.row.gy-50
+
+						.col-12.col-lg-4(data-show="startbox")
+
+							+feature({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.5 1 4.172 8.557L28 10.938l-6.75 6.657L22.843 27 14.5 22.557 6.157 27l1.593-9.405L1 10.938l9.329-1.38L14.5 1Z"/></svg>',
+								iconClass: "text-accent-3",
+								title: "Perfect Services",
+								titleClass: "mb-0 ms-20 text-white",
+								text: "Dry them years air there. Blessed Multiply morning, second night and bearing.",
+								textClass: "text-white font-size-15 m-0 pe-30"
+							})
+
+						.col-12.col-lg-4(data-show="startbox", data-show-delay="100")
+
+							+feature({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.84 3.122a7.376 7.376 0 0 0-2.39-1.57 7.48 7.48 0 0 0-5.64 0 7.378 7.378 0 0 0-2.39 1.57L15 4.517l-1.42-1.395A7.436 7.436 0 0 0 8.369 1a7.435 7.435 0 0 0-5.21 2.12A7.179 7.179 0 0 0 1 8.243c0 1.921.776 3.763 2.158 5.121L15 25l11.84-11.637a7.233 7.233 0 0 0 1.599-2.35 7.132 7.132 0 0 0 0-5.542 7.234 7.234 0 0 0-1.598-2.35Z"/></svg>',
+								iconClass: "text-accent-3",
+								title: "Talanted Team",
+								titleClass: "mb-0 ms-20 text-white",
+								text: "Yielding also above. Divided air blessed it fourth, dominion above moveth.",
+								textClass: "text-white font-size-15 m-0 pe-30"
+							})
+
+						.col-12.col-lg-4(data-show="startbox", data-show-delay="200")
+
+							+feature({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.818 24v-8.944m0-5.112V1M15 24V12.5m0-5.111V1m10.182 23v-6.389m0-5.111V1M1 15.056h7.636m2.546-7.667h7.636m2.546 10.222H29"/></svg>',
+								iconClass: "text-accent-3",
+								title: "Ultimate Flexibility",
+								titleClass: "mb-0 ms-20 text-white",
+								text: "You'll unto may life sea be unto him forth. Abundantly upon divide, that winged.",
+								textClass: "text-white font-size-15 m-0 pe-30"
+							})
+
+			include template-parts/sections/_slider-and-text.pug
+
+			include template-parts/sections/_numbers-2.pug
+
+			.pt-120.pb-130.footerPrev
+
+				.container
+
+					.row
+
+						.col-lg-4.offset-lg-4.text-center
+
+							span.badge.bg-light.text-dark.mb-20(data-show="startbox") Our team
+
+							h2.m-0(data-show="startbox", data-show-delay="100") Meet our talanted team
+
+					// Slider
+					.swiper.mt-90.shape-parent(data-swiper-slides="1", data-swiper-breakpoints="828:2, 1024:4", data-swiper-gap="30", data-swiper-grabcursor="true", data-show="startbox", data-show-delay="200")
+
+						// Shape
+						.shape.justify-content-end.align-items-center.mt-40.me-n45.text-dark(data-jarallax-element="40")
+
+							include partials/_shape.pug
+
+						.swiper-container
+
+							.swiper-wrapper
+
+								.swiper-slide
+
+									+member({
+										avatar: "assets/img/team/member-8.jpg",
+										name: "Austen Shields",
+										function: "Senior QA Engineer"
+									})
+
+								.swiper-slide
+
+									+member
+
+								.swiper-slide
+
+									+member({
+										avatar: "assets/img/team/member-2.jpg",
+										name: "Stuart Morton",
+										function: "Creative Director"
+									})
+
+								.swiper-slide
+
+									+member({
+										avatar: "assets/img/team/member-3.jpg",
+										name: "Kerrie Barrett",
+										function: "Project Manager"
+									})
+
+								.swiper-slide
+
+									+member({
+										avatar: "assets/img/team/member-4.jpg",
+										name: "Mark Hudson",
+										function: "Senior Front-End Developer"
+									})
+
+						.d-flex.mt-70.justify-content-center
+
+							.swiper-button-prev.swiper-button-position-2.swiper-button-gray.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+							.swiper-button-next.swiper-button-position-2.swiper-button-gray.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

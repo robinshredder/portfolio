@@ -1,0 +1,58 @@
+include _circle-icon.pug
+
+mixin service_box(object)
+
+	//- Default
+	- object = object || {}
+	- object.style = object.style || "" // small
+	- object.link = object.link || "service-single.html"
+	- object.icon = object.icon || '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none"><path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z"></path></svg>'
+	- object.iconClass = object.iconClass || "text-white bg-accent-2 mb-30"
+	- object.title = object.title || "Consulting"
+	- object.titleClass = object.titleClass || "mb-15"
+	- object.text = object.text || "Stars life that waters firmament our created you."
+	- object.textClass = object.textClass || "font-size-15 mb-0"
+	- object.arrowClass = object.arrowClass || "service-box-arrow stretched-link mt-30"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "position-relative rounded-4 bg-light text-center"
+
+	//- Element Class
+	- elClass = "service-box lift "
+	- elClass += object.customClass
+
+	if object.style == "small"
+		- elClass += " service-box-sm"
+
+	// Service box
+	div(class=elClass, style=object.css)
+
+		if object.icon != ""
+
+			+circle_icon({
+				icon: object.icon,
+				customClass: object.iconClass
+			})
+
+		if object.title != ""
+
+			h4.service-box-title(class=object.titleClass)
+
+				=object.title
+
+		if object.text != ""
+
+			p.service-box-text(class=object.textClass)
+
+				=object.text
+
+		if object.link != ""
+
+			if object.style != "small"
+
+				a(href=object.link, class=object.arrowClass)
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"></path></svg>
+
+			else
+
+				a(href=object.link, class="stretched-link")

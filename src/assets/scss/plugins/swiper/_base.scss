@@ -1,0 +1,23 @@
+:root {
+	--swiper-navigation-size: 46px;
+}
+
+.swiper {
+	position: relative;
+	overflow: unset;
+
+	.swiper-container {
+		overflow: hidden;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		transition: all $transition-duration $transition-timing-function;
+
+		&:focus {
+			outline: none;
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+// stylelint-disable scss/dollar-variable-default
+$btn-border-radius: 0;
+$btn-border-width: 0;
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+$btn-font-weight: 700;
+$btn-border-radius: 50rem;
+
+$input-btn-padding-y: 15px;
+$input-btn-padding-x: 40px;
+$input-btn-font-family: $font-family-base;
+
+$btn-padding-y-sm: 10px;
+$btn-padding-x-sm: 15px;
+$btn-border-radius-sm: 50rem;
+
+$btn-padding-y-lg: 20px;
+$btn-padding-x-lg: 50px;
+$btn-border-radius-lg: 50rem;
+$btn-font-size-lg: 16px;
+
+$btn-transition: all $transition-duration $transition-timing-function;

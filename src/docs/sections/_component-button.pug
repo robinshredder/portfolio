@@ -1,0 +1,75 @@
+.docs-card.tab-content.bg-white.rounded-4#component-button
+
+	h2.docs-card-title Button
+
+	.docs-card-example
+
+		+button({
+			title: "Button"
+		})
+
+		+button({
+			title: "Button",
+			customClass: "btn-accent-2 ms-15"
+		})
+
+		+button({
+			title: "Button",
+			customClass: "btn-accent-3 ms-15"
+		})
+
+		+button({
+			title: "Button",
+			customClass: "btn-light ms-15"
+		})
+
+	h5 Link & Clean
+
+	.docs-card-example.bg-dark
+
+		+button({
+			title: "Button",
+			customClass: "text-white btn-link btn-clean"
+		})
+
+		+button({
+			title: "Button",
+			customClass: "text-accent-1 btn-link btn-clean ms-15"
+		})
+
+	h5 Video Button
+
+	.docs-card-example
+
+		+video_button
+
+		+video_button({
+			customClass: "btn btn-accent-2 ms-15"
+		})
+
+		+video_button({
+			customClass: "btn btn-accent-3 ms-15"
+		})
+
+	h5 Sizes
+
+	.docs-card-example
+
+		+button({
+			title: "Button",
+			customClass: "btn-accent-1 btn-lg"
+		})
+
+		+button({
+			title: "Button",
+			customClass: "btn-accent-1 ms-30"
+		})
+
+		+button({
+			title: "Button",
+			customClass: "btn-accent-1 btn-sm ms-30"
+		})
+
+	p HTML example:
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="button.html")

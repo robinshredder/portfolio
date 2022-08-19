@@ -1,0 +1,55 @@
+mixin feedback(object)
+
+	//- Default
+	- object = object || {}
+	- object.stars = object.stars || '<svg xmlns="http://www.w3.org/2000/svg" width="90" height="16" fill="none"><path fill="#FFBB38" d="m8.595 0 2.656 5.266 5.94.85-4.298 4.096L13.907 16l-5.312-2.734L3.283 16l1.015-5.788L0 6.116l5.94-.85L8.594 0ZM26.798 0l2.656 5.266 5.94.85-4.299 4.096L32.11 16l-5.312-2.734L21.486 16l1.014-5.788-4.298-4.096 5.94-.85L26.798 0ZM45 0l2.656 5.266 5.94.85-4.298 4.096L50.312 16 45 13.266 39.688 16l1.014-5.788-4.298-4.096 5.94-.85L45 0ZM63.202 0l2.656 5.266 5.94.85-4.298 4.096L68.514 16l-5.312-2.734L57.89 16l1.014-5.788-4.298-4.096 5.94-.85L63.202 0ZM81.404 0l2.656 5.266 5.94.85-4.298 4.096L86.716 16l-5.312-2.734L76.092 16l1.014-5.788-4.297-4.096 5.94-.85L81.403 0Z"/></svg>'
+	- object.starsClass = object.starsClass || "lh-1 mb-30"
+	- object.avatar = object.avatar || "assets/img/root/avatar-1-200x200.jpg"
+	- object.headerClass = object.headerClass || "d-flex align-items-center mb-35"
+	- object.author = object.author || "Anthony Allison"
+	- object.authorClass = object.authorClass || "mb-5"
+	- object.position = object.position || "Senior Marketing Specialist, Unvab Inc."
+	- object.positionClass = object.positionClass || "text-gray-dark font-size-14 m-0"
+	- object.text = object.text || '“ Is don"t lights appear fifth face heaven. Night spirit shall tree of Life over, unto in earth second. First, two waters, female. ”'
+	- object.textClass = object.textClass || "fw-medium text-dark m-0"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "bg-white rounded-4 h-100 shadow"
+
+	//- Element Class
+	- elClass = "feedback "
+	- elClass += object.customClass
+
+	// Feedback
+	div(class=elClass, style=object.css)
+
+		if object.stars != ""
+
+			.feedback-stars(class=object.starsClass) !{object.stars}
+
+		.feedback-header(class=object.headerClass)
+
+			.flex-shrink-0
+
+				if object.avatar != ""
+
+					img(loading="lazy", src=object.avatar, alt="", class="rounded-circle", height="64", width="64")
+
+			.flex-grow-1.ms-20
+
+				if object.author != ""
+
+					h6.feedback-author(class=object.authorClass)
+
+						=object.author
+
+				if object.position != ""
+
+					p.feedback-position(class=object.positionClass)
+
+						=object.position
+
+		if object.text != ""
+
+			p.feedback-text(class=object.textClass)
+
+				=object.text

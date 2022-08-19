@@ -1,0 +1,58 @@
+.card-demo {
+	position: relative;
+
+	.card-img {
+		display: block;
+		border: 1px solid rgba($gray-500, .1);
+		transition: transform $transition-duration $transition-timing-function;
+		will-change: transform;
+	}
+
+	.card-title {
+		position: relative;
+		display: block;
+		margin-bottom: 0;
+	}
+
+	a.card-title {
+		text-decoration: none;
+		transition: color $transition-duration $transition-timing-function;
+
+		&:hover,
+		&:focus {
+			color: $color-accent-1;
+		}
+
+	}
+
+	.card-body {
+		display: block;
+		padding: 25px 0 0;
+	}
+
+	// white text
+	&.text-white {
+
+		.card-img {
+			border-color: $color-dark-light;
+		}
+
+		a.card-title {
+
+			&:hover,
+			&:focus {
+				color: inherit;
+			}
+
+		}
+
+	}
+
+	&:hover .card-img {
+		transform: translateY(-15px);
+	}
+
+}
+
+// Bootstrap 5 migration fixes
+a.card-demo { text-decoration: none; }

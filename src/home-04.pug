@@ -1,0 +1,376 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Home 04' // page title
+- MenuTitle = 'Home 04' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'hide' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'socials' // button / button-2 / button-3 / socials
+- NavbarDark = 'true' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'true' // true / false
+- NavbarSolid = 'false' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			.pt-150.pb-70.position-relative.align-items-center.d-flex
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/home-4-hero-1920x1080.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .15;")
+					.background-color(style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);")
+
+				.container
+
+					.row.gy-70.align-items-center
+
+						.col-lg-7
+
+							h1.mb-25.text-white We create experience that make people happy
+
+							p.mb-40.font-size-18.fw-medium.text-white.pe-lg-70 After make beast don't for stars good evening third was you moved rule to moved their moveth called created over.
+
+							+button({
+								title: "Learn more",
+								customClass: "text-white btn-link btn-clean"
+							})
+
+						.col-lg-5
+
+							form.ms-lg-70.rounded.bg-white.p-35.text-center
+
+								h4.mb-30 Free Consultation
+
+								input(type="text", class="form-control form-control-style-2", placeholder="Your Name *")
+
+								input(type="text", class="form-control form-control-style-2 mt-13", placeholder="Your Phone / Email *")
+
+								select.form-control.form-control-style-2.mt-13
+									option(selected="") I interested in ...
+									option Colibri Creative Project
+									option Colibri Project
+									option Happy Moments Photoset
+									option Luxury Car Website
+									option Funny Dog
+									option Creative Branding
+
+								p.font-size-13.px-40.text-gray-dark.my-25 We'll respond to your request within 1 business day.
+
+								+button({
+									tag: "button",
+									title: "Get in Touch"
+								})
+
+			.py-45.bg-dark
+
+				.container
+
+					.row.gy-45
+
+						.col-12.col-sm-6.col-lg-3
+
+							.d-flex.align-items-center(data-show="startbox")
+
+								.flex-shrink-0.text-accent-3(style="min-width: 42px;")
+
+									<svg xmlns="http://www.w3.org/2000/svg" width="36" height="39" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M34 7.25c0 2.9-7.163 5.25-16 5.25S2 10.15 2 7.25m32 0C34 4.35 26.837 2 18 2S2 4.35 2 7.25m32 0v24.5C34 34.655 26.889 37 18 37S2 34.655 2 31.75V7.25M34 19.5c0 2.905-7.111 5.25-16 5.25S2 22.405 2 19.5"/></svg>
+
+								.flex-grow-1.ms-40
+
+									h4.m-0.text-white Financial
+
+						.col-12.col-sm-6.col-lg-3
+
+							.d-flex.align-items-center(data-show="startbox", data-show-delay="100")
+
+								.flex-shrink-0.text-accent-3(style="min-width: 42px;")
+
+									<svg xmlns="http://www.w3.org/2000/svg" width="36" height="40" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M12.667 38V20h10.666v18M2 14.6 18 2l16 12.6v19.8c0 .955-.375 1.87-1.041 2.546A3.534 3.534 0 0 1 30.444 38H5.556c-.943 0-1.848-.38-2.515-1.054A3.623 3.623 0 0 1 2 34.4V14.6Z"/></svg>
+
+								.flex-grow-1.ms-40
+
+									h4.m-0.text-white Real Estate
+
+						.col-12.col-sm-6.col-lg-3
+
+							.d-flex.align-items-center(data-show="startbox", data-show-delay="200")
+
+								.flex-shrink-0.text-accent-3(style="min-width: 42px;")
+
+									<svg xmlns="http://www.w3.org/2000/svg" width="42" height="35" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M7.182 33V20.944m0-6.888V2M21 33V17.5m0-6.889V2m13.818 31v-8.611m0-6.889V2M2 20.944h10.364m3.454-10.333h10.364m3.454 13.778H40"/></svg>
+
+								.flex-grow-1.ms-40
+
+									h4.m-0.text-white Technology
+
+						.col-12.col-sm-6.col-lg-3
+
+							.d-flex.align-items-center(data-show="startbox", data-show-delay="300")
+
+								.flex-shrink-0.text-accent-3(style="min-width: 42px;")
+
+									<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M2 27.5 19 36l17-8.5M2 19l17 8.5L36 19M19 2 2 10.5 19 19l17-8.5L19 2Z"/></svg>
+
+								.flex-grow-1.ms-40
+
+									h4.m-0.text-white Construction
+			.pt-120.pb-130
+
+				.container
+
+					.row.mb-90
+
+						.col-lg-6.offset-lg-3.text-center
+
+							h3.m-0(data-show="startbox") We #[span.highlight-lg help you build and grow] your business.
+
+					.row.gy-30
+
+						// Item
+						.col-12.col-lg-6(data-show="startbox")
+
+							+service_card
+
+						// Item
+						.col-12.col-lg-6(data-show="startbox", data-show-delay="100")
+
+							+service_card({
+								title: "IOS Development",
+								text: "Lights creeping good herb their won't dry days she'd grass.",
+								image: "assets/img/service-card-2-600x600.jpg"
+							})
+
+						// Item
+						.col-12.col-lg-6(data-show="startbox")
+
+							+service_card({
+								title: "Marketing & SEO",
+								text: "Them seasons the the yielding one, thing brought behold.",
+								image: "assets/img/service-card-3-600x600.jpg"
+							})
+
+						// Item
+						.col-12.col-lg-6(data-show="startbox", data-show-delay="100")
+
+							+service_card({
+								title: "Accounting",
+								text: "Yielding bring seed was sea seasons shall that bearing.",
+								image: "assets/img/service-card-4-600x600.jpg"
+							})
+
+					.mt-80.text-center(data-show="startbox")
+
+						+button({
+							link: "services-01.html",
+							title: 'Our services'
+						})
+
+
+			include template-parts/sections/_call-to-action-5.pug
+
+			.pt-120.pb-130
+
+				.container
+
+					.row.align-items-center.gy-50
+
+						.col-lg-6.offset-lg-1.order-lg-2
+
+							img(loading="lazy", src="assets/img/root/graphic-900x570.png", alt="", class="w-100", data-show="startbox", data-show-delay="400")
+
+						.col-lg-5
+
+							span.badge.bg-light.text-dark.mb-20(data-show="startbox") What we do
+
+							h3.mb-45(data-show="startbox", data-show-delay="100") With experience from top companies
+
+							p.mb-40(data-show="startbox", data-show-delay="200") Shall over firmament, above there won't image wherein winged moveth two heaven green, the whose had so let evening forth together given form make said them. Appear grass evening shall.
+
+							div(data-show="startbox", data-show-delay="300")
+
+								+button({
+									title: "Learn more",
+									customClass: "btn-accent-1 btn-link btn-clean"
+								})
+
+			include template-parts/sections/_numbers-2.pug
+
+			.pt-120.pb-130.bg-gray-light
+
+				.container
+
+					.row.gy-50
+
+						.col-lg-5
+
+							h3.mb-45(data-show="startbox") #[span.highlight Strategic growth] support from an executive with experience.
+
+							p.mb-40(data-show="startbox", data-show-delay="100") His hath is appear be one don't creepeth. Them and one moving the won't may. Moving saw wherein divide bearing called. Green moveth Hath. That it years fruit behold Meat also us third itself made seasons green void give replenish our said saying also spirit give lesser wherein.
+
+							div(data-show="startbox", data-show-delay="200")
+
+								+button({
+									title: "Learn more",
+									customClass: "btn-accent-1 btn-link btn-clean"
+								})
+
+						.col-lg-6.offset-lg-1
+
+							include template-parts/sections/_layered-image.pug
+
+			.pt-120.pb-130
+
+				include template-parts/sections/_industries.pug
+
+				.container
+
+					.mt-80.text-center(data-show="startbox")
+
+						+button({
+							link: "contact-01.html",
+							title: 'Contact us <svg class="ms-15 align-self-center" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 15"><path fill="currentColor" d="M15 11.23v2.259a1.501 1.501 0 0 1-1.026 1.432c-.199.067-.41.092-.619.073a14.944 14.944 0 0 1-6.508-2.31A14.692 14.692 0 0 1 2.32 8.166 14.877 14.877 0 0 1 .006 1.641 1.503 1.503 0 0 1 .9.13 1.51 1.51 0 0 1 1.507 0H3.77a1.51 1.51 0 0 1 1.508 1.295c.095.722.273 1.432.528 2.115a1.503 1.503 0 0 1-.34 1.588l-.957.956a12.055 12.055 0 0 0 4.525 4.516l.958-.956a1.51 1.51 0 0 1 1.591-.338 9.7 9.7 0 0 0 2.12.527 1.509 1.509 0 0 1 1.296 1.527Z"/></svg>'
+						})
+
+			.position-relative.py-235.text-center
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/home-4-video-1920x900.jpg", class="jarallax-img", alt="")
+
+				div(data-show="startbox")
+
+					+video_button
+
+			.pt-120.pb-130
+
+				.container
+
+					.row
+
+						include template-parts/sections/_clients-shape.pug
+
+					h2.mt-120.mb-90.text-center(data-show="startbox") Frequently asked questions
+
+					include template-parts/sections/_faq-list.pug
+
+			include template-parts/sections/_reviews.pug
+
+			.pt-120.pb-130.bg-linear-gradient
+
+				.container
+
+					.row.align-items-center.gy-40.mb-90
+
+						.col-lg-6
+
+							span.badge.bg-gray-op20.text-dark.mb-20(data-show="startbox") Our blog
+
+							h3.m-0(data-show="startbox", data-show-delay="100") Latest in our blog
+
+						.col-lg-6.text-start.text-lg-end
+
+							div(data-show="startbox", data-show-delay="200")
+
+								+button({
+									link: "blog.html",
+									title: 'Our blog'
+								})
+
+					.row.gy-50
+
+						.col-lg-5(data-show="startbox")
+
+							+card_blog({
+								date: "Sep 25, 2021",
+								style: "style-2",
+								category: "Company",
+								title: "Over the every fill. Deep given, together living life won't.",
+								image: "assets/img/blog/related-post-1-900x800.jpg",
+								imageHeight: "70%"
+							})
+
+						.col-lg-7
+
+							div(data-show="startbox", data-show-delay="100")
+
+								+card_blog({
+									style: "style-3",
+									imageHeight: "88%",
+									title: "Winged Also which midst deep grass gathered seas gathered you.",
+									image: "assets/img/blog/blog-post-2-900x800.jpg",
+									date: "Sep 20, 2021"
+								})
+
+							div.mt-50.mt-lg-30(data-show="startbox", data-show-delay="200")
+
+								+card_blog({
+									style: "style-3",
+									imageHeight: "88%",
+									title: "Yielding also isn't gathering sea face second male heaven evening.",
+									image: "assets/img/blog/blog-post-3-900x800.jpg",
+									date: "Sep 16, 2021"
+								})
+
+							div.mt-50.mt-lg-30(data-show="startbox", data-show-delay="300")
+
+								+card_blog({
+									style: "style-3",
+									imageHeight: "88%",
+									title: "Let fruit was beginning thing seed which fruitful place there.",
+									image: "assets/img/blog/blog-post-4-900x800.jpg",
+									date: "Sep 03, 2021"
+								})
+
+			include template-parts/sections/_call-to-action-5.pug
+
+		//- Footer
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

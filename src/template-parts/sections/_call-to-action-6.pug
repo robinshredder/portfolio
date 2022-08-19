@@ -1,0 +1,33 @@
+// Call to action
+.position-relative
+
+	.half-section-block.container.position-absolute.top-50.start-0.end-0(data-prev-id=".footerPrev", data-next-id=".footerNext")
+
+		.shape-parent
+
+			if CallToActionShape == 'show'
+
+				// Shape
+				.shape.justify-content-end.mt-n40.me-n45.text-dark(data-jarallax-element="40")
+
+					include ../../partials/_shape-180.pug
+
+			if CallToActionShapeLeft == 'show'
+
+				.shape.justify-content-start.mt-n40.ms-n45.text-dark(data-jarallax-element="40")
+
+					include ../../partials/_shape.pug
+
+			.pt-120.pb-130.px-30.position-relative.rounded-4.overflow-hidden.z-index-1
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						// img(loading="lazy", src="assets/img/root/call-to-action-1920x1080.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #1FE6A1; opacity: 1;")
+
+						h2.m-0.text-white.text-center.pt-90(data-show="startbox") Contact me.
+				
+				.row0

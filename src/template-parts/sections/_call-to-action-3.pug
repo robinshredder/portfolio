@@ -1,0 +1,54 @@
+// Call to action
+.position-relative
+
+	.half-section-block.container.position-absolute.top-50.start-0.end-0(data-prev-id=".footerPrev", data-next-id=".footerNext")
+
+		.shape-parent
+
+			if CallToActionShape == 'show'
+
+				// Shape
+				.shape.justify-content-end.mt-n40.me-n45.text-dark(data-jarallax-element="40")
+
+					include ../../partials/_shape-180.pug
+
+			.py-70.ps-md-100.ps-50.position-relative.rounded-4.overflow-hidden.z-index-1
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/root/call-to-action-1920x1080.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #481FA0; opacity: .9;")
+
+				.row.d-flex.align-items-center.gy-40
+
+					.col-lg-5
+
+						h3.text-white.m-0(data-show="startbox") Want to get a free consultation?
+
+					.col-12.col-md-6.col-lg-3
+
+						ul.list-group.borderless.d-inline-flex
+
+							li.list-group-item.d-flex(data-show="startbox", data-show-delay="100")
+
+								<svg class="me-15 align-self-center text-accent-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill="currentColor" d="M16 11.98v2.408a1.604 1.604 0 0 1-1.094 1.527 1.613 1.613 0 0 1-.66.079 15.941 15.941 0 0 1-6.943-2.465A15.672 15.672 0 0 1 2.476 8.71a15.869 15.869 0 0 1-2.47-6.96A1.603 1.603 0 0 1 .96.136C1.163.047 1.384 0 1.607 0h2.414A1.61 1.61 0 0 1 5.63 1.381c.102.77.29 1.528.563 2.256a1.603 1.603 0 0 1-.362 1.694l-1.022 1.02a12.86 12.86 0 0 0 4.827 4.817l1.022-1.02a1.61 1.61 0 0 1 1.697-.36c.73.271 1.489.46 2.26.561A1.61 1.61 0 0 1 16 11.98Z"/></svg>
+								a(href="tel:12023580309", class="fw-bold text-white") +1 202-358-0309
+
+							li.list-group-item.d-flex.mt-15(data-show="startbox", data-show-delay="200")
+
+								<svg class="me-15 align-self-center text-accent-3" xmlns="http://www.w3.org/2000/svg" width="14" height="11" fill="none"><path fill="currentColor" d="M14 0H0l7 4.583L14 0Z"/><path fill="currentColor" d="M14 9.821V2L7 6.5 0 2v7.821C0 10.47.63 11 1.4 11h11.2c.77 0 1.4-.53 1.4-1.179Z"/></svg>
+
+								a(href="mailto:help@startbox.com", class="fw-bold text-white") help@startbox.com
+
+					.col-12.col-md-6.col-lg-4.text-start.text-lg-end
+
+						div(data-show="startbox", data-show-delay="300")
+
+							+button({
+								link: "contact-02.html",
+								customClass: "btn-accent-3 me-lg-70",
+								title: "Get in Touch"
+							})

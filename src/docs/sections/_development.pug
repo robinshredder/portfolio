@@ -1,0 +1,24 @@
+.docs-card.tab-content.bg-white.rounded-4#development
+
+	h2.docs-card-title Development
+
+	p #{ThemeName} template is developer-friendly and contains source files + gulp tasks.
+
+	p Make sure, that we will not help you with any troubles that you faced with source builds, so if you don’t have any experience with #[code npm] and #[code gulp], please first learn more about these tools. These sources only for developers.
+
+	h3 Requirements
+
+	ol
+
+		li Node.js and npm – #[a(href="https://nodejs.org/en/") https://nodejs.org/en/]
+
+	h3 Getting Started
+
+	ul
+		li Unzip downloaded template and open /#{ThemeName.toLowerCase()}/ folder
+		li Install all node packages: #[code npm install]
+		li Run #[code gulp development]
+		li Your site is now viewable at this URL: #[a(href="http://localhost:3000") http://localhost:3000]
+		li To create compressed, production-ready assets run #[code gulp production]. This will delete everything in the dist folder and recreate all of your complied files. Never make updates directly into the dist folder as these files get overridden each time.
+
+	p #[code development] and #[code production] tasks will build files to #[code /dist/] folder.

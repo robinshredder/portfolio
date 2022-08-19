@@ -1,0 +1,57 @@
+/* Master Stylesheet
+ * Version: @@version
+ *
+ * Coded by VLThemes
+ *
+ * 01. Helpers
+ * 02. Plugins
+ * 03. Base
+ * 04. Partials
+ * 05. Components
+ */
+
+/* 01. Helpers */
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/keyframes";
+@import "abstracts/snippets";
+
+/* 02. Plugins */
+@import "plugins/bootstrap/bootstrap";
+@import "plugins/swiper/include";
+@import "plugins/magnific-popup/magnific-popup";
+@import "plugins/isotope/isotope";
+
+/* 03. Base */
+@import "base/helper-classes";
+@import "base/typography";
+@import "base/custom-css";
+
+/* 04. Partials */
+@import "partials/object-fit-image";
+@import "partials/browser-topbar";
+@import "partials/background";
+@import "partials/map-container";
+@import "partials/preloader";
+@import "partials/show-on-scroll";
+@import "partials/half-section-block";
+
+/* 05. Components */
+@import "components/component-brand/brand";
+@import "components/component-docs-card/docs-card";
+@import "components/component-industry/industry";
+@import "components/component-shape/shape";
+@import "components/component-category/category";
+@import "components/component-circle-icon/circle-icon";
+@import "components/component-process-step/process-step";
+@import "components/component-service-box/service-box";
+@import "components/component-service-line/service-line";
+@import "components/component-service-card/service-card";
+@import "components/component-service-case/service-case";
+@import "components/component-feedback/feedback";
+@import "components/component-review/review";
+@import "components/component-gallery-item/gallery-item";
+@import "components/component-member/member";
+@import "components/component-countdown/countdown";
+@import "components/component-page-navigation/page-navigation";

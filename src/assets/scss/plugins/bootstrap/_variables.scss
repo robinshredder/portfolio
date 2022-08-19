@@ -1,0 +1,127 @@
+// stylelint-disable scss/dollar-variable-default
+// body
+$font-family-base: 'Inter', sans-serif;
+$line-height-base: 1.5;
+
+// headings
+$headings-font-family: $font-family-base;
+$headings-font-weight: 700;
+
+$border-radius: rem(14px, 16px);
+$border-radius-sm: rem(10px, 16px);
+$border-radius-lg: rem(20px, 16px);
+
+// lead
+$lead-font-size: em(20px);
+
+$box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+$box-shadow-lg: 0px 0px 60px rgba(0, 0, 0, 0.1);
+
+$dark: $color-dark;
+$black: $dark;
+$body-color: $dark;
+
+$gray-500: #B1B1B4;
+$gray-600: #858589;
+$light: #F5F5F7;
+
+$border-radius: 14px;
+$border-radius-xs: 6px;
+$border-radius-sm: 10px;
+$border-radius-lg: 20px;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 620px,
+	md: 828px,
+	lg: 1024px,
+	xl: 1200px,
+	xxl: 1400px
+) !default;
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px
+) !default;
+
+// paddings and margins
+$spacer: 3.33333rem;
+$enable-negative-margins: true;
+
+$spacers: (
+	0: 0,
+	1: 1px,
+	2: 2px,
+	3: 3px,
+	4: 4px,
+	5: 5px,
+	6: 6px,
+	7: 7px,
+	8: 8px,
+	9: 9px,
+	10: 10px,
+	11: 11px,
+	12: 12px,
+	13: 13px,
+	15: 15px,
+	17: 17px,
+	18: 18px,
+	20: 20px,
+	25: 25px,
+	30: 30px,
+	35: 35px,
+	40: 40px,
+	45: 45px,
+	50: 50px,
+	55: 55px,
+	60: 60px,
+	65: 65px,
+	70: 70px,
+	75: 75px,
+	80: 80px,
+	90: 90px,
+	95: 95px,
+	100: 100px,
+	110: 110px,
+	115: 115px,
+	120: 120px,
+	130: 130px,
+	150: 150px,
+	160: 160px,
+	180: 180px,
+	190: 190px,
+	200: 200px,
+	210: 210px,
+	235: 235px,
+	240: 240px,
+	270: 270px,
+	290: 290px,
+	300: 300px
+);
+
+// grid
+$grid-gutter-width: 30px;
+$grid-row-columns: 7;
+
+$display-font-sizes: (
+	1: 5rem,
+	2: 4.5rem,
+	3: 4rem,
+	4: 3.5rem,
+	5: 3rem,
+	6: 12px
+);
+
+$display-font-weight: 700;
+
+$navbar-color: $color-dark !default;
+
+// navs
+$nav-link-padding-y: 0;
+$nav-link-padding-x: 0;
+
+$nav-tabs-border-width: 0;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-color: inherit;

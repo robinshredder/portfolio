@@ -1,0 +1,83 @@
+// Shape
+.shape.align-items-start.justify-content-start
+
+	img(loading="lazy", src="assets/img/root/pricing-shape-623x455.png", alt="", width="623", height="455")
+
+.container
+
+	.row.mb-90
+
+		.col-lg-6.offset-lg-3.text-center.px-lg-50(data-show="startbox")
+
+			h2.mb-25.px-lg-10 Pick a plan that’s right for you
+
+			p.m-0 Waters his moveth seasons over Created appear greater dry air. Cattle set it night let i fruitful make our appear.
+
+	.row.gy-40
+
+		.col-12.col-md-6.col-lg-4(data-show="startbox")
+
+			+pricing({
+				content: {
+					1: {
+						active: true,
+						text: 'Constant desire renewal'
+					},
+					2: {
+						active: false,
+						text: 'Very great whose'
+					},
+					3: {
+						active: false,
+						text: 'Of there whales very fly'
+					}
+				}
+			})
+
+		.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="100")
+
+			+pricing({
+				badge: "Popular",
+				title: "Basic",
+				subtitle: "Good divide behold",
+				value: "19",
+				priceClass: "text-center mt-30 d-flex justify-content-center text-accent-2",
+				content: {
+					1: {
+						active: true,
+						text: 'Constant desire renewal'
+					},
+					2: {
+						active: true,
+						text: 'Very great whose'
+					},
+					3: {
+						active: false,
+						text: 'Of there whales very fly'
+					}
+				}
+			})
+
+		.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="200")
+
+			+pricing({
+				title: "Premium",
+				subtitle: "Fourth divide were",
+				value: "39",
+				content: {
+					1: {
+						active: true,
+						text: 'Constant desire renewal'
+					},
+					2: {
+						active: true,
+						text: 'Very great whose'
+					},
+					3: {
+						active: true,
+						text: 'Of there whales very fly'
+					}
+				}
+			})
+
+	p.m-0.fw-medium.font-size-15.mt-60.text-center(data-show="startbox") Want to get a free consultation? #[a(href="contact-01.html") Contact us].

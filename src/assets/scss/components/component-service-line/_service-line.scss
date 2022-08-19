@@ -1,0 +1,45 @@
+.service-line {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 30px 35px;
+	border: 1px solid rgba($color-gray, .3);
+	transition: background-color $transition-duration $transition-timing-function, border-color $transition-duration $transition-timing-function, transform $transition-duration $transition-timing-function;
+	will-change: background-color, border-color, transform;
+
+	@include media-breakpoint-up(xl) {
+		padding: 30px 70px;
+	}
+
+	&:hover {
+		background-color: $color-gray-light;
+		border-color: $color-gray-light;
+
+		.service-line-arrow {
+			color: $color-accent-1;
+
+			svg {
+				@extend %animate-icon-right;
+			}
+
+		}
+
+	}
+
+}
+
+.service-line-icon {
+	flex-shrink: 0;
+}
+
+.service-line-body {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-basis: 100%;
+}
+
+.service-line-sm {
+	padding-right: 40px;
+	padding-left: 40px;
+}

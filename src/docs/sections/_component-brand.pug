@@ -1,0 +1,28 @@
+.docs-card.tab-content.bg-white.rounded-4#component-brand
+
+	h2.docs-card-title Brand
+
+	p A simple brand component to easily add brand images of the same size.
+
+	p Additional classes: #[code .brand-sm].
+
+	.docs-card-example
+
+		.row.align-items-center
+
+			.col
+
+				+brand({
+					customClass: "rounded-2 bg-dark text-white"
+				})
+
+			.col
+
+				+brand({
+					style: "sm",
+					customClass: "rounded-2 bg-dark text-white"
+				})
+
+	p HTML example:
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="brand.html")

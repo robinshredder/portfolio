@@ -1,0 +1,44 @@
+.brand {
+	display: flex;
+	justify-content: center;
+	min-width: 180px;
+	min-height: 130px;
+	filter: brightness(1);
+	transition: transform $transition-duration $transition-timing-function, filter $transition-duration $transition-timing-function;
+	will-change: transform, filter;
+
+	@include media-breakpoint-down(md) {
+		min-width: 170px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		min-width: 132px;
+	}
+
+	svg {
+		display: block;
+		align-self: center;
+	}
+
+	&:hover,
+	&:focus {
+		transform: translateY(-2px);
+	}
+
+	&-md {
+		min-width: 170px;
+		min-height: 150px;
+
+		@include media-breakpoint-down(sm) {
+			min-width: 132px;
+			min-height: 132px;
+		}
+
+	}
+
+	&-sm {
+		min-width: 132px;
+		min-height: 96px;
+	}
+
+}

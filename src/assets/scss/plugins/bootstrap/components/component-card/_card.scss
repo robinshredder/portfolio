@@ -1,0 +1,61 @@
+.card-wrapper {
+	position: relative;
+}
+
+.card {
+	color: $dark;
+
+	.card-title,
+	.card-category {
+		will-change: transform, opacity;
+	}
+
+	.card-title {
+		color: inherit;
+	}
+
+	> .background {
+		z-index: 1;
+	}
+
+	.background-color {
+		opacity: 0;
+		transition: opacity $transition-duration $transition-timing-function;
+		will-change: opacity;
+	}
+
+	&.card-bg-show .background-color {
+		opacity: 1;
+	}
+
+	&:hover .background-color,
+	&:focus .background-color {
+		opacity: 1;
+	}
+
+}
+
+// Zoom
+.card-hover-zoom {
+
+	.card-img {
+		display: block;
+		overflow: hidden;
+	}
+
+	img {
+		transition: transform $transition-duration $transition-timing-function;
+	}
+
+	&:hover,
+	&:focus,
+	.card-img:hover,
+	.card-img:focus {
+
+		img {
+			@extend %animate-image;
+		}
+
+	}
+
+}

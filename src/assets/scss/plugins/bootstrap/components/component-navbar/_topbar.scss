@@ -1,0 +1,62 @@
+.navbar-topbar {
+	display: flex;
+	align-items: stretch;
+	min-height: $topbar-min-height;
+	z-index: 110;
+
+	&.navbar-dark {
+		background-color: $dark;
+	}
+
+	.nav-link {
+		font-size: 13px;
+	}
+
+	.navbar-nav {
+		height: 100%;
+
+		> .nav-item {
+			display: flex;
+
+			> .nav-link {
+				align-items: center;
+			}
+
+		}
+
+	}
+
+	.dropdown-menu[data-bs-popper] {
+		left: -20px;
+		min-width: 124px;
+		padding: 15px 0;
+		margin-top: 0;
+	}
+
+	.dropdown-item {
+		padding: 6px 20px;
+		font-size: 13px;
+		font-weight: 500;
+		color: $dark;
+		opacity: 0.7;
+
+		&:focus,
+		&:hover,
+		&.active,
+		&:active {
+			background-color: transparent;
+			opacity: 1;
+		}
+
+	}
+
+	.nav-contacts {
+
+		svg {
+			margin-right: 15px;
+			color: $color-accent-3;
+		}
+
+	}
+
+}

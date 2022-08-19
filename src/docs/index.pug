@@ -1,0 +1,296 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Documentation' // page title
+- MenuTitle = 'Documentation' // menu title
+- Preloader = 'hide' // show / hide
+- ThemeName = 'Startbox'
+
+include ../mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include ../html/_head-docs.pug
+
+		//- Preloader
+		include ../partials/_preloader.pug
+
+		//- Site Wrapper
+		+site_main
+
+			.container.overflow-hidden.my-40
+
+				.row.gy-30.gx-40
+
+					.col-12.col-lg-4
+
+						.bg-white.rounded-4.p-30
+
+							.navbar.sticky-left
+
+								ul.nav.navbar-nav.nav-no-opacity
+
+									li.nav-item
+
+										a(href="#introduction", class="nav-link active") Introduction
+
+								h5.mb-20.mt-30 Getting Started
+
+								ul.nav.navbar-nav.nav-no-opacity
+
+									li.nav-item
+
+										a(href="#getting-started", class="nav-link") Gettings Started
+
+									li.nav-item
+
+										a(href="#files-structure", class="nav-link") Files Structure
+
+									li.nav-item
+
+										a(href="#development", class="nav-link") Development
+
+								h5.mb-20.mt-30 Template Structure
+
+								ul.nav.navbar-nav.nav-no-opacity
+
+									li.nav-item
+
+										a(href="#topbar-navigation", class="nav-link") Topbar Navigation
+
+									li.nav-item
+
+										a(href="#main-navigation-top", class="nav-link") Main Navigation (top)
+
+									li.nav-item
+
+										a(href="#main-navigation-right", class="nav-link") Main Navigation (right)
+
+									li.nav-item
+
+										a(href="#footer", class="nav-link") Footer
+
+								h5.mb-20.mt-30 Components
+
+								ul.nav.navbar-nav.nav-no-opacity
+
+									li.nav-item
+
+										a(href="#component-accordion", class="nav-link") Accordion
+
+									li.nav-item
+
+										a(href="#component-background", class="nav-link") Background
+
+									li.nav-item
+
+										a(href="#component-badge", class="nav-link") Badge
+
+									li.nav-item
+
+										a(href="#component-brand", class="nav-link") Brand
+
+									li.nav-item
+
+										a(href="#component-button", class="nav-link") Button
+
+									li.nav-item
+
+										a(href="#component-category", class="nav-link") Category
+
+									li.nav-item
+
+										a(href="#component-circle-icon", class="nav-link") Circle Icon
+
+									li.nav-item
+
+										a(href="#component-feature", class="nav-link") Feature
+
+									li.nav-item
+
+										a(href="#component-feedback", class="nav-link") Feedback
+
+									li.nav-item
+
+										a(href="#component-form", class="nav-link") Form
+
+									li.nav-item
+
+										a(href="#component-gallery-item", class="nav-link") Gallery Item
+
+									li.nav-item
+
+										a(href="#component-industry", class="nav-link") Industry
+
+									li.nav-item
+
+										a(href="#component-list", class="nav-link") List
+
+									li.nav-item
+
+										a(href="#component-member", class="nav-link") Member
+
+									li.nav-item
+
+										a(href="#component-nav", class="nav-link") Nav
+
+									li.nav-item
+
+										a(href="#component-page-navigation", class="nav-link") Page Navigation
+
+									li.nav-item
+
+										a(href="#component-pricing", class="nav-link") Pricing
+
+									li.nav-item
+
+										a(href="#component-process-step", class="nav-link") Process Step
+
+									li.nav-item
+
+										a(href="#component-review", class="nav-link") Review
+
+									li.nav-item
+
+										a(href="#component-service-box", class="nav-link") Service Box
+
+									li.nav-item
+
+										a(href="#component-service-card", class="nav-link") Service Card
+
+									li.nav-item
+
+										a(href="#component-service-case", class="nav-link") Service Case
+
+									li.nav-item
+
+										a(href="#component-service-line", class="nav-link") Service Line
+
+									li.nav-item
+
+										a(href="#component-shape", class="nav-link") Shape
+
+								h5.mb-20.mt-30 Plugins
+
+								ul.nav.navbar-nav.nav-no-opacity
+
+									li.nav-item
+
+										a(href="#plugin-countdown", class="nav-link") Countdown
+
+									li.nav-item
+
+										a(href="#plugin-magnific-popup", class="nav-link") Magnific Popup
+
+									li.nav-item
+
+										a(href="#plugin-isotope", class="nav-link") Isotope
+
+									li.nav-item
+
+										a(href="#plugin-show-on-scroll", class="nav-link") Show on Scroll
+
+									li.nav-item
+
+										a(href="#plugin-swiper", class="nav-link") Swiper
+
+								h5.mb-20.mt-30 Credits
+
+								ul.nav.navbar-nav.nav-no-opacity
+
+									li.nav-item
+
+										a(href="#credits-plugins", class="nav-link") Plugins
+
+									li.nav-item
+
+										a(href="#credits-images", class="nav-link") Images
+
+									li.nav-item
+
+										a(href="#credits-others", class="nav-link") Others
+
+								h5.mb-20.mt-30 Others
+
+								ul.nav.navbar-nav.nav-no-opacity
+
+									li.nav-item
+
+										a(href="#helper-classes", class="nav-link") Helper Classes
+
+									li.nav-item
+
+										a(href="#utils", class="nav-link") Utils
+
+									li.nav-item
+
+										a(href="#figma", class="nav-link") Figma
+
+									li.nav-item
+
+										a(href="#thank-you", class="nav-link") Thank You!
+
+					.col-12.col-lg-8
+
+						.sticky-top(style="top: 60px;")
+
+							include sections/_introduction
+							include sections/_getting-started.pug
+							include sections/_files-structure.pug
+							include sections/_development.pug
+
+							// Template structure
+							include sections/_topbar-navigation.pug
+							include sections/_main-navigation-top.pug
+							include sections/_main-navigation-right.pug
+							include sections/_footer.pug
+
+							// Components
+							include sections/_component-accordion.pug
+							include sections/_component-background.pug
+							include sections/_component-badge.pug
+							include sections/_component-brand.pug
+							include sections/_component-button.pug
+							include sections/_component-category.pug
+							include sections/_component-circle-icon.pug
+							include sections/_component-feature.pug
+							include sections/_component-feedback.pug
+							include sections/_component-form.pug
+							include sections/_component-gallery-item.pug
+							include sections/_component-industry.pug
+							include sections/_component-list.pug
+							include sections/_component-member.pug
+							include sections/_component-nav.pug
+							include sections/_component-page-navigation.pug
+							include sections/_component-pricing.pug
+							include sections/_component-process-step.pug
+							include sections/_component-review.pug
+							include sections/_component-service-box.pug
+							include sections/_component-service-card.pug
+							include sections/_component-service-case.pug
+							include sections/_component-service-line.pug
+							include sections/_component-shape.pug
+
+							// Plugins
+							include sections/_plugin-countdown.pug
+							include sections/_plugin-magnific-popup.pug
+							include sections/_plugin-isotope.pug
+							include sections/_plugin-show-on-scroll.pug
+							include sections/_plugin-swiper.pug
+
+							// Credits
+							include sections/_credits-plugins.pug
+							include sections/_credits-images.pug
+							include sections/_credits-others.pug
+
+							// Others
+							include sections/_helper-classes.pug
+							include sections/_utils.pug
+							include sections/_figma.pug
+							include sections/_thank-you.pug
+
+		//- Scripts
+		include ../html/_scripts-docs.pug

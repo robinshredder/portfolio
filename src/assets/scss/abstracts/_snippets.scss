@@ -1,0 +1,15 @@
+%animate-icon-left {
+	animation: animate-icon-left $transition-duration * 1.5 $transition-timing-function forwards;
+}
+
+%animate-icon-right {
+	animation: animate-icon-right $transition-duration * 1.5 $transition-timing-function forwards;
+}
+
+%animate-icon-down {
+	animation: animate-icon-down $transition-duration * 1.5 $transition-timing-function forwards;
+}
+
+%animate-image {
+	transform: scale(1.05);
+}

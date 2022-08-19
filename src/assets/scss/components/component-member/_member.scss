@@ -1,0 +1,38 @@
+.member {
+
+	.member-image {
+		display: block;
+		overflow: hidden;
+
+		img {
+			transition: transform $transition-duration $transition-timing-function;
+			will-change: transform;
+		}
+
+	}
+
+	.member-body {
+		padding: 32px 0 0;
+	}
+
+	.member-title {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	// Bootstrap 5 migration fixes
+	a.member-title {
+		text-decoration: none;
+	}
+
+
+	&:hover {
+
+		.member-image img {
+			@extend %animate-image;
+		}
+
+	}
+
+
+}

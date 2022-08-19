@@ -1,0 +1,227 @@
+.navbar {
+	position: $navbar-position;
+	transition: transform $transition-duration $transition-timing-function, background-color $transition-duration $transition-timing-function;
+	will-change: transform, background-color;
+	z-index: 100;
+
+	.navbar-nav {
+		display: none;
+
+		.nav-link,
+		.nav-link.active {
+			color: $navbar-color;
+		}
+
+	}
+
+	.navbar-toggle {
+		color: $navbar-color;
+	}
+
+}
+
+.nav-link {
+	display: flex;
+}
+
+// top
+.navbar-top {
+	top: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	align-items: stretch;
+	width: 100%;
+	min-height: $navbar-min-height;
+	background-color: transparent;
+
+	.navbar-brand {
+
+		.dark {
+			display: none;
+		}
+
+	}
+
+	&.navbar-dark {
+
+		.navbar-brand {
+
+			.light {
+				display: none;
+			}
+
+			.dark {
+				display: block;
+			}
+
+		}
+
+	}
+
+	.navbar-nav:not(.nav-social) {
+		height: 100%;
+
+		> .nav-item {
+			display: flex;
+
+			> .nav-link {
+				align-items: center;
+				padding: 6px 18px;
+				font-weight: 700;
+			}
+
+			> .dropdown-menu > .navbar-nav > .nav-item > .nav-link {
+				padding: 6px 36px;
+				font-weight: 500;
+				color: $dark;
+			}
+
+		}
+
+	}
+
+	.dropdown-menu .nav {
+		margin: 0;
+	}
+
+}
+
+// Additional classes
+@each $size, $screen in $container-max-widths {
+
+	.navbar-expand-#{$size} {
+
+		@include media-breakpoint-up($size) {
+
+			&.navbar-top,
+			&.navbar-topbar {
+
+				.navbar-nav {
+					display: flex;
+				}
+
+				.navbar-toggle,
+				.breadcrumb {
+					display: none;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+// dark
+.navbar-dark {
+
+	.navbar-nav {
+
+		.nav-link,
+		.nav-link.active {
+			color: $white;
+		}
+
+		.nav-item:hover > .nav-link {
+			color: $white;
+		}
+
+	}
+
+	.navbar-toggle {
+		color: $white;
+	}
+
+	.dropdown-menu {
+		background-color: $white;
+	}
+
+}
+
+@include media-breakpoint-up(xl) {
+
+	body.has-topbar {
+		padding-top: $topbar-min-height;
+	}
+
+}
+
+body.has-topbar .navbar-top.navbar-opaque {
+	margin-bottom: -$navbar-min-height;
+}
+
+// position fixed
+.navbar-fixed {
+	position: fixed;
+	width: 100%;
+}
+
+// position absolute
+.navbar-absolute {
+	position: absolute;
+	width: 100%;
+}
+
+// position relative
+.navbar-relative {
+	position: relative;
+}
+
+// position static
+.navbar-static {
+	position: static;
+}
+
+// scroll
+.navbar-scroll .navbar-top {
+	background-color: $white;
+
+	&.navbar-dark {
+		background-color: $dark;
+	}
+
+}
+
+// border bottom
+.navbar-border-bottom {
+	box-shadow: inset 0 -1px rgba($color-gray, .2);
+
+	&.navbar-dark {
+		box-shadow: inset 0 -1px rgba($white, .2);
+	}
+
+}
+
+// hide
+.navbar-hide:not(.navbar-end) .navbar-top {
+	transform: translateY(-100%);
+}
+
+.navbar.sticky-left {
+	position: sticky;
+	top: 0;
+	overflow-y: auto;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: start;
+
+	.nav-link {
+		display: block;
+		padding: 6px 0;
+	}
+
+	.nav-item .nav {
+		padding-left: 10px;
+	}
+
+	.navbar-nav {
+		display: flex;
+	}
+
+	.nav-link.active {
+		color: $color-accent-1;
+	}
+
+}

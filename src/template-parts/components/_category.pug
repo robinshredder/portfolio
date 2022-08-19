@@ -1,0 +1,38 @@
+mixin category(object)
+
+	//- Default
+	- object = object || {}
+	- object.icon = object.icon || '<svg xmlns="http://www.w3.org/2000/svg" width="35" height="39" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M25.25 14.896 9.75 5.85m-7.285 4.794L17.5 19.446l15.035-8.803M17.5 37V19.428M33 26.401V12.456c0-.612-.16-1.212-.462-1.742a3.465 3.465 0 0 0-1.26-1.274L19.222 2.467a3.412 3.412 0 0 0-3.444 0L3.722 9.44a3.466 3.466 0 0 0-1.26 1.274A3.52 3.52 0 0 0 2 12.456V26.4c0 .612.16 1.212.462 1.741.303.53.737.97 1.26 1.275l12.056 6.973a3.413 3.413 0 0 0 3.444 0l12.056-6.973a3.465 3.465 0 0 0 1.26-1.275c.302-.529.461-1.13.462-1.74Z"/></svg>'
+	- object.iconClass = object.iconClass || "text-dark"
+	- object.bodyClass = object.bodyClass || "ms-40"
+	- object.title = object.title || "Manufacturing"
+	- object.titleClass = object.titleClass || "mb-5"
+	- object.text = object.text || "Green you\"ll saying"
+	- object.textClass = object.textClass || "font-size-15 text-gray-dark m-0"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || ""
+
+	//- Element Class
+	- elClass = "category "
+	- elClass += object.customClass
+
+	// Category
+	div(class=elClass, style=object.css)
+
+		if object.icon != ""
+
+			.category-icon(class=object.iconClass) !{object.icon}
+
+		.category-body(class=object.bodyClass)
+
+			if object.title != ""
+
+				h4.category-title(class=object.titleClass)
+
+					=object.title
+
+			if object.text != ""
+
+				p.category-text(class=object.textClass)
+
+					=object.text

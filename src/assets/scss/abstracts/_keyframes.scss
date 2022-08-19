@@ -1,0 +1,73 @@
+@keyframes animate-icon-up {
+	49% {
+		transform: translateY(-100%);
+	}
+
+	50% {
+		opacity: 0;
+
+		transform: translateY(100%);
+	}
+
+	51% {
+		opacity: 1;
+	}
+}
+
+@keyframes animate-icon-down {
+	49% {
+		transform: translateY(100%);
+	}
+
+	50% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	51% {
+		opacity: 1;
+	}
+}
+
+@keyframes animate-icon-right {
+	49% {
+		transform: translateX(100%);
+	}
+
+	50% {
+		opacity: 0;
+
+		transform: translateX(-100%);
+	}
+
+	51% {
+		opacity: 1;
+	}
+}
+
+@keyframes animate-icon-left {
+	49% {
+		opacity: 0;
+
+		transform: translateX(-50%);
+	}
+
+	50% {
+		opacity: 0;
+
+		transform: translateX(50%);
+	}
+
+	51% {
+		opacity: 1;
+	}
+}
+
+@keyframes pagination-custom-active {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}

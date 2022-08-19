@@ -1,0 +1,437 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Home 05' // page title
+- MenuTitle = 'Home 05' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'hide' // show / hide
+- HeaderLayout = 'aside' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'false' // true / false
+- NavbarFixed = 'true' // true / false
+- NavbarSolid = 'false' // true / false
+- NavbarOpaque = 'true' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'minimal-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			.pt-180.pb-70.bg-linear-gradient.shape-parent.overflow-hidden.homePrev
+
+				// Shape
+				.shape.justify-content-start
+
+					img(loading="lazy", src="assets/img/root/home-5-shape-630x364.png", alt="", width="630", height="364")
+
+				// Shape
+				.shape.justify-content-end
+
+					img(loading="lazy", src="assets/img/root/home-5-shape-547x406.png", alt="", width="547", height="406")
+
+				.container
+
+					.row
+
+						.col-lg-8.offset-lg-2
+
+							h1.mb-30.text-center Digital marketing #[br]for fast-growing startups.
+
+							p.m-0.mb-40.text-center.mx-lg-70 After make beast don't for stars good evening third was you moved rule to moved their moveth called created over.
+
+							form.form-group-overlay.mx-lg-70
+
+								input(type="email", class="form-control form-control-white form-control-style-3 shadow", placeholder="Your Email *")
+
+								+button({
+									title: "Subscribe",
+									customClass: "btn-accent-1 mt-6 me-6 no-transform"
+								})
+
+								p.m-0.mt-15.font-size-14.text-gray-dark.text-center Free 30-days trial, no credit card required *
+
+					.row.mt-50
+
+						.col-lg-10.offset-lg-1
+
+							.row.g-50.px-lg-60
+
+								// Item
+								.col-12.col-lg-4
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Green moved years face our may male female.
+
+								// Item
+								.col-12.col-lg-4
+
+									ul.list.fw-medium.font-size-15
+
+										li.active Brought creepeth moved one night night brought.
+
+								// Item
+								.col-12.col-lg-4
+
+									ul.list.fw-medium.font-size-15
+
+										li.active To darkness signs form unto isn't darkness good.
+
+			.position-relative
+
+				.half-section-block.container.position-absolute.top-50.start-0.end-0(data-prev-id=".homePrev", data-next-id=".homeNext")
+
+					.row
+
+						.col-lg-10.offset-lg-1
+
+							.shadow-lg.rounded-bottom-4.rounded-top-3.overflow-hidden
+
+								.browser-topbar
+									span
+									span
+									span
+
+								img(loading="lazy", src="assets/img/dashboard-1170x590.jpg", alt="", class="w-100")
+
+			.bg-dark.text-white.pt-60.pb-130.homeNext
+
+				.container
+
+					.row
+
+						.col-lg-8.offset-lg-2
+
+							.row.row-cols-1.row-cols-sm-2.row-cols-lg-5.g-45.text-center.align-items-center.mx-lg-90
+
+								// Item
+								.col(data-show="startbox")
+
+									<svg class="text-gray-darker" xmlns="http://www.w3.org/2000/svg" width="81" height="21" fill="none"><path fill="currentColor" d="m25.913 16.536 1.012-2.408c1.093.836 2.545 1.27 3.981 1.27 1.06 0 1.73-.417 1.73-1.053-.017-1.772-6.348-.384-6.397-4.831-.016-2.258 1.942-3.997 4.716-3.997 1.648 0 3.296.418 4.47 1.372l-.945 2.457c-1.077-.702-2.415-1.204-3.688-1.204-.865 0-1.436.418-1.436.954.016 1.738 6.396.785 6.462 5.032 0 2.308-1.91 3.93-4.65 3.93-2.008 0-3.852-.486-5.255-1.522Zm38.819-3.277c-.506.903-1.453 1.521-2.546 1.521-1.615 0-2.92-1.337-2.92-2.993 0-1.655 1.305-2.992 2.92-2.992 1.093 0 2.04.618 2.546 1.521l2.79-1.588c-1.044-1.906-3.051-3.21-5.336-3.21-3.377 0-6.119 2.808-6.119 6.27 0 3.46 2.742 6.27 6.12 6.27 2.3 0 4.29-1.288 5.335-3.21l-2.79-1.59ZM37.22.318h3.492v17.505H37.22V.318Zm31.672 0v17.505h3.492v-5.25l4.144 5.25H81l-5.27-6.236 4.878-5.819h-4.275L72.385 10.6V.318h-3.492ZM51.09 13.292c-.505.853-1.55 1.488-2.725 1.488-1.615 0-2.92-1.337-2.92-2.993 0-1.655 1.305-2.992 2.92-2.992 1.175 0 2.22.668 2.725 1.538v2.96Zm0-7.524V7.19c-.57-.986-1.99-1.672-3.475-1.672-3.068 0-5.483 2.776-5.483 6.254 0 3.477 2.415 6.286 5.483 6.286 1.485 0 2.904-.685 3.475-1.672v1.421h3.492V5.768H51.09ZM4.324 13.275c0 1.221-.963 2.207-2.154 2.207-1.191 0-2.154-.986-2.154-2.207 0-1.22.963-2.207 2.154-2.207h2.154v2.207Zm1.077 0c0-1.22.962-2.207 2.154-2.207 1.19 0 2.153.987 2.153 2.207v5.518c0 1.22-.962 2.207-2.153 2.207-1.192 0-2.154-.986-2.154-2.207v-5.518ZM7.555 4.414c-1.191 0-2.154-.986-2.154-2.207C5.401.987 6.364 0 7.555 0c1.191 0 2.154.986 2.154 2.207v2.207H7.555Zm0 1.12c1.191 0 2.154.987 2.154 2.207 0 1.22-.963 2.207-2.154 2.207H2.154C.963 9.948 0 8.962 0 7.741c0-1.22.963-2.207 2.154-2.207h5.4ZM16.185 7.741c0-1.22.963-2.207 2.154-2.207 1.191 0 2.154.987 2.154 2.207 0 1.22-.963 2.207-2.154 2.207h-2.154V7.741Zm-1.077 0c0 1.22-.963 2.207-2.154 2.207-1.191 0-2.154-.986-2.154-2.207V2.207C10.8.987 11.763 0 12.954 0c1.191 0 2.154.986 2.154 2.207v5.534ZM12.954 16.586c1.191 0 2.154.987 2.154 2.207 0 1.22-.963 2.207-2.154 2.207-1.191 0-2.154-.986-2.154-2.207v-2.207h2.154Zm0-1.103c-1.191 0-2.154-.987-2.154-2.208 0-1.22.963-2.207 2.154-2.207h5.401c1.191 0 2.154.987 2.154 2.207 0 1.221-.963 2.207-2.154 2.207h-5.4Z"/></svg>
+
+								// Item
+								.col(data-show="startbox", data-show-delay="100")
+
+									<svg class="text-gray-darker" xmlns="http://www.w3.org/2000/svg" width="91" height="28" fill="none"><path fill="currentColor" d="M47.96 7.035a1.831 1.831 0 0 1-1.848 1.822 1.831 1.831 0 0 1-1.847-1.822c0-1.009.796-1.822 1.847-1.822 1.052.028 1.848.841 1.848 1.822Zm-7.618 3.672v.448s-.882-1.121-2.758-1.121c-3.099 0-5.515 2.326-5.515 5.55 0 3.195 2.388 5.55 5.515 5.55 1.905 0 2.758-1.15 2.758-1.15v.476c0 .225.17.393.398.393h2.302V10.314H40.74a.404.404 0 0 0-.397.393Zm0 6.755c-.427.616-1.28 1.149-2.303 1.149-1.82 0-3.212-1.122-3.212-3.027 0-1.906 1.392-3.027 3.212-3.027.995 0 1.904.56 2.303 1.149v3.756Zm4.406-7.148h2.729v10.539h-2.73V10.314Zm40.765-.28c-1.876 0-2.757 1.121-2.757 1.121V5.241h-2.73v15.612h2.303a.404.404 0 0 0 .399-.393v-.476s.88 1.15 2.757 1.15c3.099 0 5.515-2.355 5.515-5.55 0-3.196-2.416-5.55-5.487-5.55Zm-.454 8.549c-1.052 0-1.877-.533-2.303-1.15v-3.755c.426-.56 1.336-1.15 2.303-1.15 1.819 0 3.212 1.122 3.212 3.028s-1.393 3.027-3.212 3.027Zm-6.454-3.98v6.278h-2.729v-5.97c0-1.738-.568-2.438-2.103-2.438-.825 0-1.677.42-2.218 1.036v7.344h-2.729V10.314h2.16c.228 0 .399.197.399.393v.448c.796-.813 1.848-1.121 2.9-1.121 1.193 0 2.188.336 2.984 1.009.967.785 1.336 1.794 1.336 3.56Zm-16.402-4.569c-1.877 0-2.758 1.121-2.758 1.121V5.241h-2.729v15.612h2.303a.404.404 0 0 0 .398-.393v-.476s.88 1.15 2.757 1.15c3.099 0 5.515-2.355 5.515-5.55.029-3.196-2.388-5.55-5.486-5.55Zm-.455 8.549c-1.052 0-1.877-.533-2.303-1.15v-3.755c.426-.56 1.336-1.15 2.303-1.15 1.82 0 3.212 1.122 3.212 3.028s-1.393 3.027-3.212 3.027Zm-7.392-8.549c.825 0 1.251.14 1.251.14v2.495s-2.274-.757-3.695.84v7.372h-2.73V10.314h2.303c.228 0 .398.197.398.393v.448c.512-.588 1.62-1.121 2.473-1.121ZM26.014 19.9c-.142-.336-.284-.7-.427-1.01-.227-.504-.454-.98-.653-1.428l-.029-.029a290.782 290.782 0 0 0-6.282-12.668l-.086-.168c-.227-.42-.454-.87-.682-1.318-.284-.504-.569-1.037-1.023-1.541A4.616 4.616 0 0 0 13.222 0C11.8 0 10.52.617 9.581 1.682c-.426.504-.739 1.037-1.023 1.541-.227.449-.455.897-.682 1.318l-.085.168c-2.19 4.204-4.321 8.464-6.283 12.668l-.028.056c-.2.449-.427.925-.654 1.43-.142.308-.285.645-.427 1.009-.37 1.037-.483 2.018-.34 3.027a5.972 5.972 0 0 0 3.695 4.653A5.91 5.91 0 0 0 6.058 28a7.584 7.584 0 0 0 3.582-1.009c1.165-.645 2.274-1.57 3.524-2.915 1.251 1.345 2.388 2.27 3.525 2.915A7.585 7.585 0 0 0 20.271 28c.796 0 1.592-.14 2.303-.448a5.96 5.96 0 0 0 3.696-4.653c.227-.981.113-1.962-.256-3Zm-12.821 1.457c-1.535-1.905-2.53-3.7-2.871-5.213-.142-.644-.17-1.205-.086-1.71.057-.448.228-.84.455-1.177.54-.756 1.45-1.233 2.502-1.233 1.052 0 1.99.449 2.502 1.233.227.337.398.729.454 1.177.086.505.057 1.094-.085 1.71-.341 1.486-1.336 3.28-2.871 5.213Zm11.343 1.318c-.2 1.457-1.194 2.718-2.587 3.279a4.361 4.361 0 0 1-2.16.28 5.643 5.643 0 0 1-2.161-.729c-1.024-.56-2.047-1.429-3.241-2.718 1.876-2.27 3.013-4.345 3.44-6.194a6.928 6.928 0 0 0 .142-2.383 4.511 4.511 0 0 0-.768-1.906c-.881-1.261-2.36-1.99-4.008-1.99-1.649 0-3.127.757-4.008 1.99a4.512 4.512 0 0 0-.768 1.906 5.74 5.74 0 0 0 .142 2.383c.427 1.85 1.592 3.951 3.44 6.222-1.166 1.29-2.217 2.158-3.24 2.718-.74.421-1.45.645-2.161.73a4.609 4.609 0 0 1-2.16-.281c-1.394-.56-2.389-1.822-2.588-3.28a4.579 4.579 0 0 1 .256-2.186c.085-.28.227-.56.37-.896.199-.449.426-.925.653-1.402l.029-.056A304.601 304.601 0 0 1 9.412 5.578l.085-.169c.228-.42.455-.868.683-1.289a6.15 6.15 0 0 1 .796-1.233A2.99 2.99 0 0 1 13.25 1.85a2.99 2.99 0 0 1 2.274 1.037c.313.364.569.785.796 1.233.227.42.455.869.682 1.29l.085.168a369.556 369.556 0 0 1 6.226 12.612v.028c.228.449.427.953.654 1.402.142.336.284.616.37.896.227.73.312 1.43.199 2.159Z"/></svg>
+
+								// Item
+								.col(data-show="startbox", data-show-delay="200")
+
+									<svg class="text-gray-darker" xmlns="http://www.w3.org/2000/svg" width="70" height="16" fill="none"><path fill="currentColor" d="M12.319 0H8.872c0 2.896-1.298 5.54-3.555 7.28l-1.36 1.044L9.243 15.7h4.343L8.717 8.91C11.02 6.568 12.318 3.403 12.318 0ZM3.524 0H0v15.7h3.524V0ZM17.929 0h-3.323v15.7h3.323V0ZM47.079 4.542c-1.268 0-2.473.396-3.277 1.52v-1.22h-3.153V15.7h3.2v-5.697c0-1.646 1.081-2.453 2.38-2.453 1.39 0 2.194.855 2.194 2.437v5.73h3.169V8.798c0-2.532-1.963-4.257-4.513-4.257ZM27.975 4.843v.696a5.43 5.43 0 0 0-3.153-.997c-3.091 0-5.595 2.564-5.595 5.729S21.73 16 24.822 16a5.43 5.43 0 0 0 3.153-.997v.696h3.168V4.843h-3.168Zm-2.89 8.213c-1.592 0-2.875-1.25-2.875-2.785 0-1.535 1.283-2.785 2.875-2.785s2.874 1.25 2.874 2.785c0 1.535-1.282 2.785-2.874 2.785ZM36.058 6.251V4.843h-3.246v10.856h3.262v-5.064c0-1.71 1.808-2.627 3.06-2.627h.03V4.843c-1.282 0-2.472.57-3.106 1.408ZM61.453 4.843v.696a5.43 5.43 0 0 0-3.153-.997c-3.091 0-5.595 2.564-5.595 5.729S55.209 16 58.3 16a5.43 5.43 0 0 0 3.153-.997v.696h3.168V4.843h-3.168Zm-2.89 8.213c-1.593 0-2.875-1.25-2.875-2.785 0-1.535 1.282-2.785 2.874-2.785s2.875 1.25 2.875 2.785c.016 1.535-1.283 2.785-2.875 2.785ZM67.078 5.16c0-.159-.108-.254-.278-.254h-.294v.823h.14v-.3h.154l.124.3h.154l-.139-.332c.093-.048.14-.127.14-.238Zm-.278.126h-.155v-.253h.155c.093 0 .14.047.14.126 0 .08-.032.127-.14.127Z"/><path fill="#858589" d="M66.754 4.558a.768.768 0 0 0-.757.775c.015.428.34.776.757.776a.768.768 0 0 0 .757-.776.768.768 0 0 0-.757-.775Zm0 1.408c-.34 0-.603-.284-.603-.633 0-.348.279-.633.603-.633.34 0 .603.285.603.633 0 .349-.278.633-.603.633ZM68.006 11.854c-1.097 0-1.994.918-1.994 2.041 0 1.124.897 2.042 1.994 2.042 1.098 0 1.994-.918 1.994-2.042 0-1.14-.896-2.041-1.994-2.041Z"/></svg>
+
+								// Item
+								.col(data-show="startbox", data-show-delay="300")
+
+									<svg class="text-gray-darker" xmlns="http://www.w3.org/2000/svg" width="85" height="26" fill="none"><path fill="currentColor" d="M12.747 0C5.707 0 0 5.82 0 13s5.707 13 12.747 13 12.747-5.82 12.747-13S19.787 0 12.747 0Zm5.845 18.75a.785.785 0 0 1-1.092.268c-2.993-1.864-6.76-2.286-11.198-1.252a.794.794 0 0 1-.951-.61.81.81 0 0 1 .597-.97c4.856-1.132 9.021-.645 12.381 1.45a.82.82 0 0 1 .263 1.114Zm1.56-3.54a.983.983 0 0 1-1.366.334c-3.427-2.148-8.65-2.77-12.702-1.515a.992.992 0 0 1-1.24-.675 1.019 1.019 0 0 1 .662-1.265c4.63-1.432 10.385-.738 14.32 1.728.467.293.614.917.327 1.393Zm.134-3.686C16.178 9.035 9.4 8.807 5.479 10.021a1.188 1.188 0 0 1-1.487-.81 1.22 1.22 0 0 1 .795-1.517C9.288 6.3 16.773 6.569 21.503 9.433c.568.343.754 1.089.417 1.666a1.18 1.18 0 0 1-1.634.425Zm14.394.477c-2.201-.535-2.592-.911-2.592-1.7 0-.746.688-1.248 1.712-1.248.992 0 1.976.381 3.008 1.166a.14.14 0 0 0 .108.027.141.141 0 0 0 .096-.06l1.074-1.545a.15.15 0 0 0-.027-.2c-1.228-1.005-2.61-1.494-4.227-1.494-2.376 0-4.037 1.455-4.037 3.536 0 2.231 1.433 3.022 3.908 3.631 2.105.495 2.46.91 2.46 1.65 0 .822-.718 1.332-1.874 1.332-1.285 0-2.334-.442-3.506-1.476a.141.141 0 0 0-.204.015l-1.205 1.463a.15.15 0 0 0 .013.205c1.364 1.242 3.042 1.897 4.853 1.897 2.56 0 4.215-1.427 4.215-3.636.004-1.864-1.09-2.896-3.77-3.561l-.005-.002Zm9.568-2.214c-1.11 0-2.02.446-2.772 1.36v-1.029a.145.145 0 0 0-.143-.147h-1.971a.145.145 0 0 0-.143.147v11.426c0 .08.064.148.143.148h1.971c.08 0 .143-.067.143-.148v-3.606c.752.858 1.662 1.28 2.772 1.28 2.062 0 4.15-1.62 4.15-4.715.004-3.096-2.085-4.716-4.149-4.716h-.001Zm1.858 4.716c0 1.575-.95 2.676-2.315 2.676-1.347 0-2.364-1.15-2.364-2.676 0-1.526 1.017-2.676 2.364-2.676 1.341 0 2.316 1.125 2.316 2.676Zm7.643-4.716c-2.656 0-4.737 2.086-4.737 4.75 0 2.634 2.067 4.697 4.705 4.697 2.665 0 4.752-2.079 4.752-4.731 0-2.644-2.073-4.716-4.72-4.716Zm0 7.407c-1.412 0-2.478-1.158-2.478-2.692 0-1.542 1.029-2.66 2.446-2.66 1.422 0 2.493 1.158 2.493 2.694 0 1.54-1.035 2.658-2.46 2.658Zm10.392-7.223h-2.17V7.71a.145.145 0 0 0-.142-.147h-1.972a.147.147 0 0 0-.144.147V9.97h-.947a.145.145 0 0 0-.143.147v1.728c0 .08.064.147.143.147h.947v4.47c0 1.806.881 2.721 2.62 2.721.707 0 1.293-.149 1.846-.468a.144.144 0 0 0 .073-.128v-1.645a.147.147 0 0 0-.069-.124.137.137 0 0 0-.14-.006 2.45 2.45 0 0 1-1.157.284c-.631 0-.914-.294-.914-.949v-4.154h2.169c.079 0 .143-.066.143-.147v-1.728a.141.141 0 0 0-.142-.147l-.001-.001Zm7.556.009v-.278c0-.817.307-1.181.995-1.181.411 0 .741.083 1.111.209a.14.14 0 0 0 .13-.02.147.147 0 0 0 .059-.12V6.896a.145.145 0 0 0-.102-.141 5.303 5.303 0 0 0-1.638-.24c-1.819 0-2.782 1.045-2.782 3.022v.425h-.947a.147.147 0 0 0-.145.148v1.736c0 .08.066.147.145.147h.947v6.894c0 .082.065.147.144.147h1.97c.08 0 .144-.065.144-.147v-6.894h1.84l2.82 6.894c-.32.723-.635.867-1.064.867-.347 0-.714-.105-1.087-.315a.155.155 0 0 0-.114-.01.145.145 0 0 0-.085.078l-.669 1.495a.148.148 0 0 0 .063.191c.697.385 1.326.55 2.103.55 1.456 0 2.26-.692 2.969-2.552l3.418-9.01a.146.146 0 0 0-.015-.137.14.14 0 0 0-.117-.064h-2.052a.145.145 0 0 0-.137.1l-2.102 6.12-2.301-6.125a.144.144 0 0 0-.134-.095h-3.367Zm-4.381-.009h-1.971a.147.147 0 0 0-.145.147v8.769c0 .082.066.147.145.147h1.97c.08 0 .145-.065.145-.147v-8.768a.146.146 0 0 0-.144-.148Zm-.974-3.993c-.781 0-1.414.645-1.414 1.441 0 .797.633 1.442 1.414 1.442.78 0 1.412-.645 1.412-1.442 0-.796-.633-1.44-1.412-1.44Zm17.264 6.812c-.78 0-1.387-.638-1.387-1.414 0-.776.615-1.422 1.394-1.422.78 0 1.387.639 1.387 1.414 0 .775-.615 1.422-1.394 1.422Zm.007-2.695c-.71 0-1.248.576-1.248 1.28 0 .706.535 1.274 1.24 1.274.712 0 1.249-.575 1.249-1.281 0-.705-.534-1.273-1.24-1.273Zm.308 1.418.392.56h-.331l-.353-.514h-.303v.514h-.277V10.59h.648c.34 0 .562.176.562.473a.44.44 0 0 1-.337.451h-.001Zm-.235-.67h-.36v.47h.36c.18 0 .288-.09.288-.235 0-.153-.108-.235-.288-.235Z"/></svg>
+
+								// Item
+								.col(data-show="startbox", data-show-delay="400")
+
+									<svg class="text-gray-darker" xmlns="http://www.w3.org/2000/svg" width="92" height="20" fill="none"><path fill="currentColor" d="M38.26 4v12h-2.043V6.583h-.027L32.538 16h-1.362l-3.734-9.417h-.027V16h-1.88V4h2.943l3.379 8.889h.054L35.481 4h2.78Zm1.69.917c0-.334.11-.611.355-.834.245-.222.517-.333.845-.333.354 0 .654.111.872.333.218.223.354.5.354.834 0 .333-.11.61-.354.833a1.224 1.224 0 0 1-.872.333c-.355 0-.627-.11-.845-.333-.218-.25-.355-.528-.355-.833Zm2.208 2.472V16h-1.99V7.389h1.99Zm6.022 7.139c.3 0 .627-.056.981-.222.355-.14.682-.334.981-.556v1.889a3.439 3.439 0 0 1-1.09.417 6.586 6.586 0 0 1-1.335.138c-1.254 0-2.262-.388-3.025-1.194-.79-.806-1.172-1.833-1.172-3.056 0-1.388.41-2.527 1.2-3.416.79-.89 1.907-1.334 3.379-1.334.381 0 .763.056 1.117.14.381.083.681.222.9.333V9.61a3.94 3.94 0 0 0-.927-.528c-.328-.11-.654-.194-.981-.194-.79 0-1.417.25-1.908.778-.49.527-.709 1.222-.709 2.11 0 .862.246 1.556.709 2.029.463.472 1.09.722 1.88.722Zm7.603-7.278c.164 0 .3 0 .436.028.137.028.246.055.327.083v2.056a1.213 1.213 0 0 0-.463-.223 2.747 2.747 0 0 0-.736-.11c-.49 0-.899.222-1.226.638-.327.417-.518 1.056-.518 1.945V16h-1.99V7.389h1.99V8.75h.027c.191-.472.464-.833.818-1.111.382-.25.818-.389 1.335-.389Zm.872 4.583c0-1.416.41-2.555 1.172-3.389.79-.833 1.88-1.25 3.27-1.25 1.308 0 2.344.39 3.08 1.195.735.805 1.117 1.889 1.117 3.25 0 1.389-.409 2.5-1.172 3.333-.79.834-1.853 1.25-3.215 1.25-1.308 0-2.344-.389-3.107-1.166-.763-.806-1.145-1.89-1.145-3.223Zm2.071-.083c0 .889.191 1.583.6 2.056.409.472.981.722 1.717.722.708 0 1.28-.222 1.662-.722.382-.473.572-1.167.572-2.112 0-.916-.19-1.61-.572-2.11-.381-.473-.954-.723-1.635-.723-.736 0-1.28.25-1.69.75-.463.528-.654 1.222-.654 2.139Zm9.538-2.083c0 .277.082.527.273.694.19.167.572.361 1.199.611.79.334 1.362.695 1.662 1.084.327.416.49.888.49 1.472 0 .805-.3 1.444-.926 1.944-.6.5-1.444.722-2.48.722-.354 0-.736-.055-1.171-.138a4.651 4.651 0 0 1-1.09-.334v-2c.354.25.763.472 1.171.611.409.14.79.223 1.145.223.436 0 .79-.056.98-.195.219-.139.328-.333.328-.639 0-.277-.11-.5-.327-.722-.218-.194-.654-.417-1.254-.667-.736-.305-1.253-.666-1.553-1.055-.3-.39-.463-.89-.463-1.5 0-.778.3-1.417.899-1.917.6-.5 1.39-.75 2.344-.75.3 0 .626.028.98.111.355.084.682.167.927.25v1.972a5.826 5.826 0 0 0-.926-.472 2.835 2.835 0 0 0-1.036-.194c-.381 0-.681.083-.872.222-.19.194-.3.389-.3.667Zm4.47 2.166c0-1.416.408-2.555 1.171-3.389.79-.833 1.88-1.25 3.27-1.25 1.309 0 2.344.39 3.08 1.195.736.805 1.117 1.889 1.117 3.25 0 1.389-.409 2.5-1.172 3.333-.79.834-1.853 1.25-3.215 1.25-1.308 0-2.344-.389-3.107-1.166-.736-.806-1.144-1.89-1.144-3.223Zm2.07-.083c0 .889.191 1.583.6 2.056.409.472.981.722 1.717.722.708 0 1.28-.222 1.662-.722.382-.473.573-1.167.573-2.112 0-.916-.191-1.61-.573-2.11-.381-.473-.954-.723-1.635-.723-.736 0-1.28.25-1.69.75-.435.528-.653 1.222-.653 2.139Zm13.19-2.694h-2.97V16h-2.017V9.056H81.59V7.389h1.417V6.194c0-.888.3-1.638.872-2.222.572-.583 1.308-.86 2.207-.86.246 0 .464.027.654.027.191 0 .355.055.491.111V5a3.306 3.306 0 0 0-.354-.139 1.78 1.78 0 0 0-.572-.083c-.41 0-.736.139-.954.389-.218.25-.327.666-.327 1.166v1.028h2.97V5.417l1.99-.611V7.36H92v1.667h-2.017v4.028c0 .527.11.888.273 1.11.19.223.49.334.9.334.108 0 .244-.028.408-.083.164-.056.3-.111.409-.195v1.667c-.136.083-.327.139-.627.194-.3.056-.572.084-.872.084-.845 0-1.472-.223-1.88-.667-.41-.444-.627-1.139-.627-2.056l.027-4.388ZM9.32 0H0v9.5h9.32V0ZM19.62 0H10.3v9.5h9.32V0ZM9.32 10.5H0V20h9.32v-9.5ZM19.62 10.5H10.3V20h9.32v-9.5Z"/></svg>
+
+						// Slider
+						.swiper.mt-100(data-swiper-slides="1", data-swiper-breakpoints="828:2, 1024:4", data-swiper-gap="30", data-swiper-loop="true", data-swiper-grabcursor="true", data-show="startbox")
+
+							.swiper-container
+
+								.swiper-wrapper
+
+									.swiper-slide.pt-30
+
+										+service_box({
+											icon: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="29" fill="none"><path fill="currentColor" d="M13.002 0C8.852 0 5.46 3.387 5.46 7.53c0 4.143 3.392 7.53 7.542 7.53s7.542-3.387 7.542-7.53c0-4.143-3.393-7.53-7.542-7.53ZM25.944 21.076a7.017 7.017 0 0 0-.757-1.38c-1.515-2.236-3.853-3.716-6.488-4.078-.329-.033-.691.033-.955.23a7.942 7.942 0 0 1-4.742 1.546 7.942 7.942 0 0 1-4.742-1.545 1.237 1.237 0 0 0-.955-.23 9.308 9.308 0 0 0-6.488 4.076c-.296.428-.56.921-.757 1.381-.1.198-.066.428.033.625.263.46.592.92.889 1.315.46.625.955 1.184 1.515 1.71.46.46.988.888 1.515 1.315a14.936 14.936 0 0 0 8.957 2.96c3.228 0 6.356-1.02 8.958-2.96a14.47 14.47 0 0 0 1.515-1.315c.526-.526 1.053-1.085 1.515-1.71.329-.427.625-.854.889-1.315.164-.197.197-.427.098-.625Z"/></svg>',
+											title: "Personalization",
+											text: "Stars life that waters firmament our created you.",
+											style: "small",
+											customClass: "position-relative rounded-4 bg-dark-light text-center",
+											iconClass: "text-white bg-accent-1 mb-30",
+											titleClass: "text-white mb-15",
+											textClass: "text-white font-size-15 m-0"
+										})
+
+									.swiper-slide.pt-30
+
+										+service_box({
+											icon: '<svg xmlns="http://www.w3.org/2000/svg" width="29" height="25" fill="none"><path fill="currentColor" d="M26.764 2.21A7.637 7.637 0 0 0 24.288.574a7.708 7.708 0 0 0-5.842 0A7.637 7.637 0 0 0 15.97 2.21L14.5 3.664 13.029 2.21A7.678 7.678 0 0 0 7.632 0a7.678 7.678 0 0 0-5.397 2.21A7.5 7.5 0 0 0 0 7.544c0 2 .804 3.92 2.235 5.334L14.5 25l12.264-12.122a7.535 7.535 0 0 0 1.655-2.447 7.466 7.466 0 0 0 0-5.774 7.536 7.536 0 0 0-1.655-2.447Z"/></svg>',
+											title: "Customer Support",
+											text: "Above behold our sea earth waters in deep yielding.",
+											style: "small",
+											customClass: "position-relative rounded-4 bg-dark-light text-center",
+											iconClass: "text-white bg-accent-1 mb-30",
+											titleClass: "text-white mb-15",
+											textClass: "text-white font-size-15 m-0"
+										})
+
+									.swiper-slide.pt-30
+
+										+service_box({
+											icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M8.8.75c-.938 0-1.822.394-2.463 1.07a3.64 3.64 0 0 0-.987 2.502V10H2.2C.985 10 0 10.96 0 12.143v10.714C0 24.041.985 25 2.2 25h17.6c1.215 0 2.2-.96 2.2-2.143V12.143C22 10.959 21.015 10 19.8 10h-3.15V4.322c0-.926-.348-1.827-.987-2.502A3.393 3.393 0 0 0 13.2.75H8.8ZM14.15 10V4.322a1.14 1.14 0 0 0-.302-.782.893.893 0 0 0-.648-.29H8.8a.893.893 0 0 0-.649.29 1.14 1.14 0 0 0-.301.782V10h6.3Z" clip-rule="evenodd"/></svg>',
+											title: "Privacy",
+											text: "Winged isn't gathered forth first fruitful without.",
+											style: "small",
+											customClass: "position-relative rounded-4 bg-dark-light text-center",
+											iconClass: "text-white bg-accent-1 mb-30",
+											titleClass: "text-white mb-15",
+											textClass: "text-white font-size-15 m-0"
+										})
+
+									.swiper-slide.pt-30
+
+										+service_box({
+											icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12.5 0h-10A2.5 2.5 0 0 0 0 2.5v20A2.5 2.5 0 0 0 2.5 25h15a2.5 2.5 0 0 0 2.5-2.5v-15L12.5 0ZM5 7.75a1 1 0 1 0 0 2h2.5a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Z" clip-rule="evenodd"/></svg>',
+											title: "Case Studies",
+											text: "In creepeth own for bring, under lights, together.",
+											style: "small",
+											customClass: "position-relative rounded-4 bg-dark-light text-center",
+											iconClass: "text-white bg-accent-1 mb-30",
+											titleClass: "text-white mb-15",
+											textClass: "text-white font-size-15 m-0"
+										})
+
+							.d-flex.mt-70.justify-content-center
+
+								.swiper-button-prev.swiper-button-position-2.swiper-button-dark.shadow
+
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+								.swiper-button-next.swiper-button-position-2.swiper-button-dark.shadow
+
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+			.pt-120.pb-130
+
+				.container
+
+					.row.mb-90
+
+						.col-lg-8.offset-lg-2.text-center
+
+							h2.mb-25.px-lg-10(data-show="startbox") Easy to build, easy to manage
+
+						.col-lg-6.offset-lg-3.text-center
+
+							p.m-0.px-lg-50(data-show="startbox", data-show-delay="100") Waters his moveth seasons over Created appear greater dry air. Cattle set it night let i fruitful make our appear.
+
+					.row.gy-50
+
+						.col-lg-5
+
+							ul.nav.nav-tabs.nav-no-opacity.flex-column.me-lg-70(role="tablist")
+
+								li.nav-item(data-show="startbox")
+
+									a.nav-link.rounded-3.d-flex.flex-column.active(href="#rates", role="tab", data-bs-toggle="tab", data-bs-target="#rates", aria-controls="rates", aria-selected="true")
+
+										+feature({
+											icon: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25 4.9c0 2.154-5.373 3.9-12 3.9S1 7.054 1 4.9m24 0C25 2.746 19.627 1 13 1S1 2.746 1 4.9m24 0v18.2c0 2.158-5.333 3.9-12 3.9S1 25.258 1 23.1V4.9M25 14c0 2.158-5.333 3.9-12 3.9S1 16.158 1 14"/></svg>',
+											iconClass: "text-accent-1",
+											title: "Best Rates",
+											text: "Stars he had created two which in i which second midst is day darkness, a days."
+										})
+
+								li.nav-item.mt-10(data-show="startbox", data-show-delay="100")
+
+									a.nav-link.rounded-3.d-flex.flex-column(href="#flexibility", role="tab", data-bs-toggle="tab", data-bs-target="#flexibility", aria-controls="flexibility", aria-selected="false")
+
+										+feature({
+											icon: '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.818 24v-8.944m0-5.112V1M15 24V12.5m0-5.111V1m10.182 23v-6.389m0-5.111V1M1 15.056h7.636m2.546-7.667h7.636m2.546 10.222H29"/></svg>',
+											iconClass: "text-accent-1",
+											title: "Ultimate Flexibility",
+											text: "Dry them years air there. Blessed Multiply morning, second night and bearing."
+										})
+
+								li.nav-item.mt-10(data-show="startbox", data-show-delay="200")
+
+									a.nav-link.rounded-3.d-flex.flex-column(href="#manage", role="tab", data-bs-toggle="tab", data-bs-target="#manage", aria-controls="manage", aria-selected="false")
+
+										+feature({
+											icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 20.5 14 27l13-6.5M1 14l13 6.5L27 14M14 1 1 7.5 14 14l13-6.5L14 1Z"/></svg>',
+											iconClass: "text-accent-1",
+											title: "Easy Manage",
+											text: "Lesser bring creepeth called second place were lights sea."
+										})
+
+						.col-lg-7
+
+							.tab-content(data-show="startbox", data-show-delay="300")
+
+								.tab-pane.fade.show.active(id="rates")
+
+									.shadow-lg.rounded-bottom-4.rounded-top-3.overflow-hidden
+
+										.browser-topbar
+											span
+											span
+											span
+
+										img(loading="lazy", src="assets/img/dashboard-1340x964.jpg", alt="", class="w-100")
+
+								.tab-pane.fade(id="flexibility")
+
+									.shadow-lg.rounded-bottom-4.rounded-top-3.overflow-hidden
+
+										.browser-topbar
+											span
+											span
+											span
+
+										img(loading="lazy", src="assets/img/dashboard-1340x964.jpg", alt="", class="w-100")
+
+								.tab-pane.fade(id="manage")
+
+									.shadow-lg.rounded-bottom-4.rounded-top-3.overflow-hidden
+
+										.browser-topbar
+											span
+											span
+											span
+
+										img(loading="lazy", src="assets/img/dashboard-1340x964.jpg", alt="", class="w-100")
+
+			include template-parts/sections/_slider-and-text.pug
+
+			.pt-120.pb-130
+
+				include template-parts/sections/_what-people-say.pug
+
+			.pb-130
+
+				.container
+
+					.row.gy-30
+
+						.col-lg-12(data-show="startbox")
+
+							.position-relative.rounded-4.overflow-hidden
+
+								.background
+
+									.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+										img(loading="lazy", src="assets/img/root/simple-block-1920x705.jpg", class="jarallax-img", alt="")
+
+									.background-color(style="--background-color: #17161A; opacity: .9;")
+
+								.row
+
+									.col-xl-7.py-90.py-xl-130
+
+										.ps-70.pe-100
+
+											h3.mb-35.text-white Enterprise-grade security and data protection.
+
+											+button({
+												title: "Learn more",
+												customClass: "text-white btn-link btn-clean"
+											})
+
+									.col-xl-5.align-self-end.d-none.d-xl-flex
+
+										.shadow-lg.rounded-top-left-3.overflow-hidden
+
+											.browser-topbar.browser-topbar-dark
+												span
+												span
+												span
+
+											img(loading="lazy", src="assets/img/dashboard-900x545.jpg", alt="", class="w-100")
+
+						.col-lg-6(data-show="startbox", data-show-delay="100")
+
+							.rounded-4.overflow-hidden.shape-parent
+
+								.background
+
+									.background-color(style="--background-color: #F4F2F9;")
+
+								// Shape
+								.shape.shape-visible.justify-content-end.align-items-end
+
+									<svg class="no-transform" xmlns="http://www.w3.org/2000/svg" width="176" height="123" fill="none"><path stroke="#481FA0" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M6 133.5 91 176l85-42.5M6 91l85 42.5L176 91M91 6 6 48.5 91 91l85-42.5L91 6Z" opacity=".07"/></svg>
+
+								.ps-70.pe-90.py-90
+
+									h3.mb-35 A better way to manage your finances.
+
+									+button({
+										title: "Learn more",
+										customClass: "text-dark btn-link btn-clean"
+									})
+
+						.col-lg-6(data-show="startbox", data-show-delay="200")
+
+							.rounded-4.overflow-hidden.shape-parent
+
+								.background
+
+									.background-color(style="--background-color: #FFF5EB;")
+
+								// Shape
+								.shape.shape-visible.justify-content-end.align-items-end
+
+									<svg class="no-transform" xmlns="http://www.w3.org/2000/svg" width="168" height="123" fill="none"><path stroke="#FFBB38" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="m127.5 73.428-81-47.304M8.43 51.19 87 97.217l78.57-46.028M87 189V97.126m81 36.458V60.668a18.401 18.401 0 0 0-2.416-9.104A18.117 18.117 0 0 0 159 44.9L96 8.442A17.826 17.826 0 0 0 87 6c-3.16 0-6.264.842-9 2.442L15 44.9a18.117 18.117 0 0 0-6.584 6.664A18.408 18.408 0 0 0 6 60.668v72.916a18.408 18.408 0 0 0 2.416 9.104A18.118 18.118 0 0 0 15 149.352l63 36.458a17.825 17.825 0 0 0 9 2.442c3.16 0 6.264-.842 9-2.442l63-36.458a18.118 18.118 0 0 0 6.584-6.664 18.402 18.402 0 0 0 2.416-9.104Z" opacity=".19"/></svg>
+
+								.ps-70.pe-90.py-90
+
+									h3.mb-35 A simple card and smart platform.
+
+									+button({
+										title: "Learn more",
+										customClass: "text-dark btn-link btn-clean"
+									})
+
+			.pt-120.pb-130.bg-gray-light.shape-parent
+
+				include template-parts/sections/_pricing.pug
+
+			.pt-120.pb-130.footerPrev
+
+				.container
+
+					h2.mb-90.text-center(data-show="startbox") Frequently asked questions
+
+					include template-parts/sections/_faq-list.pug
+
+			include template-parts/sections/_call-to-action-1.pug
+
+		//- Footer
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

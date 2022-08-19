@@ -1,0 +1,59 @@
+.accordion-header {
+
+	.accordion-button {
+		margin-bottom: 0;
+		color: $dark;
+		text-decoration: none;
+		box-shadow: none;
+
+		@include media-breakpoint-down(xl) {
+			padding: 30px 45px;
+		}
+
+		@include media-breakpoint-down(md) {
+			padding: 30px;
+		}
+
+		&::after {
+			background-position: center;
+			background-size: auto;
+		}
+
+		&:not(.collapsed) {
+			box-shadow: none;
+		}
+
+		&[aria-expanded="true"] {
+			color: $color-accent-1;
+
+			h4 {
+				color: inherit;
+			}
+
+		}
+
+	}
+
+}
+
+.accordion-item {
+	border-radius: $accordion-border-radius !important;
+
+	&:not(:first-of-type) {
+		border-top: $accordion-border-width solid $accordion-border-color;
+	}
+
+}
+
+.accordion-item + .accordion-item {
+	margin-top: 20px;
+}
+
+.accordion-body {
+	padding-top: 0;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+}

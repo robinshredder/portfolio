@@ -1,0 +1,37 @@
+.nav-tabs {
+
+	&[class*="-column"] {
+
+		.nav-link {
+			position: relative;
+			padding: 35px 50px 35px 40px;
+			font-weight: normal;
+			background-color: $white;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: calc(50% - 10px);
+				left: 100%;
+				width: 0;
+				height: 0;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+				border-left: 10px solid $white;
+				transition: inherit;
+			}
+
+			&.active {
+				background-color: $color-gray-light;
+
+				&::after {
+					border-left: 10px solid $color-gray-light;
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,265 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Team' // page title
+- MenuTitle = 'Team' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			// Page title
+			.position-relative.py-210
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/team-hero-1920x900.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .25;")
+
+				.container
+
+					h1.text-white.mb-0.text-center Talanted Team
+
+			.pt-120.pb-130
+
+				.container
+
+					.row.gy-70
+
+						// Item
+						.col-12.col-sm-6.col-lg-3(data-show="startbox")
+
+							+member({
+								avatar: "assets/img/team/member-8.jpg",
+								name: "Austen Shields",
+								function: "Senior QA Engineer"
+							})
+
+						// Item
+						.col-12.col-sm-6.col-lg-3(data-show="startbox", data-show-delay="100")
+
+							+member
+
+						// Item
+						.col-12.col-sm-6.col-lg-3(data-show="startbox", data-show-delay="200")
+
+							+member({
+								avatar: "assets/img/team/member-2.jpg",
+								name: "Stuart Morton",
+								function: "Creative Director"
+							})
+
+						// Item
+						.col-12.col-sm-6.col-lg-3(data-show="startbox", data-show-delay="300")
+
+							+member({
+								avatar: "assets/img/team/member-3.jpg",
+								name: "Kerrie Barrett",
+								function: "Project Manager"
+							})
+
+						// Item
+						.col-12.col-sm-6.col-lg-3(data-show="startbox")
+
+							+member({
+								avatar: "assets/img/team/member-4.jpg",
+								name: "Mark Hudson",
+								function: "Senior Front-End Developer"
+							})
+
+						// Item
+						.col-12.col-sm-6.col-lg-3(data-show="startbox", data-show-delay="100")
+
+							+member({
+								avatar: "assets/img/team/member-5.jpg",
+								name: "Donna Norton",
+								function: "Project Manager"
+							})
+
+						// Item
+						.col-12.col-sm-6.col-lg-3(data-show="startbox", data-show-delay="200")
+
+							+member({
+								avatar: "assets/img/team/member-6.jpg",
+								name: "Buck Waters",
+								function: "UI/UX Designer"
+							})
+
+						// Item
+						.col-12.col-sm-6.col-lg-3(data-show="startbox", data-show-delay="300")
+
+							+member({
+								avatar: "assets/img/team/member-7.jpg",
+								name: "Jean Walker",
+								function: "Photographer"
+							})
+
+						.text-center.mt-80(data-show="startbox")
+
+							+button({
+								title: "Load more",
+								customClass: "btn-light"
+							})
+
+					.shape-parent
+
+						// Shape
+						.shape.justify-content-start.mt-n40.ms-n45.text-dark(data-jarallax-element="40")
+
+							include partials/_shape.pug
+
+						// Video
+						.position-relative.py-235.text-center.rounded-4.overflow-hidden.mt-120(data-show="startbox")
+
+							.background
+
+								.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+									img(loading="lazy", src="assets/img/team-video-1920x900.jpg", class="jarallax-img", alt="")
+
+							+video_button
+
+			.bg-gray-light.pt-120.pb-130.shape-parent.footerPrev
+
+				// Shape
+				.shape.justify-content-end.align-items-start
+
+					img(loading="lazy", src="assets/img/root/team-shape-534x383.png", alt="", width="534", height="383")
+
+				.container
+
+					.row
+
+						.col-lg-6.offset-lg-3.text-center.px-lg-50
+
+							h2.mb-25.px-lg-10(data-show="startbox") Join to our team
+
+							p.m-0(data-show="startbox", data-show-delay="100") Waters his moveth seasons over Created appear greater dry air. Cattle set it night let i fruitful make our appear.
+
+						.col-lg-8.offset-lg-2.mt-90
+
+							// Form
+							form(data-show="startbox", data-show-delay="200")
+
+								.row.gy-40
+
+									.col-12.col-md-6
+
+										input(type="text", class="form-control", placeholder="Your Name *")
+
+									.col-12.col-md-6
+
+										input(type="email", class="form-control", placeholder="Your Email *")
+
+									.col-12.col-md-6
+
+										input(type="tel", class="form-control", placeholder="Your Phone *")
+
+									.col-12.col-md-6
+
+										input(type="text", class="form-control", placeholder="Company")
+
+									.col-12.col-md-6
+
+										select.form-control
+											option(selected="") I interested in ...
+											option Colibri Creative Project
+											option Colibri Project
+											option Happy Moments Photoset
+											option Luxury Car Website
+											option Funny Dog
+											option Creative Branding
+
+									.col-12.col-md-6
+
+										select.form-control
+											option(selected="") Budget
+											option &lt; 10 000
+											option 10-20k
+											option 20-30k
+											option &gt; 30 000
+
+									.col-12.mb-10
+
+										textarea(class="form-control", rows="2", placeholder="Message *")
+
+									.col-12.col-md-6.col-lg-5
+
+										.form-attach-file
+
+											label(for="formFile", class="form-attach-label")
+
+												<svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M24 12.251 13.126 22.953A7.162 7.162 0 0 1 8.103 25a7.162 7.162 0 0 1-5.022-2.047A6.935 6.935 0 0 1 1 18.009c0-1.854.748-3.632 2.08-4.943L13.955 2.365A4.775 4.775 0 0 1 17.303 1c1.256 0 2.46.491 3.348 1.365a4.624 4.624 0 0 1 1.387 3.295 4.624 4.624 0 0 1-1.387 3.296L9.766 19.657a2.387 2.387 0 0 1-1.675.683c-.627 0-1.23-.246-1.674-.683a2.312 2.312 0 0 1-.693-1.648c0-.618.25-1.21.693-1.647l10.046-9.875"/></svg>
+												| Attach file
+
+											input(type="file", class="form-control", id="formFile", hidden)
+
+									.col-12.col-md-6.col-lg-4
+
+										.form-check
+
+											input(type="checkbox", value="", class="form-check-input", id="personalData")
+
+											label(for="personalData", class="form-check-label") I agree with the processing of personal data *
+
+									.col-12.col-lg-3.text-start.text-lg-end
+
+										+button({
+											tag: "button",
+											title: "Send"
+										})
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

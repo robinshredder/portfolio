@@ -1,0 +1,100 @@
+mixin card_blog(object)
+
+	//- Default
+	- object = object || {}
+	- object.isotope = object.isotope || 'disable' // enable / disable
+	- object.style = object.style || "style-1" // style-1 / style-2
+	- object.link = object.link || "single-post.html"
+	- object.image = object.image || ""
+	- object.imageHeight = object.imageHeight || "72%"
+	- object.title = object.title || "This week's top Stories about Development"
+	- object.category = object.category || "Branding"
+	- object.date = object.date || "Sep 25, 2021"
+	- object.text = object.text || "This week's top Stories about Development"
+	- object.gridClass = object.gridClass || ""
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || ""
+
+	//- Element Class
+	- elClass = "card card-blog "
+	- elClass += object.customClass
+
+	//- Grid Class
+	- gridClass = ''
+
+	if object.isotope == 'enable'
+		- gridClass += " isotope-item"
+		- gridClass += " " + object.gridClass
+
+	div(class=gridClass, data-filters=object.category.toLowerCase())
+
+		// Blog
+		case object.style
+
+			when "style-1"
+
+				div(class=elClass).card-vertical.card-hover-zoom.card-blog-bordered.rounded-4.overflow-hidden.bg-white
+
+					a(href=object.link, class="card-img rounded-0", data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						span.badge.bg-dark.text-white.position-absolute.top-0.start-0.z-index-1.mt-20.ms-20
+
+							=object.category
+
+						img(loading="lazy", src=object.image, alt="")
+
+					.card-body.py-40.px-50.pb-50
+
+						a(href=object.link, class="card-title h4")
+
+							=object.title
+
+						p.card-text
+
+							=object.text
+
+						+button({
+							title: "Learn more",
+							link: object.link,
+							customClass: "btn-accent-1 btn-link btn-clean"
+						})
+
+			when "style-2"
+
+				div(class=elClass).card-vertical.card-hover-zoom
+
+					a(href=object.link, class="card-img rounded-4", data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						span.badge.bg-dark.text-white.position-absolute.top-0.start-0.z-index-1.mt-20.ms-20
+
+							=object.category
+
+						img(loading="lazy", src=object.image, alt="")
+
+					.card-body.pt-30
+
+						.card-date.text-gray-dark
+
+							=object.date
+
+						a(href=object.link, class="card-title h4")
+
+							=object.title
+
+			when "style-3"
+
+				a(href=object.link, class=elClass).card-sm.card-horizontal.card-hover-zoom
+
+					span(class="card-img rounded-2", data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						img(loading="lazy", src=object.image, alt="")
+
+					span.card-body
+
+						span.card-date.text-gray-dark
+
+							=object.date
+
+						span.card-title.h4
+
+							=object.title

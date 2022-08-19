@@ -1,0 +1,149 @@
+.btn {
+	display: inline-flex;
+
+	svg {
+		height: 1em;
+	}
+
+	&:hover,
+	&:focus {
+		transform: translateY(-2px);
+	}
+
+}
+
+// clean
+.btn-clean {
+	padding: 0;
+	background-color: transparent;
+}
+
+// accent-1
+.btn-accent-1 {
+	color: $white;
+	background-color: $color-accent-1;
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active {
+		color: $white;
+		background-color: darken($color-accent-1, 5%);
+	}
+
+}
+
+// accent-2
+.btn-accent-2 {
+	color: $white;
+	background-color: $color-accent-2;
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active {
+		color: $white;
+		background-color: darken($color-accent-2, 5%);
+	}
+
+}
+
+// accent-3
+.btn-accent-3 {
+	color: $dark;
+	background-color: $color-accent-3;
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active {
+		color: $dark;
+		background-color: darken($color-accent-3, 5%);
+	}
+
+}
+
+// light
+.btn-light {
+	color: $dark;
+	background-color: rgba($gray-500, .3);
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active {
+		color: $dark;
+		background-color: $color-gray-light;
+	}
+
+}
+
+// link
+.btn-link {
+	position: relative;
+	font-weight: $font-weight-bold;
+	color: $dark;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		transform: none;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: currentColor;
+		transition: transform $transition-duration $transition-timing-function;
+		transform: scale(1, 1);
+		transform-origin: 0 50%;
+		will-change: transform;
+	}
+
+	&.btn-accent-1,
+	&.btn-accent-1:hover,
+	&.btn-accent-1:focus,
+	&.btn-accent-1.focus,
+	&.btn-accent-1:not(:disabled):not(.disabled):active,
+	&.btn-accent-1:not(:disabled):not(.disabled).active {
+		color: $color-accent-1;
+		background-color: transparent;
+	}
+
+	&:hover,
+	&:focus {
+		color: $dark;
+		text-decoration: none;
+
+		&::after {
+			transform: scale(0,1);
+			transform-origin: 100% 50%;
+		}
+
+	}
+
+}
+
+// video
+.btn-video {
+	position: relative;
+	width: 80px;
+	height: 80px;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+
+}

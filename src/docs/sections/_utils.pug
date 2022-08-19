@@ -1,0 +1,28 @@
+.docs-card.tab-content.bg-white.rounded-4#utils
+
+	h2.docs-card-title Utils
+
+	h5 Image Height
+
+	ul
+
+		li Add #[code data-img-height] to element which contains an image.
+		li Add #[code style="--img-height: 100%;"] attribute to this element.
+
+	.docs-card-example
+
+		div(data-img-height, style="--img-height: 70%;")
+
+			a(href="../assets/img/docs/placeholder.jpg", class="image-link")
+
+				img(loading="lazy", src="../assets/img/docs/placeholder.jpg", alt="", class="rounded-4")
+
+	h5 Half Section Divider
+
+	ul
+
+		li Add #[code .half-section-block] class to element which will divide two sections.
+		li Add #[code data-prev-id] to this element which contain unique class to the previous section.
+		li Add #[code data-next-id] to this element which contain unique class to the next section.
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="utils.html")

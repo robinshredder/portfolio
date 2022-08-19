@@ -1,0 +1,25 @@
+.object-fit-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: "object-fit: cover"; //stylelint-disable-line
+	object-fit: cover;
+}
+
+[data-img-height] {
+	position: relative;
+	display: block;
+
+	&::before {
+		content: "";
+		display: block;
+		padding-top: var(--img-height);
+	}
+
+	img {
+		@extend .object-fit-image;
+	}
+
+}

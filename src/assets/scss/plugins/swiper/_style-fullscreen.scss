@@ -1,0 +1,25 @@
+.swiper-full-horizontal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	.swiper-container {
+		width: 100%;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.swiper-slide {
+
+		@include media-breakpoint-up(lg) {
+			width: 770px;
+		}
+
+		@include media-breakpoint-only(md) {
+			width: 600px;
+		}
+
+	}
+
+}

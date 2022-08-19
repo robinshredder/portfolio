@@ -1,0 +1,40 @@
+mixin member(object)
+
+	//- Default
+	- object = object || {}
+	- object.avatar = object.avatar || "assets/img/team/member-1.jpg"
+	- object.avatarClass = object.avatarClass || "rounded-4"
+	- object.name = object.name || "Mary Carroll"
+	- object.nameClass = object.nameClass || ""
+	- object.function = object.function || "Senior Web Developer"
+	- object.functionClass = object.functionClass || "font-size-15 text-gray-dark"
+	- object.link = object.link || "#"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || ""
+
+	//- Element Class
+	- elClass = "member "
+	- elClass += object.customClass
+
+	// Member
+	div(class=elClass, style=object.css)
+
+		if object.avatar != "" && object.link != ""
+
+			a.member-image(href=object.link, class=object.avatarClass, data-img-height, style="--img-height: 114%;")
+
+				img(loading="lazy", src=object.avatar, alt="")
+
+		.member-body
+
+			if object.link != "" && object.name != ""
+
+				a.member-title.h4(href=object.link, class=object.nameClass)
+
+					=object.name
+
+			if object.function != ""
+
+				.member-subtitle(class=object.functionClass)
+
+					=object.function

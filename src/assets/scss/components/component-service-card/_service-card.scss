@@ -1,0 +1,48 @@
+.service-card {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+
+	@include media-breakpoint-down(md) {
+		flex-direction: column;
+	}
+
+	.service-card-image {
+		position: relative;
+		display: block;
+		width: 200px;
+		overflow: hidden;
+		flex-shrink: 0;
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
+
+		img {
+			transition: transform $transition-duration $transition-timing-function;
+			will-change: transform;
+		}
+
+	}
+
+	&:hover {
+
+		.service-card-image img {
+			@extend %animate-image;
+		}
+
+		.service-card-arrow svg {
+			@extend %animate-icon-right;
+		}
+
+	}
+
+}
+
+.service-card-body {
+	padding: 25px 60px 25px 50px;
+}
+
+.service-card-arrow:hover {
+	color: $color-accent-1;
+}

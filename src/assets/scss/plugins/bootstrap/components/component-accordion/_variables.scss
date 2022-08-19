@@ -1,0 +1,10 @@
+$accordion-body-padding-y: 40px;
+$accordion-body-padding-x: 70px;
+$accordion-button-padding-y: 35px;
+$accordion-button-padding-x: 70px;
+$accordion-border-radius: 14px;
+$accordion-border-color: rgba($gray-500, .3);
+$accordion-button-bg: transparent;
+$accordion-button-active-bg: $accordion-button-bg;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 10'><path fill='#{$dark}' d='m8 8-.707.707.707.707.707-.707L8 8ZM.293 1.707l7 7 1.414-1.414-7-7L.293 1.707Zm8.414 7 7-7L14.293.293l-7 7 1.414 1.414Z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 10'><path fill='#{$color-gray}' d='m8 8-.707.707.707.707.707-.707L8 8ZM.293 1.707l7 7 1.414-1.414-7-7L.293 1.707Zm8.414 7 7-7L14.293.293l-7 7 1.414 1.414Z'/></svg>");

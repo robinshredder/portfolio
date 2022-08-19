@@ -1,0 +1,211 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Blog' // page title
+- MenuTitle = 'Blog' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			// Page title
+			.position-relative.py-210
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/blog/blog-hero-1920x1080.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .25;")
+
+				.container
+
+					h1.text-white.mb-0.text-center Our Blog
+
+			.pt-80.pb-130
+
+				.container
+
+					// Isotope
+					.isotope
+
+						ul.nav.justify-content-center.isotope-filters.mb-60
+
+							li.nav-item.active
+
+								a(href="#", class="nav-link", data-filter="all") All
+
+							li.nav-item
+
+								a(href="#", class="nav-link", data-filter="marketing") Marketing
+
+							li.nav-item
+
+								a(href="#", class="nav-link", data-filter="company") Company
+
+							li.nav-item
+
+								a(href="#", class="nav-link", data-filter="business") Business
+
+							li.nav-item
+
+								a(href="#", class="nav-link", data-filter="architecture") Architecture
+
+						.row.isotope-grid.gy-30
+
+							+card_blog({
+								style: "style-1",
+								category: "Architecture",
+								title: "In isn't light you'll divide",
+								text: "Shall seasons seasons darkness over own there subdue all it.",
+								image: "assets/img/blog/blog-post-1-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+							+card_blog({
+								style: "style-1",
+								category: "Company",
+								title: "Unto saw first great spirit",
+								text: "Winged Also which midst deep grass gathered seas gathered you.",
+								image: "assets/img/blog/blog-post-2-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+							+card_blog({
+								style: "style-1",
+								category: "Business",
+								title: "It was seasons divided",
+								text: "Yielding also isn't gathering sea face second male heaven evening.",
+								image: "assets/img/blog/blog-post-3-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+							+card_blog({
+								style: "style-1",
+								category: "Company",
+								title: "Behold replenish fifth",
+								text: "Let fruit was beginning thing seed which fruitful place there.",
+								image: "assets/img/blog/blog-post-4-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+							+card_blog({
+								style: "style-1",
+								category: "Marketing",
+								title: "Every seed years second",
+								text: "Winged fill female abundantly us, sixth our air creepeth dominion upon.",
+								image: "assets/img/blog/blog-post-5-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+							+card_blog({
+								style: "style-1",
+								category: "Marketing",
+								title: "Air place were said saying",
+								text: "That waters can't his night very day second, great is over cattle.",
+								image: "assets/img/blog/blog-post-6-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+							+card_blog({
+								style: "style-1",
+								category: "Business",
+								title: "And moving above",
+								text: "Divide gathering unto creepeth don't moving it grass deep void.",
+								image: "assets/img/blog/blog-post-7-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+							+card_blog({
+								style: "style-1",
+								category: "Architecture",
+								title: "Thing had said don't thing",
+								text: "After Green beginning sixth saying lesser beast dominion hath male.",
+								image: "assets/img/blog/blog-post-8-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+							+card_blog({
+								style: "style-1",
+								category: "Business",
+								title: "Stars seasons third lesser",
+								text: "Meat place fly you'll meat you that you'll firmament creature fowl.",
+								image: "assets/img/blog/blog-post-9-900x800.jpg",
+								imageHeight: "72%",
+								isotope: "enable",
+								gridClass: "col-12 col-md-6 col-lg-4"
+							})
+
+						.text-center.mt-80
+
+							+button({
+								title: "Load more",
+								customClass: "btn-light"
+							})
+
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

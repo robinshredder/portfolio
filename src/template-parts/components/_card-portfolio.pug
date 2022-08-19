@@ -1,0 +1,162 @@
+mixin card_portfolio(object)
+
+	//- Default
+	- object = object || {}
+	- object.isotope = object.isotope || 'disable' // enable / disable
+	- object.style = object.style || "style-1" // style-1 / style-2 / style-3 / style-4 / style-5
+	- object.link = object.link || "project-single-01.html"
+	- object.image = object.image || ""
+	- object.imageHeight = object.imageHeight || "100%"
+	- object.title = object.title || "Creative Branding"
+	- object.category = object.category || "Branding"
+	- object.location = object.location || "Houston, TX"
+	- object.text = object.text || ""
+	- object.overlayColor = object.overlayColor || "rgba(240, 31, 75, 0.9)"
+	- object.overlayColorHover = object.overlayColorHover || ""
+	- object.gridClass = object.gridClass || ""
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || ""
+
+	//- Element Class
+	- elClass = "card card-portfolio "
+	- elClass += object.customClass
+
+	//- Grid Class
+	- gridClass = ''
+
+	if object.isotope == 'enable'
+		- gridClass += " isotope-item"
+		- gridClass += " " + object.gridClass
+
+	div(class=gridClass, data-filters=object.category.toLowerCase())
+
+		// Portfolio
+		case object.style
+
+			when "style-1"
+
+				a(href=object.link, class=elClass).card-overlay.card-hover-appearance.text-white.text-center.rounded-4
+
+					span.card-img(data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						img(loading="lazy", src=object.image, alt="")
+
+						if object.overlayColor != ''
+
+							span.background-color(style="--background-color: " + object.overlayColor + ";")
+
+					span.card-img-overlay
+
+						span.card-title.h4
+
+							=object.title
+
+						span.card-category.subtitle
+
+							=object.category
+
+			when "style-2"
+
+				a(href=object.link, class=elClass).card-hover-bar.bg-white.text-dark.text-center.rounded-4
+
+					span.card-img(data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						img(loading="lazy", src=object.image, alt="")
+
+					span.card-img-overlay.rounded-0
+
+						span.card-title.h4
+
+							=object.title
+
+						span.card-category.subtitle
+
+							=object.category
+
+			when "style-3"
+
+				a(href=object.link, class=elClass).card-overlay.card-hover-appearance.text-white.rounded-4
+
+					span.card-img(data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						img(loading="lazy", src=object.image, alt="")
+
+						if object.overlayColor != ''
+
+							span.background-color(style="--background-color: " + object.overlayColor + ";")
+
+					span.card-img-overlay
+
+						span.card-title.h3.mt-auto
+
+							=object.title
+
+						span.card-category.subtitle.mt-10
+
+							=object.category
+
+			when "style-4"
+
+				a(href=object.link, class=elClass).card-overlay.card-hover-zoom.card-bg-show.text-white.rounded-4
+
+					span.card-img(data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						img(loading="lazy", src=object.image, alt="")
+
+						if object.overlayColor != ''
+
+							span.background-color(style="--background-color: " + object.overlayColor + "; --background-color-hover: " + object.overlayColorHover + ";")
+
+					span.card-img-overlay.card-img-overlay-lg
+
+						if object.location != ''
+
+							span.card-location
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M6 14s6-3.818 6-8.273a5.598 5.598 0 0 0-1.757-4.05A6.148 6.148 0 0 0 6 0a6.148 6.148 0 0 0-4.243 1.677A5.598 5.598 0 0 0 0 5.727C0 10.182 6 14 6 14Zm2-8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" clip-rule="evenodd"/></svg>
+
+								=object.location
+
+						span.card-title.h3
+
+							=object.title
+
+						span.card-category.subtitle.mt-10
+
+							=object.text
+
+			when "style-5"
+
+				div(class=elClass).card-hover-zoom.card-horizontal
+
+					a(href=object.link, class="card-img rounded-4 overflow-hidden", data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						span.badge.bg-dark.text-white.position-absolute.top-0.start-0.z-index-1.mt-20.ms-20
+
+							=object.category
+
+						img(loading="lazy", src=object.image, alt="")
+
+					.card-body
+
+						a(href=object.link, class="card-title h3")
+
+							=object.title
+
+						p.card-text
+
+							=object.text
+
+						+button({
+							title: "View project",
+							link: object.link,
+							customClass: "btn-accent-1 btn-link btn-clean"
+						})
+
+			when "style-6"
+
+				a(href=object.image, class=elClass).image-link.overflow-hidden.lift.rounded-4
+
+					span.card-img(data-img-height, style="--img-height: " + object.imageHeight + ";")
+
+						img(loading="lazy", src=object.image, alt="")

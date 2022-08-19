@@ -1,0 +1,16 @@
+.isotope-filters {
+	font-size: em(14px);
+
+	.nav-link {
+		font-weight: 700;
+		color: $color-gray-dark;
+		transition: all $transition-duration $transition-timing-function;
+	}
+
+	.nav-item.active > .nav-link {
+		color: $dark;
+		background-color: $color-gray-middle;
+		border-radius: 50px;
+	}
+
+}

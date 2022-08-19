@@ -1,0 +1,32 @@
+.docs-card.tab-content.bg-white.rounded-4#component-gallery-item
+
+	h2.docs-card-title Gallery Item
+
+	ul
+
+		li #[code .image-link] - class for enable popup gallery.
+		li #[code .video-link] - set the image height in percent or pixels.
+
+	p Galleries are created by adding the #[code .gallery-wrapper] class to the parent container.
+
+	.docs-card-example
+
+		.row.gallery-wrapper
+
+			.col-6
+
+				+gallery_item({
+					image: "../assets/img/docs/placeholder.jpg",
+					imageHeight: "62%"
+				})
+
+			.col-6
+
+				+gallery_item({
+					image: "../assets/img/docs/placeholder.jpg",
+					imageHeight: "62%"
+				})
+
+	p HTML example:
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="gallery-item.html")

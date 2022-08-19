@@ -1,0 +1,43 @@
+.py-100.position-relative
+
+	.background
+
+		.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+			img(loading="lazy", src="assets/img/root/process-1920x500.jpg", class="jarallax-img", alt="")
+
+		.background-color(style="--background-color: #F01F4B; opacity: .88;")
+
+	.container.overflow-hidden
+
+		.row.gy-50.gx-50
+
+			.col-12.col-md-6.col-lg-4(data-show="startbox")
+
+				+process_step({
+					numberClass: "text-white",
+					titleClass: "text-white",
+					textClass: "text-white"
+				})
+
+			.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="100")
+
+				+process_step({
+					number: "02",
+					title: "Research",
+					text: "A called gathering meat herb creeping beginning.",
+					numberClass: "text-white",
+					titleClass: "text-white",
+					textClass: "text-white"
+				})
+
+			.col-12.col-md-6.col-lg-4(data-show="startbox", data-show-delay="200")
+
+				+process_step({
+					number: "03",
+					title: "The Result",
+					text: "Appear without or light sixth, greater dominion deep.",
+					numberClass: "text-white",
+					titleClass: "text-white",
+					textClass: "text-white"
+				})

@@ -1,0 +1,162 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Robin Schritter - Portfolio' // page title
+- MenuTitle = 'Landing' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'hide' // show / hide
+- Topbar = 'hide' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			.pt-180.pb-290.shape-parent.text-center
+
+				.container
+
+					.row
+
+						.col-lg-8.offset-lg-2
+
+							h1.mb-30.px-lg-30(data-show="startbox") #[span.highlight Hi, I'm Robin!] An aspiring designer seeking the whys and hows -> generating user friendly experiences.
+
+			.pt-120.pb-130.bg-dark.shape-parent.text-center
+
+				.container
+
+					.row
+
+						.col-lg-6.offset-lg-3
+
+							h2.m-0.text-white(data-show="startbox") Some of my work.
+
+					.swiper.mt-75(data-swiper-slides="1", data-swiper-breakpoints="828:2, 1024:3", data-swiper-loop="true", data-swiper-gap="30", data-swiper-grabcursor="true", data-show="startbox", data-show-delay="100")
+
+						.swiper-container
+
+							.swiper-wrapper
+
+								.swiper-slide.pt-15
+
+									+card_demo({
+										topbarClass: "browser-topbar-dark",
+										title: "Services V.1",
+										image: "assets/img/landing/page-1.jpg",
+										link: "single-post.html",
+										customClass: "text-white"
+									})
+
+								.swiper-slide.pt-15
+
+									+card_demo({
+										topbarClass: "browser-topbar-dark",
+										title: "Services V.2",
+										image: "assets/img/landing/page-2.jpg",
+										link: "single-post-2.html",
+										customClass: "text-white"
+									})
+
+								.swiper-slide.pt-15
+
+									+card_demo({
+										topbarClass: "browser-topbar-dark",
+										title: "Service Single",
+										image: "assets/img/landing/page-3.jpg",
+										link: "single-post-3.html",
+										customClass: "text-white"
+									})
+
+								.swiper-slide.pt-15
+
+									+card_demo({
+										topbarClass: "browser-topbar-dark",
+										title: "About Us",
+										image: "assets/img/landing/page-4.jpg",
+										link: "single-post-4.html",
+										customClass: "text-white"
+									})
+
+								.swiper-slide.pt-15
+
+									+card_demo({
+										topbarClass: "browser-topbar-dark",
+										title: "About Me",
+										image: "assets/img/landing/page-5.jpg",
+										link: "single-post-5.html",
+										customClass: "text-white"
+									})
+
+						.d-flex.mt-70.justify-content-center
+
+							.swiper-button-prev.swiper-button-position-2.swiper-button-dark.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+							.swiper-button-next.swiper-button-position-2.swiper-button-dark.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+			.pb-130
+
+				.container
+
+					.row.pt-120
+
+						.col-lg-12.text-center
+
+							h2.m-0.text-black(data-show="startbox") Some of my tools.
+				.container
+					
+					include template-parts/sections/_numbers-1.pug
+			
+			
+			.pb-130
+
+				.container
+
+					.row.align-items-center.gy-90
+
+						.col-lg-6
+
+			include template-parts/sections/_call-to-action-6.pug
+
+		//- Footer
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

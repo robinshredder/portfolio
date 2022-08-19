@@ -1,0 +1,44 @@
+mixin service_card(object)
+
+	//- Default
+	- object = object || {}
+	- object.image = object.image || "assets/img/service-card-1-600x600.jpg"
+	- object.bodyClass = object.bodyClass || ""
+	- object.title = object.title || "Consulting"
+	- object.titleClass = object.titleClass || "mb-15"
+	- object.text = object.text || "Stars life that waters firmament our created you."
+	- object.textClass = object.textClass || "font-size-15 mb-30"
+	- object.link = object.link || "service-single.html"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "position-relative bg-light rounded-4 overflow-hidden"
+
+	//- Element Class
+	- elClass = "service-card lift"
+	- elClass += " " + object.customClass
+
+	// Service card
+	div(class=elClass, style=object.css)
+
+		if object.image != ""
+
+			.service-card-image.flex-shrink-0(data-img-height, style="--img-height: 100%;")
+
+				img(loading="lazy", src=object.image, alt="")
+
+		.service-card-body.flex-grow-1(class=object.bodyClass)
+
+			if object.title != ""
+
+				h4.service-card-title(class=object.titleClass)
+
+					=object.title
+
+			if object.text != ""
+
+				p.service-card-text(class=object.textClass)
+
+					=object.text
+
+			if object.link != ""
+
+				a(href=object.link, class="service-card-arrow stretched-link") <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"/></svg>

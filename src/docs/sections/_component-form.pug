@@ -1,0 +1,53 @@
+.docs-card.tab-content.bg-white.rounded-4#component-form
+
+	h2.docs-card-title Form
+
+	p Input styles - #[code .form-control-style-1], #[code .form-control-style-2], #[code .form-control-style-3].
+
+	h5 Style 1
+
+	p Additional classes: #[code .form-control-white] and #[code .form-control-gray].
+
+	.docs-card-example
+
+		.row.gy-30
+
+			.col-12
+
+				input(type="text", class="form-control", placeholder="Input field")
+
+	h5 Style 2
+
+	p Additional classes: #[code .form-control-white].
+
+	.docs-card-example
+
+		.row.gy-30
+
+			.col-12
+
+				input(type="text", class="form-control form-control-style-2", placeholder="Input field")
+
+			.col-12
+
+				input(type="text", class="form-control form-control-style-2 form-control-white", placeholder="Input field")
+
+	h5 Style 3
+
+	p Additional classes: #[code .form-control-white].
+
+	.docs-card-example.bg-dark
+
+		.row.gy-30
+
+			.col-12
+
+				input(type="text", class="form-control form-control-style-3", placeholder="Input field")
+
+			.col-12
+
+				input(type="text", class="form-control form-control-style-3 form-control-white", placeholder="Input field")
+
+	p HTML example:
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="form.html")

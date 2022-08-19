@@ -1,0 +1,214 @@
+.nav {
+	font-size: em(15px);
+
+	.nav-link,
+	.nav-link.active {
+		color: $dark;
+	}
+
+	.nav-link {
+		display: flex;
+		padding: 6px 18px;
+		margin-bottom: 0;
+		font-weight: 500; //700
+		transition: opacity $transition-duration $transition-timing-function;
+		will-change: opacity;
+
+		> svg {
+			align-self: center;
+		}
+
+		span {
+			position: relative;
+
+			// line
+			&::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 2px;
+				background-color: currentColor;
+				transition: transform $transition-duration $transition-timing-function;
+				transform: scaleX(0);
+				transform-origin: center left;
+				will-change: transform;
+			}
+
+		}
+
+	}
+
+	.active > .nav-link span::before,
+	.nav-link.active > span::before {
+		transform: scaleX(1);
+	}
+
+	// hover opacity
+	&:not(.nav-opacity):not(.nav-no-opacity) {
+
+		&:hover,
+		&.focus {
+			.nav-link {
+				opacity: .6;
+			}
+
+			.active > .nav-link,
+			.nav-link.active {
+				opacity: 1;
+			}
+
+		}
+
+		.nav-link {
+			&:hover,
+			&:focus,
+			&.active {
+				opacity: 1;
+			}
+
+		}
+
+	}
+
+	&.nav-no-opacity {
+
+		.nav-link {
+			opacity: 1;
+
+			&:hover,
+			&:focus,
+			&.active {
+				opacity: 1;
+			}
+
+		}
+
+	}
+
+	&.nav-opacity {
+
+		.nav-link {
+			opacity: .6;
+
+			&:hover,
+			&:focus,
+			&.active {
+				opacity: 1;
+			}
+
+		}
+
+	}
+
+}
+
+// vertical
+.nav[class*="-column"] {
+	margin: -2px 0;
+	font-size: em(15px);
+
+	.nav-item {
+		display: block;
+		max-width: 100%;
+	}
+
+	.nav-link {
+		padding: 2px 0;
+	}
+
+}
+
+// muted
+.nav.text-muted {
+
+	.nav-link,
+	.nav-link.active {
+		color: $gray-600;
+	}
+
+}
+
+// white
+.nav.text-white {
+
+	.nav-link,
+	.nav-link.active {
+		color: $white;
+	}
+
+}
+
+// gap
+.nav-no-gap {
+	margin: 0;
+
+	.nav-link {
+		padding: 0;
+	}
+
+	&[class*="-column"] {
+		margin: 0;
+
+		.nav-link {
+			padding: 0;
+		}
+
+	}
+
+}
+
+.nav.nav-gap-sm {
+	margin: 0 -5px;
+
+	.nav-link {
+		padding: 0 5px;
+	}
+
+	&[class*="-column"] {
+		margin: -5px;
+
+		.nav-link {
+			padding: 5px;
+		}
+
+	}
+
+}
+
+.nav.nav-gap-md {
+	margin: 0 -8px;
+
+	.nav-link {
+		padding: 0 8px;
+	}
+
+	&[class*="-column"] {
+		margin: -8px;
+
+		.nav-link {
+			padding: 8px;
+		}
+
+	}
+
+}
+
+.nav.nav-gap-xl {
+	margin: 0 -30px;
+
+	.nav-link {
+		padding: 0 30px;
+	}
+
+	&[class*="-column"] {
+		margin: -30px;
+
+		.nav-link {
+			padding: 30px;
+		}
+
+	}
+
+}

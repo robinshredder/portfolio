@@ -1,0 +1,45 @@
+mixin service_line(object)
+
+	//- Default
+	- object = object || {}
+	- object.style = object.style || "" // small
+	- object.link = object.link || "service-single.html"
+	- object.icon = object.icon || '<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M39 20.5C39 30.717 30.717 39 20.5 39M39 20.5C39 10.283 30.717 2 20.5 2M39 20.5H2M20.5 39C10.283 39 2 30.717 2 20.5M20.5 39a28.305 28.305 0 0 0 7.4-18.5A28.305 28.305 0 0 0 20.5 2m0 37a28.305 28.305 0 0 1-7.4-18.5A28.305 28.305 0 0 1 20.5 2M2 20.5C2 10.283 10.283 2 20.5 2"/></svg>'
+	- object.iconClass = object.iconClass || "text-accent-1"
+	- object.bodyClass = object.bodyClass || "ms-40"
+	- object.title = object.title || "Web Development"
+	- object.titleClass = object.titleClass || "m-0"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "position-relative rounded-3"
+
+	//- Element Class
+	- elClass = "service-line lift "
+	- elClass += object.customClass
+
+	if object.style == "small"
+		- elClass += " service-line-sm"
+
+	// Service line
+	div(class=elClass, style=object.css)
+
+		if object.icon != ""
+
+			.service-line-icon(class=object.iconClass) !{object.icon}
+
+		.service-line-body(class=object.bodyClass)
+
+			if object.title != ""
+
+				h4.service-line-title(class=object.titleClass)
+
+					=object.title
+
+			if object.link != "" && object.style != "small"
+
+				a(href=object.link, class="service-line-arrow stretched-link")
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6"/></svg>
+
+			else
+
+				a(href=object.link, class="stretched-link")

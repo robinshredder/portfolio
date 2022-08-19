@@ -1,0 +1,20 @@
+.service-box {
+	padding: 35px 30px;
+
+	&:hover {
+
+		.service-box-arrow svg {
+			@extend %animate-icon-right;
+		}
+
+	}
+
+}
+
+.service-box-arrow:hover {
+	color: $color-accent-1;
+}
+
+.service-box-sm {
+	padding: 35px 25px 50px;
+}

@@ -1,0 +1,148 @@
+.form-control {
+	padding-bottom: 16px;
+	font-size: 15px;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+
+	// white
+	&.form-control-white {
+		color: $white;
+		border-color: rgba($white, .6);
+
+		&::placeholder {
+			color: $white;
+		}
+
+		option {
+			color: $dark;
+		}
+
+		&:hover,
+		&:focus {
+			color: $white;
+			border-color: $white;
+
+			&::placeholder {
+				color: $white;
+			}
+
+		}
+
+	}
+
+	// gray
+	&.form-control-gray {
+		color: $white;
+		border-color: $color-gray-dark;
+
+		&::placeholder {
+			color: $white;
+		}
+
+		option {
+			color: $dark;
+		}
+
+		&:hover,
+		&:focus {
+			color: $white;
+			border-color: $white;
+
+			&::placeholder {
+				color: $white;
+			}
+
+		}
+
+	}
+
+}
+
+.form-control-style-2 {
+	padding: 14px 20px;
+	font-size: 14px;
+	color: $dark;
+	background-color: rgba($color-gray, .17);
+	border: none;
+	border-radius: 6px;
+
+	&:focus {
+		background-color: rgba($color-gray, .20);
+	}
+
+	// white
+	&.form-control-white {
+		color: $dark;
+		background-color: $white;
+
+		&::placeholder {
+			color: $dark;
+		}
+
+		&:focus,
+		&:hover {
+			color: $dark;
+			background-color: $white;
+
+			&::placeholder {
+				color: $dark;
+			}
+
+		}
+
+	}
+
+}
+
+.form-control-style-3 {
+	padding: 23px 28px;
+	font-size: 14px;
+	background-color: $color-gray-light;
+	border: none;
+	border-radius: 35px;
+
+	&:focus {
+		background-color: $color-gray-light;
+	}
+
+	// white
+	&.form-control-white {
+		color: $dark;
+		background-color: $white;
+
+		&::placeholder {
+			color: $dark;
+		}
+
+		&:focus,
+		&:hover {
+			color: $dark;
+			background-color: $white;
+
+			&::placeholder {
+				color: $dark;
+			}
+
+		}
+
+	}
+
+}
+
+select.form-control {
+	appearance: none;
+	background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none'><path fill='#{$color-gray-dark}' d='m6 6-.495.495L6 6.99l.495-.495L6 6ZM.505 1.495l5 5 .99-.99-5-5-.99.99Zm5.99 5 5-5-.99-.99-5 5 .99.99Z'/></svg>"));
+	background-repeat: no-repeat;
+	background-position: 100% calc(50% - 8px);
+	background-size: 12px 7px;
+}
+
+select.form-control-style-2,
+select.form-control-style-3 {
+	background-position: calc(100% - 20px) center;
+}
+
+select.form-control-white {
+	background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none'><path fill='#{$white}' d='m6 6-.495.495L6 6.99l.495-.495L6 6ZM.505 1.495l5 5 .99-.99-5-5-.99.99Zm5.99 5 5-5-.99-.99-5 5 .99.99Z'/></svg>"));
+}

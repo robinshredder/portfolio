@@ -1,0 +1,211 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Service Single' // page title
+- MenuTitle = 'Service Single' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'show' // show / hide
+- HeaderLayout = 'default' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'true' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			// Page title
+			.position-relative.py-210
+
+				.background
+
+					.background-image.jarallax(data-jarallax, data-speed="0.8")
+
+						img(loading="lazy", src="assets/img/service-single-hero-1920x900.jpg", class="jarallax-img", alt="")
+
+					.background-color(style="--background-color: #000; opacity: .25;")
+
+				.container
+
+					h1.text-white.mb-0.text-center Human Resources
+
+			.pt-120.pb-130
+
+				.container
+
+					span.badge.bg-light.text-dark.mb-20(data-show="startbox") Description
+
+					.row.gy-45
+
+						.col-lg-5
+
+							.pe-lg-70
+
+								h3.m-0(data-show="startbox", data-show-delay="100") You #[span.highlight share your idea]. #[br]We get it done.
+
+						.col-lg-6.offset-lg-1
+
+							p(data-show="startbox", data-show-delay="200") Likeness land that isn't second fourth seed wherein divided darkness night rule appear subdue land them whose grass. Whose in fruit them grass fill seas is. Tree deep dominion green. Us. Life green tree gathering. Make. Divided lesser have us which subdue from. Subdue face, don't. Deep them, life, cattle. Night moved. Green two evening. Multiply creepeth he saying the behold lights, years.
+
+							p.mb-0(data-show="startbox", data-show-delay="300") Face fly shall firmament of great fill you'll. You're, creature unto of gathering. Made land upon his i. Unto own two beast spirit us without herb fish greater green unto bearing in moving beast dry them saw.
+
+				.container.mt-120
+
+					.row.gy-30
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox")
+
+							+service_box({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="29" fill="none"><path fill="currentColor" d="M13.002 0C8.852 0 5.46 3.387 5.46 7.53c0 4.143 3.392 7.53 7.542 7.53s7.542-3.387 7.542-7.53c0-4.143-3.393-7.53-7.542-7.53ZM25.944 21.076a7.017 7.017 0 0 0-.757-1.38c-1.515-2.236-3.853-3.716-6.488-4.078-.329-.033-.691.033-.955.23a7.942 7.942 0 0 1-4.742 1.546 7.942 7.942 0 0 1-4.742-1.545 1.237 1.237 0 0 0-.955-.23 9.308 9.308 0 0 0-6.488 4.076c-.296.428-.56.921-.757 1.381-.1.198-.066.428.033.625.263.46.592.92.889 1.315.46.625.955 1.184 1.515 1.71.46.46.988.888 1.515 1.315a14.936 14.936 0 0 0 8.957 2.96c3.228 0 6.356-1.02 8.958-2.96a14.47 14.47 0 0 0 1.515-1.315c.526-.526 1.053-1.085 1.515-1.71.329-.427.625-.854.889-1.315.164-.197.197-.427.098-.625Z"/></svg>',
+								title: "Personalization",
+								text: "Stars life that waters firmament our created you.",
+								style: "small"
+							})
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="100")
+
+							+service_box({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="29" height="25" fill="none"><path fill="currentColor" d="M26.764 2.21A7.637 7.637 0 0 0 24.288.574a7.708 7.708 0 0 0-5.842 0A7.637 7.637 0 0 0 15.97 2.21L14.5 3.664 13.029 2.21A7.678 7.678 0 0 0 7.632 0a7.678 7.678 0 0 0-5.397 2.21A7.5 7.5 0 0 0 0 7.544c0 2 .804 3.92 2.235 5.334L14.5 25l12.264-12.122a7.535 7.535 0 0 0 1.655-2.447 7.466 7.466 0 0 0 0-5.774 7.536 7.536 0 0 0-1.655-2.447Z"/></svg>',
+								title: "Customer Support",
+								text: "Above behold our sea earth waters in deep yielding.",
+								style: "small"
+							})
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="200")
+
+							+service_box({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M8.8.75c-.938 0-1.822.394-2.463 1.07a3.64 3.64 0 0 0-.987 2.502V10H2.2C.985 10 0 10.96 0 12.143v10.714C0 24.041.985 25 2.2 25h17.6c1.215 0 2.2-.96 2.2-2.143V12.143C22 10.959 21.015 10 19.8 10h-3.15V4.322c0-.926-.348-1.827-.987-2.502A3.393 3.393 0 0 0 13.2.75H8.8ZM14.15 10V4.322a1.14 1.14 0 0 0-.302-.782.893.893 0 0 0-.648-.29H8.8a.893.893 0 0 0-.649.29 1.14 1.14 0 0 0-.301.782V10h6.3Z" clip-rule="evenodd"/></svg>',
+								title: "Privacy",
+								text: "Winged isn't gathered forth first fruitful without.",
+								style: "small"
+							})
+
+						.col-12.col-md-6.col-lg-3(data-show="startbox", data-show-delay="300")
+
+							+service_box({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12.5 0h-10A2.5 2.5 0 0 0 0 2.5v20A2.5 2.5 0 0 0 2.5 25h15a2.5 2.5 0 0 0 2.5-2.5v-15L12.5 0ZM5 7.75a1 1 0 1 0 0 2h2.5a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Z" clip-rule="evenodd"/></svg>',
+								title: "Case Studies",
+								text: "In creepeth own for bring, under lights, together.",
+								style: "small"
+							})
+
+			include template-parts/sections/_process-1.pug
+
+			.pt-120.pb-130
+
+				.container
+
+					.row
+
+						include template-parts/sections/_clients-shape.pug
+
+					.row.mt-130
+
+						.col-lg-6.offset-lg-3.text-center.px-lg-50
+
+							h2.mb-25.px-lg-10(data-show="startbox") Latest projects
+
+							p.m-0(data-show="startbox", data-show-delay="100") Waters his moveth seasons over Created appear greater dry air. Cattle set it night let i fruitful make our appear.
+
+					// Slider
+					.swiper.mt-90(data-swiper-slides="1", data-swiper-breakpoints="828:2, 1024:3", data-swiper-gap="30", data-swiper-grabcursor="true", data-show="startbox", data-show-delay="200")
+
+						.swiper-container
+
+							.swiper-wrapper
+
+								.swiper-slide
+
+									+card_portfolio({
+										title: "Identity Design",
+										category: "Marketing",
+										image: "assets/img/portfolio/project-5-900x1000.jpg",
+										imageHeight: "92%"
+									})
+
+								.swiper-slide
+
+									+card_portfolio({
+										title: "Corporate Building",
+										category: "Marketing",
+										image: "assets/img/portfolio/project-1-900x1000.jpg",
+										imageHeight: "92%"
+									})
+
+								.swiper-slide
+
+									+card_portfolio({
+										title: "Watch Design",
+										category: "Architecture",
+										image: "assets/img/portfolio/project-8-900x1000.jpg",
+										imageHeight: "92%",
+									})
+
+								.swiper-slide
+
+									+card_portfolio({
+										title: "Last Chance",
+										category: "Architecture",
+										image: "assets/img/portfolio/project-4-900x1000.jpg",
+										imageHeight: "92%"
+									})
+
+						.d-flex.mt-70.justify-content-center
+
+							.swiper-button-prev.swiper-button-position-2.swiper-button-gray.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd"/></svg>
+
+							.swiper-button-next.swiper-button-position-2.swiper-button-gray.shadow
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"><path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd"/></svg>
+
+			.pt-120.pb-130.bg-gray-light.shape-parent.footerPrev
+
+				include template-parts/sections/_pricing.pug
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug

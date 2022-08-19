@@ -1,0 +1,14 @@
+mixin circle_icon(object)
+
+	//- Default
+	- object = object || {}
+	- object.icon = object.icon || '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="none"><path fill="currentColor" d="M15.556 0 0 18.6h14L12.444 31 28 12.4H14L15.556 0Z"/></svg>'
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "text-white bg-accent-1"
+
+	//- Element Class
+	- elClass = "circle-icon "
+	- elClass += object.customClass
+
+	// Circle icon
+	div(class=elClass, style=object.css) !{object.icon}

@@ -1,0 +1,43 @@
+mixin industry(object)
+
+	//- Default
+	- object = object || {}
+	- object.image = object.image || "assets/img/industry-1-810x930.jpg"
+	- object.imageClass = object.imageClass || ""
+	- object.bodyClass = object.bodyClass || ""
+	- object.title = object.title || "Financial"
+	- object.titleClass = object.titleClass || "m-0 text-white"
+	- object.icon = object.icon || '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 4c0 1.657-4.03 3-9 3S1 5.657 1 4m18 0c0-1.657-4.03-3-9-3S1 2.343 1 4m18 0v14c0 1.66-4 3-9 3s-9-1.34-9-3V4m18 7c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>'
+	- object.iconClass = object.iconClass || "me-20 text-white"
+	- object.link = object.link || "#"
+	- object.css = object.css || ""
+	- object.customClass = object.customClass || "position-relative rounded-4 overflow-hidden"
+
+	//- Element Class
+	- elClass = "industry"
+	- elClass += " " + object.customClass
+
+	// Industry
+	div(class=elClass, style=object.css)
+
+		if object.link != ""
+
+			a(href=object.link, class="industry-link stretched-link")
+
+		if object.image != ""
+
+			.industry-image(class=object.imageClass, data-img-height, style="--img-height: 114%;")
+
+				img(loading="lazy", src=object.image, alt="")
+
+		.industry-body(class=object.bodyClass)
+
+			if object.icon != ""
+
+				.industry-icon(class=object.iconClass) !{object.icon}
+
+			if object.title != ""
+
+				h4.industry-title(class=object.titleClass)
+
+					=object.title

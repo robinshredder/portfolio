@@ -1,0 +1,19 @@
+.countdown {
+	display: grid;
+	grid-template-columns: 1fr 70px 1fr 70px 1fr 70px 1fr;
+
+	@include media-breakpoint-down(md) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px;
+	}
+
+}
+
+.countdown-item {
+	white-space: nowrap;
+
+	span {
+		display: block;
+	}
+
+}

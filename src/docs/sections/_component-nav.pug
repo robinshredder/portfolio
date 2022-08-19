@@ -1,0 +1,90 @@
+.docs-card.tab-content.bg-white.rounded-4#component-nav
+
+	h2.docs-card-title Nav
+
+	p #[a(href="https://getbootstrap.com/docs/5.0/components/navs-tabs/#tabs") Bootstrap documentation]
+
+	p Additional classes: #[code .nav-opacity] and #[code .nav-no-opacity].
+
+	.docs-card-example
+
+		ul.nav.mx-n18
+
+			li.nav-item #[a(href="#", class="nav-link") Item 01]
+			li.nav-item #[a(href="#", class="nav-link") Item 02]
+			li.nav-item #[a(href="#", class="nav-link") Item 03]
+
+	p Gap classes: #[code .nav-no-gap], #[code .nav-gap-sm], #[code .nav-gap-md] and #[code .nav-gap-xl].
+
+	.docs-card-example.bg-dark
+
+		ul.nav.nav-gap-md.text-white.nav-opacity
+
+			li.nav-item #[a(href="#", class="nav-link") Item 01]
+			li.nav-item #[a(href="#", class="nav-link") Item 02]
+			li.nav-item #[a(href="#", class="nav-link") Item 03]
+
+	p HTML example:
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="nav.html")
+
+	h5 Nav Tabs
+
+	.docs-card-example.bg-white
+
+		.row
+
+			.col-8
+
+				ul.nav.nav-tabs.nav-no-opacity.flex-column
+
+					li.nav-item
+
+						a.nav-link.rounded-3.d-flex.flex-column.active(href="#tab-1", data-bs-toggle="tab", data-bs-target="#tab-1", aria-controls="tab-1", aria-selected="true")
+
+							+feature({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25 4.9c0 2.154-5.373 3.9-12 3.9S1 7.054 1 4.9m24 0C25 2.746 19.627 1 13 1S1 2.746 1 4.9m24 0v18.2c0 2.158-5.333 3.9-12 3.9S1 25.258 1 23.1V4.9M25 14c0 2.158-5.333 3.9-12 3.9S1 16.158 1 14"/></svg>',
+								iconClass: "text-accent-1",
+								title: "Best Rates",
+								text: "Stars he had created two which in i which second midst is day darkness, a days."
+							})
+
+					li.nav-item.mt-10
+
+						a.nav-link.rounded-3.d-flex.flex-column(href="#tab-2", data-bs-toggle="tab", data-bs-target="#tab-2", aria-controls="tab-2", aria-selected="false")
+
+							+feature({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.818 24v-8.944m0-5.112V1M15 24V12.5m0-5.111V1m10.182 23v-6.389m0-5.111V1M1 15.056h7.636m2.546-7.667h7.636m2.546 10.222H29"/></svg>',
+								iconClass: "text-accent-1",
+								title: "Ultimate Flexibility",
+								text: "Dry them years air there. Blessed Multiply morning, second night and bearing."
+							})
+
+					li.nav-item.mt-10
+
+						a.nav-link.rounded-3.d-flex.flex-column(href="#tab-3", data-bs-toggle="tab", data-bs-target="#tab-3", aria-controls="tab-3", aria-selected="false")
+
+							+feature({
+								icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 20.5 14 27l13-6.5M1 14l13 6.5L27 14M14 1 1 7.5 14 14l13-6.5L14 1Z"/></svg>',
+								iconClass: "text-accent-1",
+								title: "Easy Manage",
+								text: "Lesser bring creepeth called second place were lights sea."
+							})
+
+			.col-4
+
+				.tab-content
+
+					.tab-pane.fade.show.active(id="tab-1")
+
+						p.m-0 Tab 1
+
+					.tab-pane.fade(id="tab-2")
+
+						p.m-0 Tab 2
+
+					.tab-pane.fade(id="tab-3")
+
+						p.m-0 Tab 3
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="tabs.html")

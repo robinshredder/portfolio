@@ -1,0 +1,27 @@
+.browser-topbar {
+	display: flex;
+	padding: 11px 13px;
+	background-color: rgba($color-gray, .25);
+
+	span {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background-color: $color-gray;
+		border-radius: 50%;
+	}
+
+	span + span {
+		margin-left: 5px;
+	}
+
+	&-dark {
+		background-color: $color-gray-dark;
+
+		span {
+			background-color: $gray-600;
+		}
+
+	}
+
+}

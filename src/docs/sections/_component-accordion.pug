@@ -1,0 +1,43 @@
+.docs-card.tab-content.bg-white.rounded-4#component-accordion
+
+	h2.docs-card-title Accordion
+
+	p #[a(href="https://getbootstrap.com/docs/5.0/components/accordion/") Bootstrap documentation]
+
+	.docs-card-example
+
+		// Accordion
+		.accordion#docsFAQ
+
+			.accordion-item
+
+				.accordion-header#headingOne
+
+					a(href="#collapseOne", class="h4 accordion-button collapsed", data-bs-toggle="collapse", data-bs-target="#collapseOne", aria-expanded="false")
+
+						| Accordion title
+
+					.accordion-collapse.collapse#collapseOne(data-bs-parent="#docsFAQ")
+
+						.accordion-body
+
+							p.m-0 Accordion text
+
+			.accordion-item
+
+				.accordion-header#headingTwo
+
+					a(href="collapseTwo", class="h4 accordion-button collapsed", data-bs-toggle="collapse", data-bs-target="#collapseTwo", aria-expanded="false")
+
+						| Accordion title
+
+					.accordion-collapse.collapse#collapseTwo(data-bs-parent="#docsFAQ")
+
+						.accordion-body
+
+							p.m-0 Accordion text
+
+
+	p HTML example:
+
+	code.docs-card-gist(data-gist-id="3db95727944fb311a7fb574e51e90d5b", data-gist-file="accordion.html")

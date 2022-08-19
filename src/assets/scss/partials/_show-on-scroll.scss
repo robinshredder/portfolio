@@ -1,0 +1,9 @@
+/* PARTIAL: SHOW ON SCROLL
+-------------------------------------------- */
+
+[data-show="startbox"] {
+	opacity: 0;
+	transition-timing-function: $transition-timing-function;
+	transition-property: transform, opacity;
+	will-change: opacity, transform;
+}
